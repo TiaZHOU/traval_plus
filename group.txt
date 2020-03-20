@@ -1,5 +1,3 @@
-<<<<<<< HEAD
 Tianqi (terry) ZHOU
-=======
 edison
->>>>>>> a2eb81611c877bf3fe3b40bb03d6e95ff3399b81
+
