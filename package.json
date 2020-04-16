@@ -1,0 +1,14 @@
+{
+  "name": "info30005_project",
+  "version": "1.0.0",
+  "description": "deliverable 2 by Zhuo Lin Chai",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zhuo Lin Chai",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
