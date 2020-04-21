@@ -1,12 +1,21 @@
 const express = require("express");
 
 // create router
-const router = express.Router();
+const userRouter = express.Router();
+const postRouter = express.Router();
+const commentRouter = express.Router();
 
 // load/import the controllers
-const appController = require('../controllers/appController.js');
-const authController = require('../controllers/authController.js');
 const userController = require('../controllers/userController.js');
+const postController = require('../controllers/postController.js');
 const commentController = require('../controllers/commentController.js');
 
-module.exports = router;
+userRouter.get("/", userController.getAllUsers);
+postRouter.get("/", postController.getAllPosts);
+commentRouter.get("/", commentController.getAllComments);
+
+module.exports = {
+   userRouter,
+   postRouter,
+   commentRouter
+};
