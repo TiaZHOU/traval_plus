@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var logger = require('morgan');
 var app = express();
 
-require('./models');
+require('./models/task');
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: true })); // support parsing of urlencoded bodies (e.g. for forms)
@@ -20,11 +20,6 @@ var taskRouter = require('./routes/taskRouter');
 
 // the task routes are added onto the end of '/immunisation-schedule' (might change to a better string)
 app.use('/travel-tasks', taskRouter);
-
-/* IGNORE THIS
-app.get("/:destination", (req, res) => {
-  // res.send("<H1>Travel+</H1>");
-}); */
 
 // start app and listen for incoming requests on port
 app.listen(process.env.PORT || 3000, () => {
