@@ -1,4 +1,4 @@
-# Scheduling Express API
+# Task scheduling API
 * Serves all HTTP requests and responds with 'dummy' data from JSON file (Under "/travel-tasks" route)
 * The functionalities should be tested with an API testing tool
 * Mock-up front end for homepage
