@@ -1,5 +1,5 @@
 # Scheduling Express API
-* Serves all HTTP requests and responds with MongoDB test data (Under "/travel-tasks" route)
+* Serves all HTTP requests and responds with 'dummy' data from JSON file (Under "/travel-tasks" route)
 * The functionalities should be tested with an API testing tool
 * Mock-up front end for homepage
 
