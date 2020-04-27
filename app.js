@@ -31,4 +31,4 @@ app.get('/alert_test',function (req,res) {
 // start app and listen for incoming requests on port
 app.listen(process.env.PORT || 3000, () => {
     console.log('Travel+ is running!');
-}
+});
