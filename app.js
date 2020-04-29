@@ -12,6 +12,7 @@ const alertRouter = require("./routes/alertRouter");
 const planRouter = require("./routes/planRouter");
 var taskRouter = require('./routes/taskRouter');
 const router = require("./routes/index.js");
+const visaRouter = require("./routes/visaRoutes.js");
 
 app.use("/alert", alertRouter);
 app.use("/plan", planRouter);
@@ -19,6 +20,7 @@ app.use('/travel-tasks', taskRouter);
 app.use("/user-management", router.userRouter);
 app.use("/post-management", router.postRouter);
 app.use("/comment-management", router.commentRouter);
+app.use("/visa-requirements", visaRouter);
 
 // GET home page
 app.get("/", (req, res) => {
