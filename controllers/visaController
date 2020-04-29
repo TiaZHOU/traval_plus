@@ -1,0 +1,24 @@
+var visas = require("../models/visaModel.js");
+
+//returns all countries with individual information
+const getAllVisas = (req,res) => {
+    res.send(visas);
+};
+
+const getVisaByID = (req, res) => {
+    // search for visa requirements by country ID
+    const visa = visas.find(visa => visa.id === req.params.id);
+
+    if (visa) {
+        // returns the visa application/requirements information
+        res.send(visa);
+    } else {
+        // currently, an empty list will be returned if country not found
+        res.send([]);
+    }
+};
+
+module.exports = {
+    getAllVisas,
+    getVisaByID
+};
