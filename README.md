@@ -52,7 +52,7 @@ The comparing will occur when the plan update and alert pop ups display when the
 alerts and plans
 
 ## REST API details:
-by links
+by links /alert_test
 
 ## Comments:
 Since most special functions are based on user management system, one functional system should be implement ASAP.
