@@ -51,3 +51,13 @@ by links
 
 ## Comments:
 Since most special functions are based on user management system, one functional system should be implement ASAP.
+
+# Travel Visa Requirements API
+displays a set of required documents and other additional information needed for a visa application in each country
+
+# Details
+- displaying documents needed for a visa application per country
+- allows users to search (or lookup) for the information by typing in the country's name 
+
+# comment
+model for this current deliverable is still very simple, just an array of strings as this deliverable doesnt require a full databse
