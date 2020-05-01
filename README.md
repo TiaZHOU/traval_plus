@@ -43,7 +43,8 @@ A forum app that allows users to discuss travel tips and experiences. This will 
 At this stage I have chosen to use arrays as my models as the current deliverable does not require actual use of databases.
 
 # links:
-https://info30005travelplus.herokuapp.com/user-management\n
+https://info30005travelplus.herokuapp.com/user-management
+
 https://info30005travelplus.herokuapp.com/post-management
 https://info30005travelplus.herokuapp.com/comment-management
 
@@ -63,7 +64,8 @@ by links /alert_test
 Since most special functions are based on user management system, one functional system should be implement ASAP.
 
 # link: 
-https://info30005travelplus.herokuapp.com/alert\n
+https://info30005travelplus.herokuapp.com/alert
+
 https://info30005travelplus.herokuapp.com/plan
 
 # Travel Visa Requirements API
