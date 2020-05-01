@@ -24,15 +24,30 @@
 ```
 /travel-tasks/2/
 ```
-# Mockup App server (NodeJs forum app)
+# Discussion Forum API
 A forum app that allows users to discuss travel tips and experiences. This will allow first-time travellers to receive personal advice from experienced travellers
 
-# Features
+## Features
 -Create posts
 
 -Update posts
 
 -Comment on posts
 
-# Comments
+## Comments
 At this stage I have chosen to use arrays as my models as the current deliverable does not require actual use of databases.
+
+# Travel Alerts API
+methods:
+
+Once a traveling plan is made by user(no matter how many information user offered), the system will compare the plan with the alert list.
+The comparing will occur when the plan update and alert pop ups display when the alert information match.
+
+## Dataset:
+alerts and plans
+
+## REST API details:
+by links
+
+## Comments:
+Since most special functions are based on user management system, one functional system should be implement ASAP.
