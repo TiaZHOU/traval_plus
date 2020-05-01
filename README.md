@@ -26,6 +26,8 @@
 ```
 
 # link: 
+https://info30005travelplus.herokuapp.com/travel-tasks
+
 
 # Discussion Forum API
 A forum app that allows users to discuss travel tips and experiences. This will allow first-time travellers to receive personal advice from experienced travellers
@@ -40,7 +42,10 @@ A forum app that allows users to discuss travel tips and experiences. This will 
 ## Comments
 At this stage I have chosen to use arrays as my models as the current deliverable does not require actual use of databases.
 
-# link: 
+# links:
+https://info30005travelplus.herokuapp.com/user-management
+https://info30005travelplus.herokuapp.com/post-management
+https://info30005travelplus.herokuapp.com/comment-management
 
 # Travel Alerts API
 methods:
@@ -58,6 +63,8 @@ by links /alert_test
 Since most special functions are based on user management system, one functional system should be implement ASAP.
 
 # link: 
+https://info30005travelplus.herokuapp.com/alert
+https://info30005travelplus.herokuapp.com/plan
 
 # Travel Visa Requirements API
 displays a set of required documents and other additional information needed for a visa application in each country
@@ -70,4 +77,5 @@ displays a set of required documents and other additional information needed for
 model for this current deliverable is still very simple, just an array of strings as this deliverable doesnt require a full databse
 
 # link: 
+https://info30005travelplus.herokuapp.com/visa-requirements
 
