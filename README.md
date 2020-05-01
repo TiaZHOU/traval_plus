@@ -24,6 +24,9 @@
 ```
 /travel-tasks/2/
 ```
+
+# link: 
+
 # Discussion Forum API
 A forum app that allows users to discuss travel tips and experiences. This will allow first-time travellers to receive personal advice from experienced travellers
 
@@ -36,6 +39,8 @@ A forum app that allows users to discuss travel tips and experiences. This will 
 
 ## Comments
 At this stage I have chosen to use arrays as my models as the current deliverable does not require actual use of databases.
+
+# link: 
 
 # Travel Alerts API
 methods:
@@ -52,6 +57,8 @@ by links
 ## Comments:
 Since most special functions are based on user management system, one functional system should be implement ASAP.
 
+# link: 
+
 # Travel Visa Requirements API
 displays a set of required documents and other additional information needed for a visa application in each country
 
@@ -59,5 +66,8 @@ displays a set of required documents and other additional information needed for
 - displaying documents needed for a visa application per country
 - allows users to search (or lookup) for the information by typing in the country's name 
 
-# comment
+# Comments
 model for this current deliverable is still very simple, just an array of strings as this deliverable doesnt require a full databse
+
+# link: 
+
