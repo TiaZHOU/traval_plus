@@ -1,3 +1,6 @@
+# Home Page
+https://info30005travelplus.herokuapp.com/
+
 # Task scheduling API
 * Serves all HTTP requests and responds with 'dummy' data from JSON file (Under "/travel-tasks" route)
 * The functionalities should be tested with an API testing tool
@@ -64,7 +67,7 @@ by links /alert_test
 ## Comments:
 Since most special functions are based on user management system, one functional system should be implement ASAP.
 
-# link: 
+# links: 
 https://info30005travelplus.herokuapp.com/alert
 
 https://info30005travelplus.herokuapp.com/plan
