@@ -24,7 +24,7 @@
 ```
 /travel-tasks/2/
 ```
-# Mockup App server (NodeJs forum app)
+# Discussion Forum API
 A forum app that allows users to discuss travel tips and experiences. This will allow first-time travellers to receive personal advice from experienced travellers
 
 # Features
