@@ -18,9 +18,7 @@ app.use("/alert", alertRouter);
 app.use("/plan", planRouter);
 app.use("/tasks", taskRouter);
 app.use("/requirement", requirementRouter);
-app.use("/user-management", forumRouter.userRouter);
-app.use("/post-management", forumRouter.postRouter);
-app.use("/comment-management", forumRouter.commentRouter);
+app.use("/forum", forumRouter);
 
 // GET home page
 app.get("/", (req, res) => {

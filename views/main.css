@@ -31,10 +31,16 @@ header p {
 .jumbotron {
     display: flex;
     align-items: center;
+    min-height: 100%;
     background-image: url('https://pics.freeartbackgrounds.com/Sky_with_Clouds_and_Airplane_Background-1482.jpg');
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
+
     color: #ffffff;
-    height: 500px;
     text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 

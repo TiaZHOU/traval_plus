@@ -1,6 +1,6 @@
 const posts = [
   {
-    id: "0001",
+    id: "1",
     title: "Travelling tips for the USA",
     content: "Looking for any tips regarding the US.",
     first_name: "Jennifer",
@@ -8,7 +8,7 @@ const posts = [
     created_date: "2020-04-10"
   },
   {
-    id: "0002",
+    id: "2",
     title: "Places to visit in Japan?",
     content: "Hey guys, looking for any cool tourist spots for the Tokyo region.",
     first_name: "Evan",

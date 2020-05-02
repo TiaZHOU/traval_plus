@@ -1,21 +1,13 @@
 const express = require("express");
+const forumRouter = express.Router();
 
-// create router
-const userRouter = express.Router();
-const postRouter = express.Router();
-const commentRouter = express.Router();
+// load/import the routers
+const userRouter = require("./forum-subroutes/userRouter");
+const postRouter = require("./forum-subroutes/postRouter");
+const commentRouter = require("./forum-subroutes/commentRouter");
 
-// load/import the controllers
-const userController = require('../controllers/userController.js');
-const postController = require('../controllers/postController.js');
-const commentController = require('../controllers/commentController.js');
+forumRouter.use("/user", userRouter);
+forumRouter.use("/post", postRouter);
+forumRouter.use("/comment", commentRouter);
 
-userRouter.get("/", userController.getAllUsers);
-postRouter.get("/", postController.getAllPosts);
-commentRouter.get("/", commentController.getAllComments);
-
-module.exports = {
-   userRouter,
-   postRouter,
-   commentRouter
-};
+module.exports = forumRouter;
