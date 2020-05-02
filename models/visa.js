@@ -1,4 +1,4 @@
-  const visa = [
+const visa = [
   {
     id: "0001",
     Country: "US",

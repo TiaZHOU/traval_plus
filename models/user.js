@@ -1,4 +1,4 @@
-  const users = [
+const users = [
   {
     id: "0001",
     first_name: "Jennifer",

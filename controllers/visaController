@@ -1,4 +1,4 @@
-var visas = require("../models/visaModel.js");
+var visas = require("../models/visa");
 
 //returns all countries with individual information
 const getAllVisas = (req,res) => {

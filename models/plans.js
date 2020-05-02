@@ -1,5 +1,4 @@
-const plans= [
-  {
+const plans = [{
     id: "1",
     name: "Anna",
     des_con: "China",
@@ -9,8 +8,7 @@ const plans= [
     time: "20200312",
     duration: "10",
     visa_type: "tourist"
-  },
-   {
+  }, {
     id: "2",
     name: "Bob",
     des_con: "Australia",
@@ -20,6 +18,6 @@ const plans= [
     time: "20200411",
     duration: "100",
     visa_type: "student"
-  }
-];
+  }];
+
 module.exports = plans;
