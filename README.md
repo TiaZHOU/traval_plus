@@ -1,103 +1,94 @@
-# Home Page
-https://info30005travelplus.herokuapp.com/
+# Travel+ homepage
+Link: https://info30005travelplus.herokuapp.com/
 
-# Task scheduling API
-* Serves all HTTP requests and responds with 'dummy' data from JSON file (Under "/travel-tasks" route)
-* The functions of the API should be tested with an API testing tool
-* Mock-up front end for homepage
+## Introduction
+A website for first-time/ inexperienced Australian travellers to get travel information.
+Currently the mock-up web server serves all HTTP requests and responds with 'dummy' data from JSON files.
+The functions of the API should be tested with an API testing tool. (e.g. Postman)
 
-## REST API details:
-* See all tasks
-```
-/travel-tasks/
-```
-* Create new tasks
-```
-/travel-tasks/?taskName=Buy%20tickets&taskDate=20-03-2020&isDone=false/
-```
-* Find a specific task
-```
-/travel-tasks/1/
-```
-* Modify/update tasks
-```
-/travel-tasks/1?taskName=Buy%20tickets&taskDate=20-03-2020&isDone=false/
-```
-* Delete tasks
-```
-/travel-tasks/2/
-```
+## Core function 1: Travel alerts
 
-# link: 
-https://info30005travelplus.herokuapp.com/travel-tasks
+- Link to travel alerts: https://info30005travelplus.herokuapp.com/alert
+- Link to travel plans: https://info30005travelplus.herokuapp.com/plan
 
-
-# Discussion Forum API
-A forum app that allows users to discuss travel tips and experiences. This will allow first-time travellers to receive personal advice from experienced travellers
-
-## Features
--Create posts
-
--Update posts
-
--Comment on posts
-
-## Comments
-At this stage I have chosen to use arrays as my models as the current deliverable does not require actual use of databases.
-
-function of travel alerts
-
-
-# link: 
-
-# links:
-https://info30005travelplus.herokuapp.com/user-management
-
-https://info30005travelplus.herokuapp.com/post-management
-
-https://info30005travelplus.herokuapp.com/comment-management
-
-
-# Travel Alerts API
-
-methods:
-
+Methods:
 Once a traveling plan is made by user(no matter how many information user offered), the system will compare the plan with the alert list.
 The comparing will occur when the plan update and alert pop ups display when the alert information match.
 
-
-dataset:
+Dataset:
 alerts and plans
 
 API testing:
 by links
 
-comments:
+Comments
+model for this current deliverable is still very simple, just an array of strings as this deliverable doesnt require a full database
+
+Comments:
 Since most special functions are based on user management system, one functional system should be implement ASAP.
 
-## Dataset:
+Dataset:
 alerts and plans
 
-## REST API details:
+REST API details:
 by links /alert_test
 
-## Comments:
-Since most special functions are based on user management system, one functional system should be implement ASAP.
+## Core function 2: Travel docs and immunisation requirement
+Displays a set of required documents, immunisation requirements and other useful information needed for visa applications for each country.
+- Link to visa req: https://info30005travelplus.herokuapp.com/requirement/visa
+- Link to immunisation reqs: https://info30005travelplus.herokuapp.com/requirement/immunisation
 
-# links: 
-https://info30005travelplus.herokuapp.com/alert
+#### Features
+- Displaying relevant visa application information and immunisation requirements for each country 
+- Allows users to search (or lookup) for the information by typing in the country's name
 
-https://info30005travelplus.herokuapp.com/plan
+| Method   | Url (example)
+| -------- |-------
+| get      | ```/requirement/visa/```
+| get      | ```/requirement/immunisation/```
+| get      | ```/requirement/visa/0001/```
+| get      | ```/requirement/immunisation/0001/```
 
-# Travel Visa Requirements API
-displays a set of required documents and other additional information needed for a visa application in each country
+## Core function 3: Discussion forum
+A forum app that allows users to discuss travel tips and experiences. This will allow first-time travellers to receive personal advice from experienced travellers.
+- Link to forum comments: https://info30005travelplus.herokuapp.com/forum/comment
+- Link to forum posts: https://info30005travelplus.herokuapp.com/forum/post
 
-# Details
-- displaying documents needed for a visa application per country
-- allows users to search (or lookup) for the information by typing in the country's name 
+#### Features
+- See all comments and posts
+- View comments and posts in detail
+- Create new comments and posts
+- Edit comments and posts
+- Delete comments and posts
 
-# Comments
-model for this current deliverable is still very simple, just an array of strings as this deliverable doesnt require a full databse
+| Method   | Url (example)
+| -------- |-------
+| get      | ```/forum/comment/```
+| get      | ```/forum/post/```
+| get      | ```/forum/comment/1/```
+| get      | ```/forum/post/1/```
+| post     | ```/forum/comment/```
+| post     | ```/forum/post/```
+| put      | ```/forum/comment/```
+| put      | ```/forum/post/```
+| delete   | ```/forum/comment/1/```
+| delete   | ```/forum/post/1/```
 
-# link: 
-https://info30005travelplus.herokuapp.com/visa-requirements
+## Core function 4: Task scheduling
+Link: https://info30005travelplus.herokuapp.com/travel-tasks/
+
+#### Features:
+- View all travel tasks
+- View travel task in detail
+- Create travel tasks
+
+| Method   | Url (example)
+| -------- |-------
+| get      | ```/travel-tasks/```
+| get      | ```/travel-tasks/1/```
+| post     | ```/travel-tasks/?taskName=Buy%20tickets&taskDate=20-03-2020&isDone=false/```
+| put      | ```/travel-tasks/1?taskName=Buy%20tickets&taskDate=20-03-2020&isDone=false/```
+| delete   | ```/travel-tasks/2/```
+
+## To-do
+* [ ] Core function 5: Google Maps API
