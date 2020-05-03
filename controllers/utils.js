@@ -20,16 +20,16 @@ const createElement = (queryArgs, elementList) => {
 };
 
 const createPostElement = (queryArgs, elementList) => {
-    if (queryArgs.hasOwnProperty('title') && queryArgs.hasOwnProperty('comment') &&
+    if (queryArgs.hasOwnProperty('title') && queryArgs.hasOwnProperty('content') &&
         queryArgs.hasOwnProperty('first_name') && queryArgs.hasOwnProperty('last_name') &&
-        queryArgs.hasOwnProperty('created_date'))  {
+        queryArgs.hasOwnProperty('date'))  {
         return {
             'id': String(elementList.length + 1),
             'title': queryArgs.title,
             'content': queryArgs.content,
             'first_name': queryArgs.first_name,
             'last_name': queryArgs.last_name,
-            'created_date': queryArgs.created_date
+            'date': queryArgs.date
         };
     } else {
         return false;
@@ -39,14 +39,14 @@ const createPostElement = (queryArgs, elementList) => {
 const createCommentElement = (queryArgs, elementList) => {
     if (queryArgs.hasOwnProperty('post') && queryArgs.hasOwnProperty('comment') &&
         queryArgs.hasOwnProperty('first_name') && queryArgs.hasOwnProperty('last_name') &&
-        queryArgs.hasOwnProperty('created_date')) {
+        queryArgs.hasOwnProperty('date')) {
         return {
             'id': String(elementList.length + 1),
             'post': queryArgs.post,
             'comment': queryArgs.comment,
             'first_name': queryArgs.first_name,
             'last_name': queryArgs.last_name,
-            'created_date': queryArgs.created_date
+            'date': queryArgs.date
         };
     } else {
         return false;

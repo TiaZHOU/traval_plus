@@ -5,7 +5,7 @@ const comments = [
     comment: "I would check out...",
     first_name: "Jennifer",
     last_name: "Robbins",
-    created_date: "2020-01-14"
+    date: "2020-01-14"
   },
   {
     id: "2",
@@ -13,7 +13,7 @@ const comments = [
     comment: "Make sure you...",
     first_name: "Evan",
     last_name: "Hahn",
-    created_date: "2020-04-15"
+    date: "2020-04-15"
   }
 ];
 

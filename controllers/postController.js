@@ -15,7 +15,7 @@ var getPostById = (req, res) => {
 // create new post
 var createPost = (req, res) => {
     const receivedPost = createPostElement(req.query, posts);
-    if (receivedpost) {
+    if (receivedPost) {
         posts.push(receivedPost);
         res.status(201).send(receivedPost);
     } else {
