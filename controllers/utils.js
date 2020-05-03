@@ -19,6 +19,40 @@ const createElement = (queryArgs, elementList) => {
     }
 };
 
+const createPostElement = (queryArgs, elementList) => {
+    if (queryArgs.hasOwnProperty('title') && queryArgs.hasOwnProperty('comment') &&
+        queryArgs.hasOwnProperty('first_name') && queryArgs.hasOwnProperty('last_name') &&
+        queryArgs.hasOwnProperty('created_date'))  {
+        return {
+            'id': String(elementList.length + 1),
+            'title': queryArgs.title,
+            'content': queryArgs.content,
+            'first_name': queryArgs.first_name,
+            'last_name': queryArgs.last_name,
+            'created_date': queryArgs.created_date
+        };
+    } else {
+        return false;
+    }
+};
+
+const createCommentElement = (queryArgs, elementList) => {
+    if (queryArgs.hasOwnProperty('post') && queryArgs.hasOwnProperty('comment') &&
+        queryArgs.hasOwnProperty('first_name') && queryArgs.hasOwnProperty('last_name') &&
+        queryArgs.hasOwnProperty('created_date')) {
+        return {
+            'id': String(elementList.length + 1),
+            'post': queryArgs.post,
+            'comment': queryArgs.comment,
+            'first_name': queryArgs.first_name,
+            'last_name': queryArgs.last_name,
+            'created_date': queryArgs.created_date
+        };
+    } else {
+        return false;
+    }
+};
+
 const updateElement = (id, queryArgs, elementList) => {
     const elementIndex = getIndexById(id, elementList);
     if (elementIndex === -1) {
@@ -30,6 +64,8 @@ const updateElement = (id, queryArgs, elementList) => {
 
 module.exports = {
     createElement: createElement,
+    createCommentElement: createCommentElement,
+    createPostElement: createPostElement,
     getIndexById: getIndexById,
     getElementById: getElementById,
     updateElement: updateElement

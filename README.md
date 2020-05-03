@@ -12,26 +12,20 @@ The functions of the API should be tested with an API testing tool. (e.g. Postma
 - Link to travel plans: https://info30005travelplus.herokuapp.com/plan
 
 Methods:
-Once a traveling plan is made by user(no matter how many information user offered), the system will compare the plan with the alert list.
+Once a traveling plan is made by user (no matter how many information user offered), the system will compare the plan with the alert list.
 The comparing will occur when the plan update and alert pop ups display when the alert information match.
 
-Dataset:
-alerts and plans
+Dataset: alerts and plans
 
-API testing:
-by links
+API testing: by links
 
-Comments
-model for this current deliverable is still very simple, just an array of strings as this deliverable doesnt require a full database
+Comments: model for this current deliverable is still very simple, just an array of strings as this deliverable doesnt require a full database
 
-Comments:
-Since most special functions are based on user management system, one functional system should be implement ASAP.
+Comments: Since most special functions are based on user management system, one functional system should be implement ASAP.
 
-Dataset:
-alerts and plans
+Dataset: alerts and plans
 
-REST API details:
-by links /alert_test
+REST API details: by links /alert_test
 
 ## Core function 2: Travel docs and immunisation requirement
 Displays a set of required documents, immunisation requirements and other useful information needed for visa applications for each country.
@@ -75,6 +69,7 @@ A forum app that allows users to discuss travel tips and experiences. This will 
 | delete   | ```/forum/post/1/```
 
 ## Core function 4: Task scheduling
+
 Link: https://info30005travelplus.herokuapp.com/travel-tasks/
 
 #### Features:
@@ -92,3 +87,4 @@ Link: https://info30005travelplus.herokuapp.com/travel-tasks/
 
 ## To-do
 * [ ] Core function 5: Google Maps API
+* [ ] Reconsider if authentication functionality is needed

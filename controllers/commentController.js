@@ -1,8 +1,8 @@
 var comments = require("../models/comment.js");
-const { getElementById, getIndexById, updateElement, createElement } = require('./utils');
+const { getElementById, getIndexById, updateElement, createCommentElement } = require('./utils');
 
 //get all comments from the models folder
-var getAllComments = (req,res) => {
+var getAllComments = (req, res) => {
    res.send(comments);
 };
 
@@ -14,7 +14,7 @@ var getCommentById = (req, res) => {
 
 // create new comment
 var createComment = (req, res) => {
-    const receivedComment = createElement(req.query, comments);
+    const receivedComment = createCommentElement(req.query, comments);
     if (receivedComment) {
         comments.push(receivedComment);
         res.status(201).send(receivedComment);

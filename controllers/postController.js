@@ -1,8 +1,8 @@
 var posts = require("../models/post.js");
-const { getElementById, getIndexById, updateElement, createElement } = require('./utils');
+const { getElementById, getIndexById, updateElement, createPostElement } = require('./utils');
 
 //get all posts
-var getAllPosts = (req,res) => {
+var getAllPosts = (req, res) => {
    res.send(posts);
 };
 
@@ -14,7 +14,7 @@ var getPostById = (req, res) => {
 
 // create new post
 var createPost = (req, res) => {
-    const receivedPost = createElement(req.query, posts);
+    const receivedPost = createPostElement(req.query, posts);
     if (receivedpost) {
         posts.push(receivedPost);
         res.status(201).send(receivedPost);
