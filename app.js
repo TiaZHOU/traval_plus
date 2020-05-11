@@ -14,13 +14,8 @@ app.get("/", (req, res) => {
   res.send("<H1>Discussion Forum system</H1>");
 });
 
-const router = require("./routes/index.js");
-app.use("/user-management", router.userRouter);
-
-app.use("/post-management", router.postRouter);
-
-app.use("/comment-management", router.commentRouter);
-
+const forumRouter = require("./routes/forumRouter.js");
+app.use("/forum", forumRouter);
 
 
 // start app and listen for incoming requests on port 3000
