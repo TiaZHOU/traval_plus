@@ -2,8 +2,8 @@
 Link: https://info30005travelplus.herokuapp.com/
 
 ## Introduction
-A website for first-time or inexperienced Australian travellers to get travel information.
-Currently the mock-up web server serves all HTTP requests and responds with 'dummy' data from JSON files.
+A website for first-time or inexperienced Australian travelers to get travel information.
+Currently, the mock-up web server serves all HTTP requests and responds with 'dummy' data from JSON files.
 The functions of the API should be tested with an API testing tool. (e.g. Postman)
 
 ## Core function 1: Travel docs and immunisation requirement

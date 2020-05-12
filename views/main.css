@@ -1,45 +1,39 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 300;
 }
 
 header {
-    padding: 20px 0;
+    padding: 15px 0px 12px 0px;
 }
 
-header .row,
-footer .row {
+header .row, footer .row {
     display: flex;
     align-items: center;
-}
-
-header h1 {
-    font-weight: 700;
-    margin: 0;
 }
 
 header nav {
     display: flex;
     justify-content: flex-end;
+    margin-left: 150px;
 }
 
 header p {
-    padding: 0 20px;
+    padding: 0 15px;
     margin: 0;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .jumbotron {
     display: flex;
     align-items: center;
-    min-height: 100%;
-    background-image: url('https://pics.freeartbackgrounds.com/Sky_with_Clouds_and_Airplane_Background-1482.jpg');
-
-    /* Create the parallax scrolling effect */
+    height: 600px;
+    background-image: url("https://pics.freeartbackgrounds.com/Sky_with_Clouds_and_Airplane_Background-1482.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
     color: #ffffff;
     text-shadow: 0.25px 0.25px 0.25px #000000;
 }
@@ -56,32 +50,22 @@ header p {
     color: #fff;
 }
 
-section .row img {
-    margin: 0 0 30px;
-    width: 100%;
-}
-
 .col-md-6 {
     margin: 0 0 30px;
 }
 
 .btn.btn-primary {
-    border-radius: 2px;
+    margin-top: 30px;
+    border-radius: 6px;
     border: 0px;
-    color: #fbd1d5;
+    color: #b8e0fb;
     text-shadow: none;
     background-color: #ffffff;
 }
 
 .btn.btn-primary:hover {
     color: #ffffff;
-    background-color: #fbd1d5;
-}
-
-.btn-secondary {
-    background-color: #E8DFE0;
-    color: #ffffff;
-    margin: 0 0 30px;
+    background-color: #b8e0fb;
 }
 
 footer {
