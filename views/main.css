@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    padding: 15px 0px 12px 0px;
+    padding: 15px 0px 12px;
 }
 
 header .row, footer .row {
@@ -58,14 +58,14 @@ header p {
     margin-top: 30px;
     border-radius: 6px;
     border: 0px;
-    color: #b8e0fb;
+    color: #aed3fb;
     text-shadow: none;
     background-color: #ffffff;
 }
 
 .btn.btn-primary:hover {
     color: #ffffff;
-    background-color: #b8e0fb;
+    background-color: #aed3fb;
 }
 
 footer {

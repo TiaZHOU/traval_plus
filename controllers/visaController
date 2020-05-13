@@ -1,24 +1,28 @@
-var visas = require("../models/visa");
+var mongoose = require("mongoose");
+var Visa = mongoose.model("visa");
 
-//returns all countries with individual information
-const getAllVisas = (req,res) => {
-    res.send(visas);
+// Returns information about all countries
+var getAllVisas = async (req, res) => {
+    try {
+        const allVisas = await Visa.find();
+        return res.send(allVisas); //return res.render('index', {items: allTasks});
+    } catch (err) {
+        return res.status(400).send("Database query failed");
+    }
 };
 
-const getVisaByID = (req, res) => {
-    // search for visa requirements by country ID
-    const visa = visas.find(visa => visa.id === req.params.id);
-
-    if (visa) {
-        // returns the visa application/requirements information
-        res.send(visa);
-    } else {
-        // currently, an empty list will be returned if country not found
-        res.send([]);
+// Returns information about a specify country
+var getVisaById = async (req, res) => {
+    const visaId = req.body.id;
+    try {
+        const visa = await Visa.findById(visaId);
+        return res.send(visa);
+    } catch (err) {
+        return res.status(400).send("Database query failed");
     }
 };
 
 module.exports = {
     getAllVisas,
-    getVisaByID
+    getVisaById
 };

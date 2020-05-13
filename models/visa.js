@@ -1,14 +1,8 @@
-const visa = [
-  {
-    id: "0001",
-    Country: "US",
-    visaRequirements: ["Doc1", "Doc2", "Doc3"]
-  },
-  {
-    id: "0002",
-    Country: "Singapore",
-    visaRequirements: ["Doc1", "Doc2", "Doc3"]
-  }
-];
+var mongoose = require("mongoose");
 
-module.exports = visa;
+var visaSchema = new mongoose.Schema({
+  country: {type: String},
+  visa: {type: Array}
+});
+
+module.exports = mongoose.model("visa", visaSchema, "visa");

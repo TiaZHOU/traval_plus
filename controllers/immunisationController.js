@@ -1,21 +1,28 @@
-const Immunisation = require("../models/immunisation");
-const { getElementById } = require('./utils');
+var mongoose = require("mongoose");
+var Immunisation = mongoose.model("immunisation");
 
-// return immunisation requirements of all countries
-const getAllImmunisations = (req, res) => {
-    res.send(Immunisation);
+// Returns information about all countries
+var getAllImmunisations = async (req, res) => {
+    try {
+        const allImmunisations = await Immunisation.find();
+        return res.send(allImmunisations); //return res.render('index', {items: allTasks});
+    } catch (err) {
+        return res.status(400).send("Database query failed");
+    }
 };
 
-const getImmunisationByID = (req, res) => {
-    const foundImmunisation = getElementById(req.params.id, Immunisation);
-    if (foundImmunisation) {
-        res.send(foundImmunisation);
-    } else {
-        res.status(404).send();
+// Returns information about a specify country
+var getImmunisationById = async (req, res) => {
+    const immunisationId = req.body.id;
+    try {
+        const immunisation = await Immunisation.findById(immunisationId);
+        return res.send(immunisation);
+    } catch (err) {
+        return res.status(400).send("Database query failed");
     }
 };
 
 module.exports = {
     getAllImmunisations,
-    getImmunisationByID
+    getImmunisationById
 };
