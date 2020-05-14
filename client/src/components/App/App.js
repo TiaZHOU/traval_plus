@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Nav from "../Nav/Nav";
 import Home from "../../pages/Home";
-import Tasks from "../../pages/Task";
+import Tasks from "../../pages/Tasks";
 
 export default function App() {
   return (
       <Router>
         <div className="App">
-          <Nav />
+            <Nav />
 
           {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
           <Switch>
@@ -23,8 +23,16 @@ export default function App() {
               </Route>
 
               {/* <Route path="/requirements/visa">
-              <Reqs />
-            </Route>*/}
+                  <Reqs />
+               </Route>
+
+               <Route path="/requirements/visa">
+                  <Reqs />
+               </Route>
+
+               <Route path="/requirements/visa">
+                  <Reqs />
+               </Route>*/}
 
           </Switch>
         </div>

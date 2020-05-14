@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require("body-parser");
 var logger = require('morgan');
 var cors = require('cors');
+const path = require('path');
 
 require('./models');
 
@@ -11,9 +12,9 @@ app.use(bodyParser.urlencoded({ extended: true })); // support parsing of urlenc
 app.use(bodyParser.json()); // use the body-parser middleware, which parses request bodies into req.body
 app.use(cors());
 
-app.use(express.static('views'));
+//app.use(express.static('views'));
 // Serve static files from the React app
-// app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 const alertRouter = require("./routes/alertRouter");
 const planRouter = require("./routes/planRouter");
