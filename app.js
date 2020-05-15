@@ -1,20 +1,17 @@
 var express = require("express");
-var app = express();
 var bodyParser = require("body-parser");
 var logger = require('morgan');
 var cors = require('cors');
 const path = require('path');
-
-require('./models');
+var app = express();
 
 app.use(logger('dev')); // dev tool
 app.use(bodyParser.urlencoded({ extended: true })); // support parsing of urlencoded bodies (e.g. for forms)
 app.use(bodyParser.json()); // use the body-parser middleware, which parses request bodies into req.body
+app.use(express.static(path.join(__dirname, 'client/build'))); // Serve static files from the React app
 app.use(cors());
 
-//app.use(express.static('views'));
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/build')));
+require('./models');
 
 const alertRouter = require("./routes/alertRouter");
 const planRouter = require("./routes/planRouter");
@@ -30,7 +27,7 @@ app.use("/forum", forumRouter);
 
 // GET home page
 app.get("/", (req, res) => {
-    res.sendFile(__dirname +'/index.html');
+    res.sendFile(path.join(__dirname + '/client/public', 'index.html'));
 });
 
 app.get('/alert_test',function (req, res) {

@@ -9,33 +9,34 @@ import Tasks from "../../pages/Tasks";
 export default function App() {
   return (
       <Router>
-        <div className="App">
-            <Nav />
+          <div className="App">
+              <Nav />
+              {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
+              <Switch>
+                  <Route exact path="/">
+                      <Home />
+                  </Route>
 
-          {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
-          <Switch>
-              <Route exact path="/">
-                  <Home />
-              </Route>
+                  <Route path="/tasks">
+                      <Tasks />
+                  </Route>
 
-              <Route path="/tasks">
-                  <Tasks />
-              </Route>
+                  <Route path="/requirement/visa">
+                      {/*<visa>
+                      <immunisation>*/}
+                  </Route>
 
-              {/* <Route path="/requirements/visa">
-                  <Reqs />
-               </Route>
+                  {/*
+                <Route path="/requirements/visa">
+                    <Reqs />
+                </Route>
 
-               <Route path="/requirements/visa">
-                  <Reqs />
-               </Route>
+                <Route path="/requirements/visa">
+                    <Reqs />
+                </Route>*/}
 
-               <Route path="/requirements/visa">
-                  <Reqs />
-               </Route>*/}
-
-          </Switch>
-        </div>
+              </Switch>
+          </div>
       </Router>
   );
 }

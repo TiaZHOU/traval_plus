@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
+    "dev": "nodemon app.js --exec babel-node --presets babel-preset-env",
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
@@ -22,6 +23,6 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.7.0",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.4"
   }
 }
