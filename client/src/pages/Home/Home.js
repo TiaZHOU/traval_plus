@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../../components/Footer/Footer";
 import './Home.css';
 
 export default function Home() {
@@ -9,10 +10,7 @@ export default function Home() {
                 <h4>Travelling made easy</h4>
                 <a className="button" href="/">Start now</a> {/* add href */}
             </section>
-            <footer>
-                <p>&copy; 2020 Travel+</p>
-                <p>INFO30005 project by Angelina Lim, Tianqi Zhou, Zhuo Lin Chai and Angela Theodora Nubary</p>
-            </footer>
+            <Footer />
         </div>
     );
 }

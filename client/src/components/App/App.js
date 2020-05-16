@@ -1,10 +1,11 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import './App.css';
 
 import Nav from "../Nav/Nav";
-import Home from "../../pages/Home";
-import Tasks from "../../pages/Tasks";
+import Home from "../../pages/Home/Home";
+import Tasks from "../../pages/Tasks/Tasks";
+import Visas /*immunisation*/ from "../../pages/Reqs/Reqs";
 
 export default function App() {
   return (
@@ -22,8 +23,8 @@ export default function App() {
                   </Route>
 
                   <Route path="/requirement/visa">
-                      {/*<visa>
-                      <immunisation>*/}
+                      <Visas />
+                      {/*<Immunisation />*/}
                   </Route>
 
                   {/*

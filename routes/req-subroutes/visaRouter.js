@@ -4,6 +4,6 @@ var visaController = require('../../controllers/visaController');
 
 visaRouter.get('/', visaController.getAllVisas); // get all visas
 
-visaRouter.get('/:id', visaController.getVisaById); // get visa by id
+visaRouter.get('/:country', visaController.getVisaByCountry); // get visa by country
 
 module.exports = visaRouter;

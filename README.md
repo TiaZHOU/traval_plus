@@ -21,7 +21,7 @@ Link to immunisation reqs: https://info30005travelplus.herokuapp.com/requirement
 | -------- |-------
 | get      | ```/requirement/visa/```
 | get      | ```/requirement/immunisation/```
-| get      | ```/requirement/visa/0001/```
+| get      | ```/requirement/visa/Mexico/```
 | get      | ```/requirement/immunisation/0001/```
 
 ## Core function 2: Discussion forum

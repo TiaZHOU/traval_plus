@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { useTasks /*addTask, updateTask, deleteTask*/ } from "./TasksAPI";
 import './Tasks.css';
-import { useTasks /*, updateAuthor, deleteAuthor*/ } from "../api";
 
 export default function Tasks() {
     const { loading, tasks, error } = useTasks();
@@ -11,7 +11,6 @@ export default function Tasks() {
         return <p>Something went wrong: {error.message}</p>;
     }
 
-    // Display a list of the authors
     return (
         <div>
             <div className="addTask">
@@ -56,7 +55,6 @@ export default function Tasks() {
 
 function Task(task) {
     const { _id, taskName, taskDate, taskDescription, isDone } = task;
-    const [showUpdate, setShowUpdate] = useState(false);
     return (
         <div className="info">
             <input type="checkbox" checked={isDone} value="blablabla" /> {taskName} {taskDate}
@@ -72,4 +70,4 @@ function Task(task) {
         //   first_name,
         //   last_name
         // });
-    } */
+    }*/

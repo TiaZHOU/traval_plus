@@ -5,17 +5,18 @@ var Visa = mongoose.model("visa");
 var getAllVisas = async (req, res) => {
     try {
         const allVisas = await Visa.find();
-        return res.send(allVisas); //return res.render('index', {items: allTasks});
+        return res.send(allVisas);
     } catch (err) {
         return res.status(400).send("Database query failed");
     }
 };
 
 // Returns information about a specify country
-var getVisaById = async (req, res) => {
-    const visaId = req.body.id;
+var getVisaByCountry = async (req, res) => {
+    const country = req.params.country;
+    console.log(country);
     try {
-        const visa = await Visa.findById(visaId);
+        const visa = await Visa.find({Destination : country} );
         return res.send(visa);
     } catch (err) {
         return res.status(400).send("Database query failed");
@@ -24,5 +25,5 @@ var getVisaById = async (req, res) => {
 
 module.exports = {
     getAllVisas,
-    getVisaById
+    getVisaByCountry
 };
