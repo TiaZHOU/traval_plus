@@ -36,3 +36,22 @@ export function useReqs() {
     }, []);
     return { loading, reqs, error };
 }
+
+export function useReqsByCountry() {
+    const [loading, setLoading] = useState(true);
+    const [reqs, setReqs] = useState([]);
+    const [error, setError] = useState(null);
+    useEffect(() => {
+        getReqsByCountry()
+            .then(reqs => {
+                setReqs(reqs);
+                setLoading(false);
+            })
+            .catch(e => {
+                console.log(e);
+                setError(e);
+                setLoading(false);
+            });
+    }, []);
+    return { loading, reqs, error };
+}

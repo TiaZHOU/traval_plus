@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useReqs, getReqsByCountry } from "../Reqs/ReqsAPI";
+import { useReqs, getReqsByCountry, useReqsByCountry } from "../Reqs/ReqsAPI";
 import CountryMenu from "../../components/CountryMenu/CountryMenu";
 import Footer from "../../components/Footer/Footer";
 //import "./Reqs.css";
@@ -15,8 +15,8 @@ export default function Visas() {
     }
     // Pass to child component CountryMenu
     function handleChange(e) {
+        e.preventDefault();
         setCountry(e.target.value);
-        getReqsByCountry(e.target.value);
     }
     return (
         <div>
@@ -27,10 +27,10 @@ export default function Visas() {
             </label>
             <CountryMenu country={country} onChange={handleChange} />
             <p className="text">Visa information:</p>
-            { /* DROPDOWN SELECTION = jsonResponse.Destination */}
+
             {reqs.map(req => (
-                <Visa key={req._id} {...req} />
-            ))}
+                <Visa key={req._id} {...req} />))
+            }
 
             <p className="text">Immunisation information:</p>
 
@@ -38,6 +38,13 @@ export default function Visas() {
         </div>
     );
 }
+
+//function Visa(visa) => {
+    //const {loading, reqs, error} = useReqsByCountry();
+    //getReqsByCountry(e.target.value));
+    //FIND COUNTRY VALUE
+//}
+// console.log(getReqsByCountry(setCountry));
 
 function Visa(visa) {
     const { destination, visa_requirement } = visa;
