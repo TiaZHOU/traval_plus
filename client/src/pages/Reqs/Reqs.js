@@ -25,11 +25,11 @@ export default function Visas() {
                     options={CountryMenu.options}
                     value={country}
                     onChange={event => console.log(event.value, event.label)} />
-            <p className="text">Visa information:</p>
+            <h3 className="text">Visa information:</h3>
             {reqs.map(req => (
                 <Visa key={req._id} {...req} />))
             }
-            <p className="text">Immunisation information:</p>
+            <h3 className="text">Immunisation information:</h3>
             <Footer />
         </div>
     );
@@ -40,8 +40,7 @@ function Visa(visa) {
     const { _id, id, visa_requirement } = visa;
     return (
         <div className="info">
-            {_id}<br/>
-            {id}: {visa_requirement}
+            <p> id:{_id} {id}: {visa_requirement} </p>
             <br/>
         </div>
     );
