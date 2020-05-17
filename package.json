@@ -8,6 +8,7 @@
     "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
+    "axois": "0.0.1-security",
     "cookie-parser": "~1.4.5",
     "cors": "^2.8.5",
     "debug": "~4.1.1",
@@ -16,7 +17,9 @@
     "http-errors": "~1.7.3",
     "mongoose": "^5.9.10",
     "morgan": "~1.10.0",
-    "pug": "2.0.4"
+    "pug": "2.0.4",
+    "react-select": "^3.1.0",
+    "react-select-country-list": "^2.1.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

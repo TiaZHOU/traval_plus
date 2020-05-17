@@ -11,10 +11,10 @@ export default function Nav() {
             </a>
             <ul className="menu">
                 <li><NavLink exact to="/">Home</NavLink></li>
-                <li><NavLink to="/requirement/visa">Travel Documents Finder</NavLink></li>
+                <li><NavLink to="/requirement/visa">Travel Document Finder</NavLink></li>
                 <li><NavLink to="/tasks">To Do List</NavLink></li>
-                <li><NavLink to="/alert_test">Travel Alert</NavLink></li>
-                <li><NavLink to="/forum/comment">Forum</NavLink></li>
+                <li><NavLink to="/alert">Travel Alert</NavLink></li>
+                <li><NavLink to="/forum">Forum</NavLink></li>
             </ul>
         </nav>
     );

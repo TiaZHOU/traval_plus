@@ -40,11 +40,12 @@ export default function Tasks() {
                         // }}
                     />
                     <br/>
+                    <br />
                     <input type="submit" value="Submit"/>
                 </form>
             </div>
             <div className="taskList">
-                <h2>Tasks List</h2>
+                <h3>Tasks List</h3>
                 {tasks.map(task => (
                     <Task key={task._id} {...task} />
                 ))}
@@ -57,7 +58,7 @@ function Task(task) {
     const { _id, taskName, taskDate, taskDescription, isDone } = task;
     return (
         <div className="info">
-            <input type="checkbox" checked={isDone} value="blablabla" /> {taskName} {taskDate}
+            <input type="checkbox" /> {taskName} {taskDate}
         </div>
     );
 }

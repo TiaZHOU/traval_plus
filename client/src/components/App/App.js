@@ -5,14 +5,13 @@ import './App.css';
 import Nav from "../Nav/Nav";
 import Home from "../../pages/Home/Home";
 import Tasks from "../../pages/Tasks/Tasks";
-import Visas /*immunisation*/ from "../../pages/Reqs/Reqs";
+import Visas from "../../pages/Reqs/Reqs";
 
 export default function App() {
   return (
       <Router>
           <div className="App">
               <Nav />
-              {/* A <Switch> looks through its children <Route>s and renders the first one that matches the current URL. */}
               <Switch>
                   <Route exact path="/">
                       <Home />
@@ -26,16 +25,12 @@ export default function App() {
                       <Visas />
                       {/*<Immunisation />*/}
                   </Route>
-
-                  {/*
-                <Route path="/requirements/visa">
-                    <Reqs />
+                  <Route path="/alert">
+                    <p>This page is under development.</p>
+                  </Route>
+                  <Route path="/forum">
+                      <p>This page is under development.</p>
                 </Route>
-
-                <Route path="/requirements/visa">
-                    <Reqs />
-                </Route>*/}
-
               </Switch>
           </div>
       </Router>
