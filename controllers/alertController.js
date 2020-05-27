@@ -1,58 +1,28 @@
-const alerts = require("../models/alerts.js");
+var mongoose = require("mongoose");
+var Alert = mongoose.model("alert");
 
-// function to handle a request to get all alerts
-const getAllAlerts = (req, res) => {
-    res.send(alerts); // return the list of alerts
-};
-
-// function to handle a request to a particular alert
-const getAlertByID = (req, res) => {
-    // search for alert in the database via ID
-    const alert = alerts.find(alert => alert.id === req.params.id);
-
-    if (alert) {
-        // send back the alert details
-        res.send(alert);
-    } else {
-        // you can decide what to return if alert is not found
-        // currently, an empty list will be returned
-        res.send([]);
+// Returns information about all countries
+var getAllAlerts = async (req, res) => {
+    try {
+        const allAlerts = await Alert.find();
+        return res.send(allAlerts); //return res.render('index', {items: allTasks});
+    } catch (err) {
+        return res.status(400).send("Database query failed");
     }
 };
 
-// function to handle request to add alert
-const addAlert = (req, res) => {
-    // extract info. from body
-    const alert = req.body;
-
-    // add alert to array
-    alerts.push(alert);
-    res.send(alerts);
-};
-
-// function to modify alert by ID
-const updateAlert = (req, res) => {
-    const new_alert = req.body;
-
-    // search for alert in the database via ID
-    const alert = alerts.find(alert => alert.id === req.params.id);
-    if (!alert) {
-        // cannot be found
-        return res.send([]);
+// Returns information about a specify country
+var getAlertById = async (req, res) => {
+    const alertId = req.body.country;
+    try {
+        const alert = await Alert.findOne(alertId);
+        return res.send(alert);
+    } catch (err) {
+        return res.status(400).send("Database query failed");
     }
-
-    // now merge new_alert into the original alert object
-    // it is assumed that user input is well-formed (a dangerous assumption)
-    Object.assign(alert, new_alert);
-
-    // return updated alert
-    res.send(alert);
 };
 
-// remember to export the functions
 module.exports = {
     getAllAlerts,
-    getAlertByID,
-    addAlert,
-    updateAlert
+    getAlertById
 };
