@@ -13,13 +13,23 @@ var getUserById = async (req, res) => {
 };
 
 // POST users
-var createUser = (req, res) => {
-    if(!req.body) { return res.send(400); }
-    const data = new users(req.body);
-    data.save();
-    res.redirect('/user');
-};
 
+var createUser = function(req,res){
+    var user = new users({
+        "username":req.body.authResp.userID,
+        "Name":req.body.first_name,
+        "Email":req.body.email,
+    });
+
+    user.save(function(err,newUser){
+        if(err){
+            console.log(err.errmsg);
+            res.status(400).send(err.errmsg);
+        }else{
+            res.send(newUser);
+        }
+    });
+};
 // DELETE users by username
 var deleteUser = (req, res) => {
     const userId = req.body.username;
