@@ -27,23 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="151f89c5-2551-4ac0-9810-dca6177080c1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-lite/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/caniuse-lite/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/contentsecuritypolicy2.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/contentsecuritypolicy2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/cryptography.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/cryptography.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/css-appearance.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/css-appearance.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/speech-recognition.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/speech-recognition.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/webusb.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/caniuse-lite/data/features/webusb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/caniuse-lite/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/caniuse-lite/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/electron-to-chromium/full-chromium-versions.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/electron-to-chromium/full-chromium-versions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/electron-to-chromium/full-versions.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/electron-to-chromium/full-versions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/electron-to-chromium/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/electron-to-chromium/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nodemon/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nodemon/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/nodemon/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/nodemon/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +99,7 @@
       <workItem from="1589895744927" duration="12000" />
       <workItem from="1590579495437" duration="5742000" />
       <workItem from="1590585728210" duration="256000" />
-      <workItem from="1590590052716" duration="1099000" />
+      <workItem from="1590590052716" duration="1968000" />
     </task>
     <servers />
   </component>
@@ -159,25 +143,25 @@
       <screen x="62" y="0" width="1858" height="1080" />
     </state>
     <state x="771" y="294" key="FileChooserDialogImpl/62.0.1858.1080@62.0.1858.1080" timestamp="1589273961557" />
-    <state width="857" height="274" key="GridCell.Tab.0.bottom" timestamp="1590591084893">
+    <state width="857" height="274" key="GridCell.Tab.0.bottom" timestamp="1590591981203">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="857" height="274" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1590591084893" />
+    <state width="857" height="274" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1590591981203" />
     <state width="1837" height="295" key="GridCell.Tab.0.bottom/62.0.1858.1080@62.0.1858.1080" timestamp="1589519630481" />
-    <state width="857" height="274" key="GridCell.Tab.0.center" timestamp="1590591084893">
+    <state width="857" height="274" key="GridCell.Tab.0.center" timestamp="1590591981203">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="857" height="274" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1590591084893" />
+    <state width="857" height="274" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1590591981203" />
     <state width="1837" height="295" key="GridCell.Tab.0.center/62.0.1858.1080@62.0.1858.1080" timestamp="1589519630481" />
-    <state width="857" height="274" key="GridCell.Tab.0.left" timestamp="1590591084893">
+    <state width="857" height="274" key="GridCell.Tab.0.left" timestamp="1590591981203">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="857" height="274" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1590591084893" />
+    <state width="857" height="274" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1590591981203" />
     <state width="1837" height="295" key="GridCell.Tab.0.left/62.0.1858.1080@62.0.1858.1080" timestamp="1589519630481" />
-    <state width="857" height="274" key="GridCell.Tab.0.right" timestamp="1590591084893">
+    <state width="857" height="274" key="GridCell.Tab.0.right" timestamp="1590591981203">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="857" height="274" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1590591084893" />
+    <state width="857" height="274" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1590591981203" />
     <state width="1837" height="295" key="GridCell.Tab.0.right/62.0.1858.1080@62.0.1858.1080" timestamp="1589519630481" />
     <state width="612" height="295" key="GridCell.Tab.1.bottom" timestamp="1586939341509">
       <screen x="62" y="0" width="1858" height="1080" />
