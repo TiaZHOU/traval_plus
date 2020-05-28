@@ -16,7 +16,7 @@ var getVisaByCountry = async (req, res) => {
     const country = req.params.country;
     console.log(country);
     try {
-        const visa = await Visa.find({Destination : country} );
+        const visa = await Visa.find({id : country} );
         return res.send(visa);
     } catch (err) {
         return res.status(400).send("Database query failed");

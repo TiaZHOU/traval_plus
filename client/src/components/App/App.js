@@ -16,14 +16,12 @@ export default function App() {
                   <Route exact path="/">
                       <Home />
                   </Route>
-
-                  <Route path="/tasks">
-                      <Tasks />
-                  </Route>
-
-                  <Route path="/requirement/visa">
+                  <Route path="/travel-docs">
                       <Visas />
                       {/*<Immunisation />*/}
+                  </Route>
+                  <Route path="/travel-tasks">
+                      <Tasks />
                   </Route>
                   <Route path="/alert">
                     <p>This page is under development.</p>

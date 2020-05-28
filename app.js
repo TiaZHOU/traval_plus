@@ -27,16 +27,10 @@ app.use("/forum", forumRouter);
 
 // GET home page
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + '/client/public', 'index.html'));
-});
-
-app.get('/alert_test',function (req, res) {
-    res.send('<H1>Alert test</H1>' +
-        '<a href="/plan">All Plans</a> <a href="/plan/1">Plan 1</a> <a href="/plan/2">Plan 2</a> ' +
-        '<a href="/alert">Alerts</a> <a href="/alert/1">Alert 1</a> <a href="/alert/2">Alert 2</a>')
+    res.sendFile(path.join(__dirname + '/client/public/index.html'));
 });
 
 // start app and listen for incoming requests on port
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log('Travel+ is running!');
 });
