@@ -72,28 +72,20 @@ Link: https://info30005travelplus.herokuapp.com/tasks/
 | put      | ```/tasks/1?taskName=Buy tickets&taskDate=20-03-2019&isDone=false/```
 | delete   | ```/tasks/1/```
 
-## Core function 4: Travel alerts and plans 
+## Core function 4: Travel alerts
 Once a traveling plan is made by user, the system will compare the plan with the alert list.
 The comparing will occur when the plan is updated in the database and an alert will pop-up when the travel plan clashes with alert data. (e.g. travel ban clash)
 
-Link to functionality: https://info30005travelplus.herokuapp.com/alert_test
+Link to functionality: https://info30005travelplus.herokuapp.com/alert
 
 #### Features:
-- Shows users travel alerts and their travel plans.
-- Shows travel alerts for specific country and specific travel plans.
-- Create travel plans.
-- Edit travel plans.
-- Allows users to delete plans.
+- Shows users travel alerts.
+- Shows travel alerts for specific country.
 
 | Method   | Url (example)
 | -------- |-------
 | get      | ```/alert/```
-| get      | ```/alert/1/```
-| get      | ```/plan/```
-| get      | ```/plan/1/```
-| post     | ```/plan/```
-| put      | ```/plan/1/```
-| delete   | ```/plan/1/```
+| get      | ```/alert/China/```
 
 ## To-do
 * [ ] Implement MongoDB and agree on data format and data constraints
