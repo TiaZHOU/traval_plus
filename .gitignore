@@ -1,0 +1,8 @@
+.idea/
+client/.DS_Store
+client/node_modules/
+client/src/.DS_Store
+client/src/pages/.DS_Store
+node_modules/
+.gitignore
+.DS_Store

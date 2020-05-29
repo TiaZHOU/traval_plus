@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import Select from 'react-select';
-//import { useReqs, getReqsByCountry, useReqsByCountry } from "../Reqs/ReqsAPI";
 import Footer from "../../components/Footer/Footer";
 import "./Reqs.css";
+
+//import { useReqs, getReqsByCountry, useReqsByCountry } from "../Reqs/ReqsAPI";
 
 const BASE_URL = "https://info30005travelplus.herokuapp.com";
 const CountryMenu = require("./CountryMenu");
@@ -33,6 +34,7 @@ export default class Visas extends Component {
                     onChange={(country) => this.handleChange(country)}
                 />
                 <p>You have selected {country.value}</p>
+                <Footer/>
             </div>
         );
     }
