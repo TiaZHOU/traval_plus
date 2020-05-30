@@ -1,0 +1,40 @@
+.jumbotron {
+    background-image: url("https://pics.freeartbackgrounds.com/Sky_with_Clouds_and_Airplane_Background-1482.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 600px;
+    color: #ffffff;
+    text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+.jumbotron h1 {
+    font-size: 25px;
+    font-weight: 200;
+    margin: 0;
+    color: #fff;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.option_btn {
+    position: fixed;
+    top:55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: 250px; */
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 20px 32px;
+    text-align: center;
+    font-size: 16px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+

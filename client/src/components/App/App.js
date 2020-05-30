@@ -6,6 +6,7 @@ import Nav from "../Nav/Nav";
 import Home from "../../pages/Home/Home";
 import Tasks from "../../pages/Tasks/Tasks";
 import Visas from "../../pages/Reqs/Reqs";
+import Alert from "../../pages/Alerts/Alert";
 
 export default function App() {
   return (
@@ -24,7 +25,7 @@ export default function App() {
                       <Tasks />
                   </Route>
                   <Route path="/alert">
-                    <p>This page is under development.</p>
+                    <Alert/>>
                   </Route>
                   <Route path="/forum">
                       <p>This page is under development.</p>
