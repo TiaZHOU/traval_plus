@@ -30,8 +30,16 @@ export default class Visas extends Component {
         return (
             <div>
                 <h2>Travel reqs</h2>
-
-                <p> Search for travel docs for 198 countries around the world! </p>
+                <h4> Search for travel docs for 198 countries around the world! </h4>
+                <h3>HEALTH RISKS DISCLAIMER</h3>
+                <p>The following information is intended as a guide only and is not intended to replace professional
+                    medical advice.</p>
+                <p>Travel+ cannot guarantee that the following information is complete, up-to-date, accurate or error
+                    free. You therefore view the following information at your own risk.</p>
+                <p>You should obtain specific travel health advice in relation to your individual needs and your
+                    intended travel, including advice on vaccinations, anti-malarial and other medications based on
+                    your past vaccination history, your present medical condition and your intended itinerary.</p>
+                <p>To continue you must accept this disclaimer by clicking the button below.</p>
 
                 <Select
                     className="CountryMenu"
@@ -41,23 +49,20 @@ export default class Visas extends Component {
                     onChange={(country) => this.handleChange(country)}
                 />
 
-                <ul className="visaReq">
+                <ul className="result">
                     {this.state.visas ?
                         this.state.visas.map(visa =>
-                        <li key={visa.id}> { visa.id } { visa.visa_requirement} </li>
+                        <li key={visa.id}> { visa.visa_requirement} </li>
                     ) : <div></div>
                     }
                 </ul>
 
-                <ul className="immunisationReq">
+                <ul className="result">
                     {this.state.immunisations ?
                         this.state.immunisations.map(immunisation =>
-                            <p key={immunisation.country}> { immunisation.country } { immunisation.immunisation_req} </p>
+                            <p key={immunisation.country}> { immunisation.immunisation_req} </p>
                         ) : <div></div>
                     }
-                    {/*{this.state.immunisations.map(immunisation =>*/}
-                    {/*    <li key={immunisation.id}>{ immunisation.id } { immunisation.immunisation_req }</li>*/}
-                    {/*)}*/}
                 </ul>
 
                 <Footer/>

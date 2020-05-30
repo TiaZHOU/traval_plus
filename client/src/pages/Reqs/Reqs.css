@@ -17,14 +17,9 @@
     padding: 0.5rem 3rem;
 }
 
-.visaReq {
+.result {
     list-style: none;
     padding: 0;
     width: 30%;
     margin: auto;
-}
-
-.visaReq li {
-    font-size: 1.3rem;
-    line-height: 2rem;
 }
