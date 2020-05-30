@@ -38,20 +38,23 @@ export default function App() {
     return (
         <div>
             <section className="jumbotron">
-                <div style={{ height: "50vh", width: "70%" }}>
+                <div>
+                    <h1>Before you trip</h1>
+                </div>
+                <div style={{ height: "40vh", width: "60%" }}>
                     <GoogleMapReact
                         distanceToMouse={distanceToMouse}
                         bootstrapURLKeys={{
                             key: "AIzaSyDm1LGRwK1dWiCNc77SrsjpK4U-xxFA408"
                         }}
-                        center={{ lat: -25.81, lng: 135.957 }}
+                        center={{ lat: -28.5, lng: 135.95 }}
                         defaultZoom={3}
                     >
-                        <MyMarker lat={-10.796} lng={111.96} text="Stay in Australia" />
+                        <MyMarker lat={-14.796} lng={111.96} text="Stay in Australia" />
                     </GoogleMapReact>
                 </div>
                 <div>
-                    <h2>Before you trip</h2>
+                    good
                 </div>
             </section>
             <Footer/>

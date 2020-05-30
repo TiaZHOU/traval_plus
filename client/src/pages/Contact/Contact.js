@@ -7,7 +7,7 @@ export default function Contact() {
     return (
         <div>
             <section className="jumbotron">
-                <h1>Please email to XXXXXX@gmail.com for us.</h1>
+                <h3>Please email to XXXXXX@gmail.com for us.</h3>
                 <a className="btn" role="button">
                     <p>
                         <NavLink to="/">Back to home</NavLink>

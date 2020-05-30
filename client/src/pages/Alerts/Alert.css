@@ -12,12 +12,11 @@
 }
 
 .jumbotron h1 {
-    font-size: 25px;
+    font-size: 45px;
     font-weight: 200;
     margin: 0;
     color: #fff;
-    position: fixed;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
