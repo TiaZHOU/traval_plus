@@ -15,11 +15,10 @@ export default function Nav() {
                 <img src={logo} className="logo" alt="logo" />
             </a>
             <ul className="menu">
-                <li><NavLink exact to="/">Home</NavLink></li>
-                <li><NavLink to="/travel-docs">Travel Document Finder</NavLink></li>
-                <li><NavLink to="/travel-tasks">To Do List</NavLink></li>
-                <li><NavLink to="/alert">Travel Alert</NavLink></li>
-                <li><NavLink to="/forum">Forum</NavLink></li>
+                <li><NavLink to="/travel-docs">Destination</NavLink></li>
+                <li><NavLink to="/forum">Community</NavLink></li>
+                <li><NavLink to="/travel-tasks">Planner</NavLink></li>
+                <li><NavLink to="/help">Helps</NavLink></li>
             </ul>
 
             <div>
@@ -31,7 +30,11 @@ export default function Nav() {
                         onFailure={responseGoogle}
                         cookiePolicy={"single_host_origin"}
                     />
-                    <GoogleLogout buttonText="Log out" />,
+                    <GoogleLogout
+                        clientId="224843828266-862i7muvqmc3cr9nb7sep6d47itlu70k.apps.googleusercontent.com"
+                        buttonText="Logout"
+                        onLogoutSuccess={responseGoogle}
+                    />,
                 </p>
             </div>
         </nav>

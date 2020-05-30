@@ -7,7 +7,7 @@ import Home from "../../pages/Home/Home";
 import Tasks from "../../pages/Tasks/Tasks";
 import Visas from "../../pages/Reqs/Reqs";
 import Alert from "../../pages/Alerts/Alert";
-
+import Help from "../../pages/Helps/Help";
 export default function App() {
   return (
       <Router>
@@ -30,6 +30,9 @@ export default function App() {
                   <Route path="/forum">
                       <p>This page is under development.</p>
                 </Route>
+                  <Route path="/help">
+                      <Help/>>
+                  </Route>
               </Switch>
           </div>
       </Router>

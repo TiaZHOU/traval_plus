@@ -8,7 +8,7 @@ export default function Home() {
             <section className="jumbotron">
                 <h2>Travel+</h2>
                 <h4>Travelling made easy</h4>
-                <a className="button" href="/requirement/visa">Start now</a>
+                <NavLink to="/alert">Start</NavLink>
             </section>
             <Footer />
         </div>
