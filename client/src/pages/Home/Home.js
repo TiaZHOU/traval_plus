@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import './Home.css';
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
     return (
