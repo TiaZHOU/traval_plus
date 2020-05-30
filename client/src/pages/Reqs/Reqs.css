@@ -5,7 +5,7 @@
 }
 
 .CountryMenu{
-    width: 16%;
+    width: 17%;
     margin: auto;
 }
 
@@ -17,15 +17,14 @@
     padding: 0.5rem 3rem;
 }
 
-.visaRes {
+.visaReq {
     list-style: none;
     padding: 0;
     width: 30%;
     margin: auto;
 }
 
-.visaRes li {
+.visaReq li {
     font-size: 1.3rem;
     line-height: 2rem;
-    border-bottom: 1px dotted #777;
 }

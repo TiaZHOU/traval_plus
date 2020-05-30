@@ -3,7 +3,6 @@ exports.options = [
     {value:"Albania", label:"🇦🇱 Albania"},
     {value:"Algeria", label:"🇩🇿 Algeria"},
     {value:"Andorra", label:"🇦🇩 Andorra"},
-    {value:"Anguilla", label:"🇦🇮 Anguilla"},
     {value:"Antigua and Barbuda", label:"🇦🇬 Antigua and Barbuda"},
     {value:"Argentina", label:"🇦🇷 Argentina"},
     {value:"Armenia", label:"🇦🇲 Armenia"},

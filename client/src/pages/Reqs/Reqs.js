@@ -16,12 +16,12 @@ export default class Visas extends Component {
         this.setState({ country });
         fetch(BASE_URL + `/requirement/visa/` + country.value)
             .then(res => res.json())
-            .then(visas => this.setState({visas}, () =>
-                console.log('Visas fetched...', visas)));
+            .then(visas => this.setState({visas}));
+
         fetch(BASE_URL + `/requirement/immunisation/` + country.value)
             .then(res => res.json())
-            .then(visas => this.setState({visas}, () =>
-                console.log('Immunisations fetched...', visas)));
+            .then(immunisations => this.setState({immunisations}, () =>
+                console.log('Immunisations fetched...', immunisations)));
     };
 
     render() {
@@ -29,6 +29,10 @@ export default class Visas extends Component {
 
         return (
             <div>
+                <h2>Travel reqs</h2>
+
+                <p> Search for travel docs for 198 countries around the world! </p>
+
                 <Select
                     className="CountryMenu"
                     options={CountryMenu.options}
@@ -36,36 +40,28 @@ export default class Visas extends Component {
                     placeholder="Select a country"
                     onChange={(country) => this.handleChange(country)}
                 />
-                <p>You have selected {country.value}</p>
+
+                <ul className="visaReq">
+                    {this.state.visas ?
+                        this.state.visas.map(visa =>
+                        <li key={visa.id}> { visa.id } { visa.visa_requirement} </li>
+                    ) : <div></div>
+                    }
+                </ul>
+
+                <ul className="immunisationReq">
+                    {this.state.immunisations ?
+                        this.state.immunisations.map(immunisation =>
+                            <p key={immunisation.country}> { immunisation.country } { immunisation.immunisation_req} </p>
+                        ) : <div></div>
+                    }
+                    {/*{this.state.immunisations.map(immunisation =>*/}
+                    {/*    <li key={immunisation.id}>{ immunisation.id } { immunisation.immunisation_req }</li>*/}
+                    {/*)}*/}
+                </ul>
+
                 <Footer/>
             </div>
         );
     }
 }
-
-/*    constructor() {
-        super();
-        this.state = {
-            visas: []
-        }
-    }
-    componentDidMount() {
-        fetch(BASE_URL + `/requirement/visa`)
-            .then(res => res.json())
-            .then(visas => this.setState({visas}, () =>
-                console.log('Visas fetched...', visas)));
-    }
-    render() {
-        return(
-            <div>
-                <h2>Travel visa reqs</h2>
-                <ul className="visaRes">
-                    {this.state.visas.map(visa =>
-                        <li key={visa.id}>{ visa.id } { visa.visa_requirement }</li>
-                    )}
-                </ul>
-                <Footer/>
-            </div>
-        )
-    }
-}*/
