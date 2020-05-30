@@ -45,7 +45,7 @@ export default function App() {
                             key: "AIzaSyDm1LGRwK1dWiCNc77SrsjpK4U-xxFA408"
                         }}
                         center={{ lat: -25.81, lng: 135.957 }}
-                        defaultZoom={13}
+                        defaultZoom={3}
                     >
                         <MyMarker lat={-10.796} lng={111.96} text="Stay in Australia" />
                     </GoogleMapReact>
