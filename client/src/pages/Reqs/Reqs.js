@@ -3,8 +3,6 @@ import Select from 'react-select';
 import Footer from "../../components/Footer/Footer";
 import "./Reqs.css";
 
-//import { useReqs, getReqsByCountry, useReqsByCountry } from "../Reqs/ReqsAPI";
-
 const BASE_URL = "https://info30005travelplus.herokuapp.com";
 const CountryMenu = require("./CountryMenu");
 
@@ -16,10 +14,14 @@ export default class Visas extends Component {
 
     handleChange = country => {
         this.setState({ country });
-        fetch(BASE_URL + `/requirement/visa/` + country.value) // FIX BACKEND
+        fetch(BASE_URL + `/requirement/visa/` + country.value)
             .then(res => res.json())
             .then(visas => this.setState({visas}, () =>
                 console.log('Visas fetched...', visas)));
+        fetch(BASE_URL + `/requirement/immunisation/` + country.value)
+            .then(res => res.json())
+            .then(visas => this.setState({visas}, () =>
+                console.log('Immunisations fetched...', visas)));
     };
 
     render() {
@@ -28,8 +30,9 @@ export default class Visas extends Component {
         return (
             <div>
                 <Select
+                    className="CountryMenu"
                     options={CountryMenu.options}
-                    value={country}
+                    value={ country }
                     placeholder="Select a country"
                     onChange={(country) => this.handleChange(country)}
                 />

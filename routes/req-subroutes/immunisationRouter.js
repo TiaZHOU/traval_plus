@@ -4,6 +4,6 @@ var immunisationController = require('../../controllers/immunisationController')
 
 immunisationRouter.get('/', immunisationController.getAllImmunisations);
 
-immunisationRouter.get('/:id', immunisationController.getImmunisationById);
+immunisationRouter.get('/:country', immunisationController.getImmunisationByCountry);
 
 module.exports = immunisationRouter;

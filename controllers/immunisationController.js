@@ -1,10 +1,6 @@
 var mongoose = require("mongoose");
 var Immunisation = mongoose.model("immunisation");
 
-
-
-
-
 // Returns information about all countries
 var getAllImmunisations = async (req, res) => {
     try {
@@ -16,10 +12,10 @@ var getAllImmunisations = async (req, res) => {
 };
 
 // Returns information about a specify country
-var getImmunisationById = async (req, res) => {
-    const immunisationId = req.body.id;
+var getImmunisationByCountry = async (req, res) => {
+    const country = req.params.country;
     try {
-        const immunisation = await Immunisation.findById(immunisationId);
+        const immunisation = await Immunisation.find({country: country});
         return res.send(immunisation);
     } catch (err) {
         return res.status(400).send("Database query failed");
@@ -28,5 +24,5 @@ var getImmunisationById = async (req, res) => {
 
 module.exports = {
     getAllImmunisations,
-    getImmunisationById
+    getImmunisationByCountry
 };

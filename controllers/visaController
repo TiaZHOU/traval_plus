@@ -14,7 +14,6 @@ var getAllVisas = async (req, res) => {
 // Returns information about a specify country
 var getVisaByCountry = async (req, res) => {
     const country = req.params.country;
-    console.log(country);
     try {
         const visa = await Visa.find({id : country} );
         return res.send(visa);
