@@ -8,6 +8,7 @@ import Tasks from "../../pages/Tasks/Tasks";
 import Visas from "../../pages/Reqs/Reqs";
 import Alert from "../../pages/Alerts/Alert";
 import Help from "../../pages/Helps/Help";
+import Contact from "../../pages/Contact/Contact";
 export default function App() {
   return (
       <Router>
@@ -32,6 +33,9 @@ export default function App() {
                 </Route>
                   <Route path="/help">
                       <Help/>>
+                  </Route>
+                  <Route path="/Contact">
+                      <Contact/>>
                   </Route>
               </Switch>
           </div>

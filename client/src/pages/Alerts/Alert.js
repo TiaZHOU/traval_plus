@@ -8,7 +8,7 @@ const MyMarker = ({ text }) => (
         style={{
             color: "white",
             background: "red",
-            padding: "10px 10px",
+            padding: "15px 15px",
             display: "inline-flex",
             textAlign: "center",
             alignItems: "center",
@@ -44,10 +44,10 @@ export default function App() {
                         bootstrapURLKeys={{
                             key: "AIzaSyDm1LGRwK1dWiCNc77SrsjpK4U-xxFA408"
                         }}
-                        center={{ lat: -37.81, lng: 144.957 }}
+                        center={{ lat: -25.81, lng: 135.957 }}
                         defaultZoom={13}
                     >
-                        <MyMarker lat={-37.796} lng={144.96} text="Dont go Unimelb" />
+                        <MyMarker lat={-10.796} lng={111.96} text="Stay in Australia" />
                     </GoogleMapReact>
                 </div>
                 <div>
