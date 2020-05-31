@@ -1,25 +1,88 @@
 .Reqs {
-    align-items: center;
-    font-family: sans-serif;
-    text-align: center;
+  align-items: center;
+  font-family: sans-serif;
+  text-align: center;
 }
 
 .CountryMenu{
-    width: 17%;
-    margin: auto;
+  width: 17%;
+  top: 10px;
+ 
+  margin: auto;
 }
 
 .Footer {
-    display: flex;
-    font-weight: 200;
-    font-size: 0.8rem;
-    justify-content: space-between;
-    padding: 0.5rem 3rem;
+  display: flex;
+  font-weight: 200;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  padding: 0.5rem 3rem;
 }
 
 .result {
-    list-style: none;
-    padding: 0;
-    width: 30%;
-    margin: auto;
+  list-style: none;
+  font-size: 18px;
+  padding: 15px;
+  width: 30%;
+  bottom: 20%;
+  margin: auto;
+}
+
+.result_immunisation_requirements {
+  list-style: none;
+  font-size: 20px;
+  padding: 0;
+  width: 30%;
+  margin: auto;
+}
+
+.result_immunisation_info {
+  list-style: none;
+  font-size: 20px;
+  padding: 0;
+  width: 30%;
+  margin: auto;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  bottom: 2%
+  color: black;
+}
+
+h3{
+  font-size: 15px;
+  font-weight: 700;
+  margin: 2.5%;
+  color: black;
+}
+
+h4 {
+  font-size: 10px;
+  font-weight: 500;
+  margin: 2%;
+  color: black;
+}
+
+h5 {
+  font-size: 10px;
+  font-weight: 500;
+  bottom: 10%;
+  margin: 1%;
+  color: black;
+
+}
+p {
+  font-size: 10px;
+  font-weight: 500;
+  bottom: 10%;
+  margin: 1%;
+  color: black;
+
+}
+ 
+Button{
+  padding: 10px;
+  margin: 5px;
 }
