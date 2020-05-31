@@ -29,5 +29,17 @@
     "babel-preset-env": "^1.7.0",
     "google-map-react": "^1.1.7",
     "nodemon": "^2.0.4"
-  }
+  },
+  "description": "Link: https://info30005travelplus.herokuapp.com/",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Angelinalim911/info30005_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Angelinalim911/info30005_project/issues"
+  },
+  "homepage": "https://github.com/Angelinalim911/info30005_project#readme"
 }
