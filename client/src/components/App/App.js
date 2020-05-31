@@ -23,8 +23,8 @@ export default function App() {
                   <Route path="/travel-tasks">
                       <Tasks />
                   </Route>
-                  <Route path="/alert">
-                    <Alert/>
+                  <Route path="/Alert">
+                    <Alert/>>
                   </Route>
                   <Route path="/forum">
                       <p>This page is under development.</p>
