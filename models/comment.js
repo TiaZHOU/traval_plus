@@ -1,21 +1,26 @@
+const mongoose = require("mongoose");
 
-const comments = [
-{
-  id: "0001",
-  post: "Places to visit in Japan?",
-  comment: "I would check out...",
-  first_name: "Jennifer",
-  last_name: "Robbins",
-  created_date: "2020-01-14"
-},
-{
-  id: "0002",
-  post: "Travelling tips for the USA",
-  comment: "Make sure you...",
-  first_name: "Evan",
-  last_name: "Hahn",
-  created_date: "2020-04-15"
-}
-];
+const CommentSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User"
+  },
+  userName: {
+    type: String
+  },
+  commentText: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  }
+});
 
-module.exports = comments;
+const Comment = mongoose.model("Comment", CommentSchema);
+
+module.exports = {
+  Comment: Comment,
+  CommentSchema: CommentSchema
+};
