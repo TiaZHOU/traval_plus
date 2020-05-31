@@ -80,9 +80,9 @@ Link to functionality: https://info30005travelplus.herokuapp.com/alert
 
 #### Features:
 - Shows users travel alerts.
-- Shows travel alerts for specific country.
+- Shows travel alerts for specific area.
 
 | Method   | Url (example)
 | -------- |-------
 | get      | ```/alert/```
-| get      | ```/alert/China/```
+| get      | ```/alert/North America/```
