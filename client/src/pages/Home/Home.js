@@ -9,7 +9,7 @@ export default function Home() {
             <section className="jumbotron">
                 <h2>Travel+</h2>
                 <h4>Travelling made easy</h4>
-                <NavLink to="/alert">Start</NavLink>
+                <NavLink to="/Alert">Start</NavLink>
             </section>
             <Footer />
         </div>

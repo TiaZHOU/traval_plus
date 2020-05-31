@@ -25,7 +25,7 @@ export default function App() {
                   <Route path="/travel-tasks">
                       <Tasks />
                   </Route>
-                  <Route path="/alert">
+                  <Route path="/Alert">
                     <Alert/>>
                   </Route>
                   <Route path="/forum">
