@@ -38,6 +38,7 @@ export default function App() {
     return (
         <div>
             <section className="jumbotron">
+                <h2>Travel Alert Map</h2>
                 <div style={{ height: "50vh", width: "70%" }}>
                     <GoogleMapReact
                         distanceToMouse={distanceToMouse}
@@ -49,9 +50,6 @@ export default function App() {
                     >
                         <MyMarker lat={-10.796} lng={111.96} text="Stay in Australia" />
                     </GoogleMapReact>
-                </div>
-                <div>
-                    <h2>Before you trip</h2>
                 </div>
             </section>
             <Footer/>

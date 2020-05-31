@@ -1,5 +1,5 @@
 nav {
-    font-family: proximaNova, "Helvetica Neue";
+    font-family: proximaNova, "Helvetica Neue", sans-serif;
     font-size: 13px;
     font-weight: 400;
     display: flex;
@@ -32,4 +32,12 @@ nav {
 .menu li a:hover {
     transition: all 0.3s ease 0s;
     color: #aed3fb;
+}
+
+.loginControls {
+    margin-left: auto;
+}
+
+.loginButton, .logoutButton{
+    margin: 0 10px;
 }

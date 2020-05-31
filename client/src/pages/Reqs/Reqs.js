@@ -6,7 +6,7 @@ import "./Reqs.css";
 const BASE_URL = "https://info30005travelplus.herokuapp.com";
 const CountryMenu = require("./CountryMenu");
 
-export default class Visas extends Component {
+export default class Reqs extends Component {
     constructor(props) {
         super(props);
         this.state = { country: "", showPopup: false };
@@ -57,7 +57,10 @@ export default class Visas extends Component {
                 <div className="VisaReq">
                     {this.state.visas ?
                         this.state.visas.map(visa =>
-                            <p key={visa.id}> {visa.visa_requirement} </p>
+                            <table key={visa.country}>
+                                <th>Visa requirement</th>
+                                <td key={visa.id}> {visa.visa_requirement} </td>
+                            </table>
                         ) : <div></div>
                     }
                 </div>
@@ -80,9 +83,9 @@ export default class Visas extends Component {
                         ) : <div></div>
                     }
                 </div>
-
-                <p>Source: blablabla</p>
-
+                <div className="source">
+                    Source: <a href={"https://www.smartraveller.gov.au/destinations"}>https://www.smartraveller.gov.au/destinations</a>
+                </div>
                 <Footer/>
             </div>
         );

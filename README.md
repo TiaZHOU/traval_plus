@@ -86,8 +86,3 @@ Link to functionality: https://info30005travelplus.herokuapp.com/alert
 | -------- |-------
 | get      | ```/alert/```
 | get      | ```/alert/China/```
-
-## To-do
-* [ ] Implement MongoDB and agree on data format and data constraints
-* [ ] Core function 5: Google Maps API (Linked to core function 4)
-* [ ] Reconsider if authentication functionality is needed
