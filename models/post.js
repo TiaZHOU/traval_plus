@@ -1,20 +1,35 @@
-const posts = [
-  {
-    id: "1",
-    title: "Travelling tips for the USA",
-    content: "Looking for any tips regarding the US.",
-    first_name: "Jennifer",
-    last_name: "Robbins",
-    date: "2020-04-10"
+const mongoose = require("mongoose");
+const CommentModel = require("./Comment");
+const PostSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
   },
-  {
-    id: "2",
-    title: "Places to visit in Japan?",
-    content: "Hey guys, looking for any cool tourist spots for the Tokyo region.",
-    first_name: "Evan",
-    last_name: "Hahn",
-    date: "2020-01-10"
+  content: {
+    type: String,
+    required: true
+  },
+  topic: {
+    type: String,
+    required: true
+  },
+  likes: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User"
+    }
+  ],
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User"
+  },
+  comments: [CommentModel.CommentSchema],
+  date: {
+    type: Date,
+    default: Date.now
   }
-];
+});
 
-module.exports = posts;
+const Post = mongoose.model("Post", PostSchema);
+
+module.exports = Post;
