@@ -12,7 +12,7 @@ export default function Tasks() {
     }
 
     return (
-        <div>
+        <div className="container">
             <div className="addTask">
                 <h3>Add New Task</h3>
                 <form>

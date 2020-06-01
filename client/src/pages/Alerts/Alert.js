@@ -32,7 +32,7 @@ function useAlets() {
 }
 
 function Alert(alert) {
-    const { _id, id, country, lat, lng,alert_info } = alert;
+    const { _id, country, lat, lng, alert_info } = alert;
     return (
         <MyMarker lat={lat} lng={lng} text={alert_info} />
     );
@@ -82,7 +82,7 @@ export default function App() {
                 <div>
                     <h1>Check alerts before you trip</h1>
                 </div>
-                <div style={{ height: "50vh", width: "60%" }}>
+                <div style={{ height: "60vh", width: "60%" }}>
                     <GoogleMapReact
                         distanceToMouse={distanceToMouse}
                         bootstrapURLKeys={{

@@ -17,7 +17,7 @@ exports.options = [
     {value:"Belize", label:"🇧🇿 Belize"},
     {value:"Benin", label:"🇧🇯 Benin"},
     {value:"Bhutan", label:"🇧🇹 Bhutan"},
-    {value:"Bosnia and Hezegovina", label:"🇧🇦 Bosnia and Hezegovina"},
+    {value:"Bosnia and Herzegovina", label:"🇧🇦 Bosnia and Herzegovina"},
     {value:"Bolovia", label:"🇧🇴 Bolovia"},
     {value:"Botswana", label:"🇧🇼 Botswana"},
     {value:"Brazil", label:"🇧🇷 Brazil"},

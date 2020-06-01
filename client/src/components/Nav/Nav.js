@@ -92,9 +92,7 @@ export default function Nav() {
                 <li><NavLink to="/forum">Forum</NavLink></li>
             </ul>
             <div>
-                <p>
-                   <LoginButton/>
-                </p>
+                <LoginButton className="LoginButton"/>
             </div>
         </nav>
 

@@ -6,11 +6,11 @@ import { NavLink } from "react-router-dom";
 export default function Home() {
     return (
         <div>
-            <section className="jumbotron">
+            <div className="jumbotron">
                 <h2>Travel+</h2>
                 <h4>Travelling made easy</h4>
-                <NavLink to="/Alert">Start</NavLink>
-            </section>
+                <NavLink to="/Alert" className="button">Start</NavLink>
+            </div>
             <Footer />
         </div>
     );

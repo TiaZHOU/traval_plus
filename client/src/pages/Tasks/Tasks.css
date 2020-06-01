@@ -1,8 +1,20 @@
-.addTask {
+.container {
+    display: grid;
+    padding-top: 5%;
+    grid-template-columns: 1fr 1fr;
+}
+
+.addTask, .taskList {
     text-align: center;
+}
+.addTask, .taskList {
+    background-color: #aed3fb;
+    min-height: 400px;
+    min-width: 55%;
+    justify-self: center;
+    box-shadow: 0 0 20px rgb(0,0,0,0.15);
 }
 
 .taskList {
-    margin-top: 10rem;
-    text-align: center;
+    background-color: #fbd1d5;
 }

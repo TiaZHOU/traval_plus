@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import './App.css';
 
 import Nav from "../Nav/Nav";
 import Home from "../../pages/Home/Home";
@@ -24,7 +23,7 @@ export default function App() {
                       <Tasks />
                   </Route>
                   <Route path="/Alert">
-                    <Alert/>>
+                    <Alert />
                   </Route>
                   <Route path="/forum">
                       <p>This page is under development.</p>

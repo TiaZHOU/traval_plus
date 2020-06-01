@@ -1,5 +1,5 @@
 .jumbotron {
-    background-image: url("backgound.jpg");
+    background-image: url("../../background.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -13,14 +13,13 @@
     flex-direction: column;
 }
 
-.jumbotron h2 {
-    font-size: 75px;
+.jumbotron h2, .jumbotron h4 {
+    color: #ffffff;
     text-shadow: 0.25px 0.25px 0.25px #000000;
-    margin: 0;
 }
 
-.jumbotron h4 {
-    text-shadow: 0.25px 0.25px 0.25px #000000;
+.jumbotron h2 {
+    font-size: 75px;
 }
 
 .button {
@@ -29,7 +28,6 @@
     border: solid 1px #fff;
     color: #fff;
     background-color: transparent;
-    cursor: pointer;
     text-decoration: none;
 }
 
@@ -38,9 +36,8 @@
     border-radius: 0.2rem;
     padding: 0.5rem 1rem 0.5rem 1rem;
     border: solid 1px #fff;
-    color: #aed3fb;
+    color: transparent;
     background-color: #fff;
-    cursor: pointer;
 }
 
 .Footer {

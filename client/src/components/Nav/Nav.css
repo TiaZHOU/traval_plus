@@ -4,7 +4,8 @@ nav {
     font-weight: 400;
     display: flex;
     align-items: center;
-    margin: 25px 150px;
+    padding: 25px 150px;
+    background-color: transparent;
 }
 
 .logo {
@@ -34,10 +35,6 @@ nav {
     color: #aed3fb;
 }
 
-.loginControls {
-    margin-left: auto;
-}
-
-.loginButton, .logoutButton{
-    margin: 0 10px;
+.LoginButton {
+    padding-left: 50px;
 }
