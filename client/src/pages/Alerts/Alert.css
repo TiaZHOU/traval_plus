@@ -1,5 +1,5 @@
 .alert_background {
-    background-image: url("");
+    background-image: url("../../background.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,16 +14,20 @@
 .alert_background h2 {
     font-size: 45px;
     font-weight: 200;
-    color: black;
+    color: floralwhite;
     margin: 15%;
 }
 .alert_background h3 {
     font-size: 20px;
     font-weight: 100;
-    color: black;
+    color: white;
     margin: 15%;
 }
-
+.alert_background h4 {
+    font-size: 20px;
+    font-weight: 50;
+    color: black;
+}
 .option_btn {
     position: fixed;
     top:55%;

@@ -98,6 +98,7 @@ export default function App() {
                     </GoogleMapReact>
                 </div>
             </section>
+            <h4>Due to COVID-19, many countries have since closed their borders for travellers to enter in order to decrese the spread of the virus. </h4>
             <Footer/>
         </div>
     );
