@@ -1,3 +1,20 @@
+.task_background {
+    background-image: url("../../background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    height: 600px;
+    color: black;
+    text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+.task_background h1 {
+    color: white;
+    padding-top: 25px;
+    margin:0%;
+}
+
 .container {
     display: grid;
     padding-top: 5%;

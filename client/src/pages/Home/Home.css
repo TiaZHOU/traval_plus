@@ -16,12 +16,8 @@
 .jumbotron h2, .jumbotron h4 {
     color: #ffffff;
     text-shadow: 0.25px 0.25px 0.25px #000000;
-}
 
-.jumbotron h2 {
-    font-size: 75px;
 }
-
 
 .logowhite {
     max-width: 300px;
