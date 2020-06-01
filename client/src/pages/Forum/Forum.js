@@ -6,10 +6,12 @@ import EditPost from "../../components/post/EditPost";
 import { Container } from "reactstrap";
 // import Profile from "./components/user/Profile";
 import ProtectedRoute from "../../components/auth/ProtectedRoute";
+import { Provider } from "react-redux";
+import { BrowserRouter } from "react-router-dom";
+import store from "../../store";
 
 import "./Forum.css";
 
-import store from "../../store";
 import { loadUser } from "../../actions/authActions";
 import AppNavbar from "../../components/layout/AppNavbar";
 import Home from "../../components/layout/Home";
@@ -19,6 +21,7 @@ export default function Forum() {
     store.dispatch(loadUser());
   });
   return (
+     <Provider store={store}>
     <div>
       <AppNavbar />
       <Container>
@@ -34,5 +37,6 @@ export default function Forum() {
         </Switch>
       </Container>
     </div>
+    </Provider>
   );
 }

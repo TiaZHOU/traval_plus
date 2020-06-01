@@ -1,5 +1,5 @@
-.jumbotron {
-    /*background-image: url("");*/
+.alert_background {
+    background-image: url("../../background.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -7,20 +7,27 @@
     display: flex;
     align-items: center;
     height: 600px;
-    color: #ffffff;
+    color: black;
     text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 
-.jumbotron h1 {
+.alert_background h2 {
     font-size: 45px;
     font-weight: 200;
-    margin: 0;
-    color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    color: floralwhite;
+    margin: 15%;
 }
-
+.alert_background h3 {
+    font-size: 20px;
+    font-weight: 100;
+    color: white;
+    margin: 15%;
+}
+.alert_background h4 {
+    font-size: 20px;
+    font-weight: 50;
+    color: black;
+}
 .option_btn {
     position: fixed;
     top:55%;
@@ -36,4 +43,3 @@
     opacity: 0.6;
     cursor: pointer;
 }
-
