@@ -78,9 +78,10 @@ export default function App() {
     }
     return (
         <div>
-            <section className="jumbotron">
+            <section className="alert_background">
                 <div>
-                    <h1>Check alerts before you trip</h1>
+                    <h2>Check Alerts Before Your Trip!</h2>
+                    <h3>Use the map to see more live information about each destination</h3>
                 </div>
                 <div style={{ height: "60vh", width: "60%" }}>
                     <GoogleMapReact
@@ -95,9 +96,6 @@ export default function App() {
                             <Alert key={alert._id} {...alert} />
                         ))}
                     </GoogleMapReact>
-                </div>
-                <div>
-                    <h4>Pan the map to check other place </h4>
                 </div>
             </section>
             <Footer/>

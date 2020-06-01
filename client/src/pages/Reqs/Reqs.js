@@ -32,7 +32,7 @@ export default class Reqs extends Component {
 
         return (
             <div className="page">
-                <h2>Travel reqs</h2>
+                <h2>Travel Requirements</h2>
                 <h4>Search for travel docs for 198 countries around the world!</h4>
                 <h3>HEALTH RISKS DISCLAIMER</h3>
                 <p>The following information is intended as a guide only and is not intended to replace professional
