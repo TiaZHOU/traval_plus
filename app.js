@@ -25,7 +25,7 @@ const taskRouter = require("./routes/taskRouter");
 const requirementRouter = require("./routes/requirementRouter.js");
 const forumRouter = require('./routes/api.js');
 
-app.use('/api/forum', forumRouter);
+app.use('/forum', forumRouter);
 app.use("/alert", alertRouter);
 app.use("/tasks", taskRouter);
 app.use("/requirement", requirementRouter);
