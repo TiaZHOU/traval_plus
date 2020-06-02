@@ -229,7 +229,7 @@ export default class App extends Component {
                   </span>
                 ) : (
                   <span>
-                    Want to join? <Link to=BASE_URL + "/forum/register">sign up</Link> in
+                    Want to join? <Link to="/forum/register">sign up</Link> in
                     seconds.
                   </span>
                 )}
