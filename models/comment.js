@@ -1,20 +1,39 @@
-const comments = [
-  {
-    id: "1",
-    post: "Places to visit in Japan?",
-    comment: "I would check out...",
-    first_name: "Jennifer",
-    last_name: "Robbins",
-    date: "2020-01-14"
+const mongoose = require('mongoose');
+const commentSchema = new mongoose.Schema({
+  comment: {
+    type: String
   },
-  {
-    id: "2",
-    post: "Travelling tips for the USA",
-    comment: "Make sure you...",
-    first_name: "Evan",
-    last_name: "Hahn",
-    date: "2020-04-15"
-  }
-];
+  created: {
+    type: Date,
+    default: Date.now()
+  },
+  author: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User'
+  },
+  post: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Post'
+  },
+  username: {
+    type: String
+  },
+  score: {
+    type: Number,
+    default: 1
+  },
+  upvotedby: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User'
+    }
+  ],
+  downvotedby: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User'
+    }
+  ]
+});
 
-module.exports = comments;
+module.exports = mongoose.model('Comment', commentSchema);

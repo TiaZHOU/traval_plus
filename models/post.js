@@ -1,20 +1,42 @@
-const posts = [
-  {
-    id: "1",
-    title: "Travelling tips for the USA",
-    content: "Looking for any tips regarding the US.",
-    first_name: "Jennifer",
-    last_name: "Robbins",
-    date: "2020-04-10"
+const mongoose = require('mongoose');
+const postSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true
   },
-  {
-    id: "2",
-    title: "Places to visit in Japan?",
-    content: "Hey guys, looking for any cool tourist spots for the Tokyo region.",
-    first_name: "Evan",
-    last_name: "Hahn",
-    date: "2020-01-10"
-  }
-];
+  text: {
+    type: String
+  },
+  link: {
+    type: String
+  },
+  created: {
+    type: Date,
+    default: Date.now()
+  },
+  author: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User'
+  },
+  username: {
+    type: String
+  },
+  score: {
+    type: Number,
+    default: 1
+  },
+  upvotedby: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User'
+    }
+  ],
+  downvotedby: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User'
+    }
+  ]
+});
 
-module.exports = posts;
+module.exports = mongoose.model('Post', postSchema);

@@ -15,7 +15,18 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-select": "^3.1.0",
+<<<<<<< HEAD
     "recompose": "^0.30.0"
+=======
+    "recompose": "^0.30.0",
+    "dangerously-set-inner-html": "^2.0.1",
+    "gh-pages": "^2.0.1",
+    "moment": "^2.24.0",
+    "react-adsense": "^0.0.6",
+    "react-dangerous-html": "^1.0.0",
+    "react-markdown": "^4.0.6",
+    "react-router": "^4.3.1"
+>>>>>>> Forum
   },
   "scripts": {
     "start": "react-scripts start",

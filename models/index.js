@@ -27,4 +27,6 @@ require('./visa');
 require('./immunisation');
 require('./alerts')
 require('./user')
-
+require("./comment");
+require("./post");
+require("./user");
