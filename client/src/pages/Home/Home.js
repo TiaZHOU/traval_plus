@@ -12,7 +12,7 @@ export default function Home() {
                 <img src={logowhite} className="logowhite" alt="logowhite" />
                 </h2>
                 <h4>Travelling made easy</h4>
-                <NavLink to="/Alert" className="button">Start</NavLink>
+                <NavLink to="/map" className="button">Start</NavLink>
             </div>
             <Footer />
         </div>
