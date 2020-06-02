@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 import Markdown from 'react-markdown';
 
+const BASE_URL = "https://info30005travelplus.herokuapp.com";
+
 export default class Comment extends Component {
   upvote = () => {
     if (this.props.user._id) {
-      fetch(`/api/forum/comment/${this.props.comment._id}/upvote`, {
+      fetch(BASE_URL + `/forum/comment/${this.props.comment._id}/upvote`, {
         method: 'PUT',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -33,7 +35,7 @@ export default class Comment extends Component {
   };
   downvote = () => {
     if (this.props.user._id) {
-      fetch(`/api/forum/comment/${this.props.comment._id}/downvote`, {
+      fetch(BASE_URL + `/forum/comment/${this.props.comment._id}/downvote`, {
         method: 'PUT',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -60,7 +62,7 @@ export default class Comment extends Component {
   };
 
   deleteComment = () => {
-    fetch(`/api/forum/post/${this.props.comment._id}/comment`, {
+    fetch(BASE_URL + `/forum/post/${this.props.comment._id}/comment`, {
       method: 'DELETE',
       headers: {
         Authorization: 'Bearer ' + this.props.token,

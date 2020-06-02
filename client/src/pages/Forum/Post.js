@@ -2,11 +2,11 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import Markdown from 'react-markdown';
-
+const BASE_URL = "https://info30005travelplus.herokuapp.com";
 export default class Post extends Component {
   upvote = () => {
     if (this.props.user._id) {
-      fetch(`/api/forum/post/${this.props.post._id}/upvote`, {
+      fetch(BASE_URL + `/forum/post/${this.props.post._id}/upvote`, {
         method: 'PUT',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -40,7 +40,7 @@ export default class Post extends Component {
   };
   downvote = () => {
     if (this.props.user._id) {
-      fetch(`/api/forum/post/${this.props.post._id}/downvote`, {
+      fetch(BASE_URL + `/forum/post/${this.props.post._id}/downvote`, {
         method: 'PUT',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -74,7 +74,7 @@ export default class Post extends Component {
 
   deletePost = (user, id) => {
     if (this.props.user._id) {
-      fetch(`/api/forum/post/${id}/delete`, {
+      fetch(BASE_URL + `/forum/post/${id}/delete`, {
         method: 'DELETE',
         headers: {
           Authorization: 'Bearer ' + this.props.token,

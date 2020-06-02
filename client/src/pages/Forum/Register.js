@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+const BASE_URL = "https://info30005travelplus.herokuapp.com";
 
 export default class Register extends Component {
   state = {
@@ -23,7 +24,7 @@ export default class Register extends Component {
 
     // TODO Validate here
     if (user.username && user.password) {
-      fetch('/api/forum/register', {
+      fetch(BASE_URL + '/forum/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -8,7 +8,7 @@ import Admin from './Admin';
 import { BrowserRouter, Route, Link, Redirect } from 'react-router-dom';
 import UserPage from './UserPage';
 import InnerHTML from 'react-dangerous-html';
-
+const BASE_URL = "https://info30005travelplus.herokuapp.com";
 function Layout(props) {
   return <div id="layout">{props.children}</div>;
 }
@@ -29,7 +29,7 @@ export default class App extends Component {
 
   getNextPosts = () => {
     let posts = [...this.state.posts];
-    fetch(`/api/forum/posts/50/${this.state.currentPage}`)
+    fetch(BASE_URL + `/forum/posts/50/${this.state.currentPage}`)
       .then((res) => res.json())
       .then((res) => {
         if (res.posts.length) {
@@ -70,7 +70,7 @@ export default class App extends Component {
     user.username = event.target.username.value;
     user.password = event.target.password.value;
     if (user.username && user.password) {
-      fetch('/api/forum/login', {
+      fetch(BASE_URL + '/forum/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -164,7 +164,7 @@ export default class App extends Component {
       });
     }
 
-    fetch('/api/forum/posts/all')
+    fetch(BASE_URL + '/forum/posts/all')
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {
@@ -182,7 +182,7 @@ export default class App extends Component {
         this.setState({ loading: false });
       });
 
-    fetch('/api/forum/app/content')
+    fetch(BASE_URL + '/forum/app/content')
       .then((res) => res.json())
       .then((json) => {
         if (json.success) {
@@ -201,7 +201,7 @@ export default class App extends Component {
             <nav className="top-menu" />
             <div className="main-header">
               <Link to="/forum" id="header-img" className="default-header">
-                reddit clone
+                forum home
               </Link>
               <div className="tab-menu" />
 
@@ -229,7 +229,7 @@ export default class App extends Component {
                   </span>
                 ) : (
                   <span>
-                    Want to join? <Link to="/forum/register">sign up</Link> in
+                    Want to join? <Link to=BASE_URL + "/forum/register">sign up</Link> in
                     seconds.
                   </span>
                 )}

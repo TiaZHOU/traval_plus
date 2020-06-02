@@ -3,7 +3,7 @@ import Post from './Post';
 import Comment from './Comment';
 import Loading from '../../img/loading.gif';
 import InnerHTML from 'react-dangerous-html';
-
+const BASE_URL = "https://info30005travelplus.herokuapp.com";
 export default class Single extends Component {
   state = {
     post: null,
@@ -53,7 +53,7 @@ export default class Single extends Component {
         created: Date.now()
       };
 
-      fetch(`/api/forum/post/${postId}/comment`, {
+      fetch(BASE_URL + `/forum/post/${postId}/comment`, {
         method: 'POST',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -85,7 +85,7 @@ export default class Single extends Component {
 
   componentDidMount() {
     let postId = this.props.match.params.id;
-    fetch(`/api/forum/post/${postId}/single`)
+    fetch(BASE_URL + `/forum/post/${postId}/single`)
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {

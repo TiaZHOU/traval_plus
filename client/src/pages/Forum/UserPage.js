@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Post from './Post';
-
+const BASE_URL = "https://info30005travelplus.herokuapp.com";
 export default class UserPage extends Component {
   state = {
     posts: [],
@@ -9,7 +9,7 @@ export default class UserPage extends Component {
 
   adminAction = (type) => {
     if (this.props.user._id) {
-      fetch(`/api/forum/user/${this.props.match.params.username}/action/${type}`, {
+      fetch(BASE_URL + `/forum/user/${this.props.match.params.username}/action/${type}`, {
         method: 'POST',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -42,7 +42,7 @@ export default class UserPage extends Component {
           'Are you sure you want to delete this user and all the posts created by them?'
         )
       ) {
-        fetch(`/api/forum/user/${this.props.match.params.username}`, {
+        fetch(BASE_URL + `/forum/user/${this.props.match.params.username}`, {
           method: 'DELETE',
           headers: {
             Authorization: 'Bearer ' + this.props.token,
@@ -54,7 +54,7 @@ export default class UserPage extends Component {
           .then((res) => {
             if (res.success) {
               // Deleted successfully
-              this.props.history.push(`/forum`);
+              this.props.history.push(BASE_URL + `/forum`);
               console.log(res);
             } else {
               console.log(res);
@@ -87,7 +87,7 @@ export default class UserPage extends Component {
   };
 
   componentDidMount() {
-    fetch(`/api/forum/user/${this.props.match.params.username}/posts`)
+    fetch(BASE_URL + `/forum/user/${this.props.match.params.username}/posts`)
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {

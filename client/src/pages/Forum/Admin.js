@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+const BASE_URL = "https://info30005travelplus.herokuapp.com";
+
 export default class Admin extends Component {
   state = {
     loading: ''
@@ -16,7 +18,7 @@ export default class Admin extends Component {
     updates.extraCode = event.target.extraCode.value;
 
     this.setState({ loading: 'Saving...' });
-    fetch(`/api/forum/app/update`, {
+    fetch(BASE_URL + `/forum/app/update`, {
       method: 'PUT',
       headers: {
         // TODO

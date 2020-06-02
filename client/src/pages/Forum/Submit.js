@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+const BASE_URL = "https://info30005travelplus.herokuapp.com";
 export default class Submit extends Component {
   state = {
     submit: false,
@@ -17,7 +17,7 @@ export default class Submit extends Component {
     post.username = this.props.user.username;
 
     if (post.title) {
-      fetch('/api/forum/posts/new', {
+      fetch(BASE_URL + '/forum/posts/new', {
         method: 'POST',
         headers: {
           Authorization: 'Bearer ' + this.props.token,
@@ -30,7 +30,7 @@ export default class Submit extends Component {
           if (res.success) {
             // Posted successfully!
             this.props.submitPost(res);
-            this.props.history.push(`/forum/post/${res.post._id}`);
+            this.props.history.push(BASE_URL + `/forum/post/${res.post._id}`);
           } else if (res.tokenExpired) {
             this.props.tokenExpired();
           } else {
