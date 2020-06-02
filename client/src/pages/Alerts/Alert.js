@@ -65,9 +65,16 @@ export default function App() {
     return (
         <div>
             <section className="alert_background">
-                <div>
-                    <h2>Check Alerts Before Your Trip!</h2>
-                    <h3>Use the map to see more live information about each destination</h3>
+                <div className="info">
+                    <h2>Live Travel Alert Map</h2>
+                    <h4>Pan around the map to see live travel alerts and plan your trip accordingly.</h4>
+                    <h4>Due to the current COVID-19 pandemic, most countries have closed their borders in order to decrease the spread of the virus.
+                        You can't leave Australia unless you seek an <a href="https://covid19.homeaffairs.gov.au/leaving-australia">exemption from Home Affairs</a>.
+                    </h4>
+                    <h5>
+                        You should apply for an exemption at least 48 hours before, but not more than 3 months before your planned travel.
+                    </h5>
+                    <p>Source: <a href="https://www.smartraveller.gov.au/destinations">https://www.smartraveller.gov.au/destinations</a></p>
                 </div>
                 <div className="map">
                     <GoogleMapReact
@@ -84,7 +91,6 @@ export default function App() {
                     </GoogleMapReact>
                 </div>
             </section>
-            <h4>Due to COVID-19, many countries have since closed their borders for travellers to enter in order to decrese the spread of the virus. </h4>
             <Footer/>
         </div>
     );

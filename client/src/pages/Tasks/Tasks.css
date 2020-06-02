@@ -2,6 +2,8 @@
     display: grid;
     padding-top: 5%;
     grid-template-columns: 1fr 1fr;
+    background-color: #eeeeee;
+    min-height: 80vh;
 }
 
 .addTask, .taskList {

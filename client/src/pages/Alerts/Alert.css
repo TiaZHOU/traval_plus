@@ -11,22 +11,21 @@
     text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 
-.alert_background h2 {
-    font-size: 45px;
+.info {
+    max-width: 35%;
+    padding: 0 4%;
+}
+
+h2 {
+    font-size: 35px;
     font-weight: 200;
     color: floralwhite;
-    margin: 15%;
 }
-.alert_background h3 {
-    font-size: 20px;
-    font-weight: 100;
-    color: white;
-    margin: 15%;
-}
-.alert_background h4 {
-    font-size: 20px;
+
+h4 {
+    font-size: 15px;
     font-weight: 50;
-    color: black;
+    color: white;
 }
 
 .map {
@@ -39,9 +38,10 @@
     padding: 10px 20px;
     display: inline-flex;
     min-width: 100px;
-    background-color: rgba(255, 0, 0, 0.4);
+    background-color: rgba(255, 0, 0, 0.6);
     color: #ffffff;
     border-radius: 0.3rem;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     border: solid 1px rgba(255, 0, 0, 0.8);
+    text-shadow: 2px 2px 4px #000000;
 }
