@@ -1,31 +1,50 @@
-const mongoose = require("mongoose");
-
-const UserSchema = new mongoose.Schema({
-  name: {
+const mongoose = require('mongoose');
+const userSchema = new mongoose.Schema({
+  username: {
     type: String,
+    unique: true,
     required: true
   },
   email: {
-    type: String,
-    required: true,
-    unique: true
+    type: String
   },
-  password: {
-    type: String,
-    required: true
+  hash: {
+    type: String
   },
-  posts: [
+  salt: {
+    type: String
+  },
+  banned: {
+    type: Boolean,
+    default: false
+  },
+  shadowed: {
+    type: Boolean,
+    default: false
+  },
+  isAdmin: {
+    type: Boolean,
+    default: false
+  },
+  created: {
+    type: Date,
+    default: Date.now()
+  },
+  name: {
+    type: String
+  },
+  upvotes: [
     {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Post"
+      type: mongoose.Schema.ObjectId,
+      ref: 'Post'
     }
   ],
-  register_date: {
-    type: Date,
-    default: Date.now
-  }
+  downvotes: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'Post'
+    }
+  ]
 });
 
-const User = mongoose.model("User", UserSchema);
-
-module.exports = User;
+module.exports = mongoose.model('User', userSchema);

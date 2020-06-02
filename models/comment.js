@@ -1,26 +1,39 @@
-const mongoose = require("mongoose");
-
-const CommentSchema = new mongoose.Schema({
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User"
-  },
-  userName: {
+const mongoose = require('mongoose');
+const commentSchema = new mongoose.Schema({
+  comment: {
     type: String
   },
-  commentText: {
-    type: String,
-    required: true
-  },
-  date: {
+  created: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now()
+  },
+  author: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User'
+  },
+  post: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'Post'
+  },
+  username: {
+    type: String
+  },
+  score: {
+    type: Number,
+    default: 1
+  },
+  upvotedby: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User'
+    }
+  ],
+  downvotedby: [
+    {
+      type: mongoose.Schema.ObjectId,
+      ref: 'User'
+    }
+  ]
 });
 
-const Comment = mongoose.model("Comment", CommentSchema);
-
-module.exports = {
-  Comment: Comment,
-  CommentSchema: CommentSchema
-};
+module.exports = mongoose.model('Comment', commentSchema);

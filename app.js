@@ -1,18 +1,23 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+const config = require('./config');
+const routes = require('./routes/api');
 var logger = require('morgan');
 var cors = require('cors');
-const config = require("config");
 const path = require('path');
+const expressValidator = require('express-validator');
+const helmet = require('helmet');
 var app = express();
 
 //test by demo
 
+app.use(helmet());
 app.use(logger('dev')); // dev tool
 app.use(bodyParser.urlencoded({ extended: true })); // support parsing of urlencoded bodies (e.g. for forms)
 app.use(bodyParser.json()); // use the body-parser middleware, which parses request bodies into req.body
 app.use(express.static(path.join(__dirname, 'client/build'))); // Serve static files from the React app
 app.use(cors());
+app.use(expressValidator());
 
 require('./models');
 
@@ -20,18 +25,10 @@ const alertRouter = require("./routes/alertRouter");
 const taskRouter = require("./routes/taskRouter");
 const requirementRouter = require("./routes/requirementRouter.js");
 
+app.use('/api/forum', routes);
 app.use("/alert", alertRouter);
 app.use("/tasks", taskRouter);
 app.use("/requirement", requirementRouter);
-
-//forum
-app.use(express.json());
-
-app.use("/api/forum/users", require("./routes/api/users"));
-app.use("/api/forum/auth", require("./routes/api/auth"));
-app.use("/api/forum/posts", require("./routes/api/posts"));
-app.use("/api/forum/posts/comments", require("./routes/api/comments"));
-app.use("/api/forum/posts/likes", require("./routes/api/likes"));
 
 // GET home page
 app.get("/", (req, res) => {
