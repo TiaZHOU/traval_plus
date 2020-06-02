@@ -71,3 +71,18 @@ table tr:last-of-type {
   justify-content: space-between;
   padding: 0.5rem 3rem;
 }
+
+.jumbotron {
+  background-image: url("../../background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 650px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}

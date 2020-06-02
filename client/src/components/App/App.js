@@ -6,6 +6,7 @@ import Home from "../../pages/Home/Home";
 import Tasks from "../../pages/Tasks/Tasks";
 import Reqs from "../../pages/Reqs/Reqs";
 import Alert from "../../pages/Alerts/Alert";
+import Forum from "../../pages/Forum/App";
 
 export default function App() {
   return (
@@ -26,7 +27,7 @@ export default function App() {
                     <Alert />
                   </Route>
                   <Route path="/forum">
-                      <p>This page is under development.</p>
+                      <Forum />
                 </Route>
               </Switch>
           </div>

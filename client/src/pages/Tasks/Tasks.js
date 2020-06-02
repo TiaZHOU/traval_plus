@@ -23,6 +23,7 @@ export default function Tasks() {
                         //   setId(event.target.value);
                         // }}
                     />
+                    <br />
                     <label htmlFor="task_date">Task date:</label>
                     <input type="date" name="task_date"
                         // value={first_name}
@@ -30,13 +31,15 @@ export default function Tasks() {
                         //   setFirstName(event.target.value);
                         // }}
                     />
-                    <label htmlFor="task_time">Task date:</label>
+                    <br />
+                    <label htmlFor="task_time">Task time:</label>
                     <input type="time" name="task_time"
                         // value={first_name}
                         // onChange={event => {
                         //   setFirstName(event.target.value);
                         // }}
                     />
+                    <br />
                     <label htmlFor="task_description">Task description:</label>
                     <input type="text" placeholder="Task description (Optional)" name="task_description"
                         // value={first_name}
@@ -44,6 +47,7 @@ export default function Tasks() {
                         //   setFirstName(event.target.value);
                         // }}
                     />
+                    <br/>
                     <input type="submit" value="Submit" className="button"/>
                 </form>
             </div>
