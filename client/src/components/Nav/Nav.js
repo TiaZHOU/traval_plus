@@ -87,7 +87,7 @@ export default function Nav() {
             </a>
             <div className="menu">
                 <NavLink to="/travel-docs">Travel Requirements</NavLink>
-                <NavLink to="/alert-map">Alert Map</NavLink>
+                <NavLink to="/map">Alert Map</NavLink>
                 <NavLink to="/travel-tasks">Planner</NavLink>
                 <NavLink to="/forum">Forum</NavLink>
             </div>
