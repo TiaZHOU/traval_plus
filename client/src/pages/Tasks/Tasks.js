@@ -14,7 +14,7 @@ export default function Tasks() {
     return (
         <div className="container">
             <div className="addTask">
-                <h3>Add New Task</h3>
+                <header>Add New Task</header>
                 <form>
                     <label htmlFor="task_name">Task name:</label>
                     <input type="text" placeholder="Task name" name="task_name"
@@ -23,15 +23,20 @@ export default function Tasks() {
                         //   setId(event.target.value);
                         // }}
                     />
-                    <br/>
-                    <label htmlFor="task_date">Task date and time:</label>
-                    <input type="datetime-local" name="task_date"
+                    <label htmlFor="task_date">Task date:</label>
+                    <input type="date" name="task_date"
                         // value={first_name}
                         // onChange={event => {
                         //   setFirstName(event.target.value);
                         // }}
                     />
-                    <br/>
+                    <label htmlFor="task_time">Task date:</label>
+                    <input type="time" name="task_time"
+                        // value={first_name}
+                        // onChange={event => {
+                        //   setFirstName(event.target.value);
+                        // }}
+                    />
                     <label htmlFor="task_description">Task description:</label>
                     <input type="text" placeholder="Task description (Optional)" name="task_description"
                         // value={first_name}
@@ -39,16 +44,15 @@ export default function Tasks() {
                         //   setFirstName(event.target.value);
                         // }}
                     />
-                    <br/>
-                    <br />
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" value="Submit" className="button"/>
                 </form>
             </div>
             <div className="taskList">
-                <h3>Tasks List</h3>
+                <header>Tasks List</header>
                 {tasks.map(task => (
                     <Task key={task._id} {...task} />
                 ))}
+                <footer></footer>
             </div>
         </div>
     );
@@ -58,7 +62,8 @@ function Task(task) {
     const { _id, taskName, taskDate, taskDescription, isDone } = task;
     return (
         <div className="info">
-            <input type="checkbox" /> {taskName} {taskDate}
+            <input type="checkbox" id={taskName}/>
+            <label for={taskName}>{taskName} {taskDate} {taskDescription}</label>
         </div>
     );
 }

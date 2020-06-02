@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Select from "react-select";
 import Footer from "../../components/Footer/Footer";
+import PopUp from "../../components/PopUp/PopUp";
 import "./Reqs.css";
 
 const BASE_URL = "https://info30005travelplus.herokuapp.com";
@@ -9,8 +10,14 @@ const CountryMenu = require("./CountryMenu");
 export default class Reqs extends Component {
     constructor(props) {
         super(props);
-        this.state = { country: "", showPopup: false };
+        this.state = { country: "", show: true };
+        this.toggleDiv = this.toggleDiv.bind(this);
     }
+
+    toggleDiv = () => {
+        const {show} = this.state;
+        this.setState({show: false});
+    };
 
     handleChange = country => {
         this.setState({ country });
@@ -31,28 +38,23 @@ export default class Reqs extends Component {
         const { country } = this.state;
 
         return (
-            <div className="page">
-                <h2>Travel reqs</h2>
-                <h4>Search for travel docs for 198 countries around the world!</h4>
-                <h3>HEALTH RISKS DISCLAIMER</h3>
-                <p>The following information is intended as a guide only and is not intended to replace professional
-                    medical advice.</p>
-                <p>Travel+ cannot guarantee that the following information is complete, up-to-date, accurate or error
-                    free. You therefore view the following information at your own risk.</p>
-                <p>You should obtain specific travel health advice in relation to your individual needs and your
-                    intended travel, including advice on vaccinations, anti-malarial and other medications based on
-                    your past vaccination history, your present medical condition and your intended itinerary.</p>
-                <p>To continue you must accept this disclaimer by clicking the button below.</p>
+            <div>
+                <div>
+                    <h2>Travel Requirements Finder</h2>
+                    <p>Search for this visa requirements and recommended vaccines you should get before travelling to your destination country!</p>
+                    { this.state.show && <div className="Disclaimer" >
+                        <PopUp />
+                        <button type="button" className="Button" onClick={this.toggleDiv}>Agree</button>
+                    </div> }
+                </div>
 
-                <button type="button">Agree</button>
-
-                <Select
+                { !this.state.show? <Select
                     className="CountryMenu"
                     options={CountryMenu.options}
                     value={ country }
                     placeholder="Select a country"
                     onChange={(country) => this.handleChange(country)}
-                />
+                /> : <p></p> }
 
                 <div className="VisaReq">
                     {this.state.visas ?

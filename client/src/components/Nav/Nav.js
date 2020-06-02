@@ -85,12 +85,12 @@ export default function Nav() {
             <a href="/">
                 <img src={logo} className="logo" alt="logo" />
             </a>
-            <ul className="menu">
-                <li><NavLink to="/travel-docs">Travel Requirements</NavLink></li>
-                <li><NavLink to="/alert">Alert Map</NavLink></li>
-                <li><NavLink to="/travel-tasks">Planner</NavLink></li>
-                <li><NavLink to="/forum">Forum</NavLink></li>
-            </ul>
+            <div className="menu">
+                <NavLink to="/travel-docs">Travel Requirements</NavLink>
+                <NavLink to="/alert">Alert Map</NavLink>
+                <NavLink to="/travel-tasks">Planner</NavLink>
+                <NavLink to="/forum">Forum</NavLink>
+            </div>
             <div>
                 <LoginButton className="LoginButton"/>
             </div>

@@ -5,16 +5,43 @@
 }
 
 .addTask, .taskList {
-    text-align: center;
-}
-.addTask, .taskList {
     background-color: #aed3fb;
     min-height: 400px;
     min-width: 55%;
     justify-self: center;
     box-shadow: 0 0 20px rgb(0,0,0,0.15);
+    text-align: center;
+    border-radius: 0.2em;
 }
 
 .taskList {
     background-color: #fbd1d5;
+}
+
+.button {
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: solid 1px #fff;
+    color: #fff;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.button:hover {
+    transition: all 0.3s ease 0s;
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: solid 1px #fff;
+    color: #aed3fb;
+    background-color: #fff;
+}
+
+label {
+    cursor: pointer;
+}
+
+.info {
+    margin: 1rem 0;
 }

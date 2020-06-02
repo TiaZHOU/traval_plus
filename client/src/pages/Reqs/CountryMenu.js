@@ -105,7 +105,7 @@ exports.options = [
     {value:"Maldives", label:"🇲🇻 Maldives"},
     {value:"Mali", label:"🇲🇱 Mali"},
     {value:"Malta", label:"🇲🇹 Malta"},
-    {value:"Marshall Islands", label:"🇲🇷 Marshall Islands"},
+    {value:"Marshall Islands", label:"🇲🇭 Marshall Islands"},
     {value:"Mauritania", label:"🇲🇷 Mauritania"},
     {value:"Mauritius", label:"🇲🇺 Mauritius"},
     {value:"Mexico", label:"🇲🇽 Mexico"},

@@ -5,50 +5,58 @@ div {
 }
 
 .CountryMenu {
-  width: 17%;
+  padding-top: 1%;
+  width: 18%;
+  min-width: 200px;
   margin: auto;
 }
 
-.Reqs {
-  align-items: center;
-  font-family: sans-serif;
-  text-align: center;
+.Disclaimer {
+  margin: auto;
+  background-color: rgba(255, 0, 0, 0.1);
+  border: solid 1px #ff0000;
+  padding: 1.5em 3em;
+  max-width: 32%;
 }
 
-.result {
-  list-style: none;
-  padding: 1rem;
-  width: 30%;
-  margin: auto;
+.Disclaimer p {
+  font-size: 12px;
+}
+
+.Button {
+  padding: 1%;
 }
 
 table {
-  margin: 3rem auto 0 auto;
-  width: 40%;
+  min-width: 20rem;
+  margin: 2rem auto 0 auto;
+  width: 45%;
   border-collapse: collapse;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgb(0,0,0,0.15);
+  font-size: 15px;
 }
 
 table th {
-  background-color: #009879;
+  background-color: #3498DB;
   color: white;
-  padding: 12px 15px;
+  padding: 10px 15px;
 }
 
 table td {
-  padding: 12px 15px;
+  padding: 10px 15px;
   border-bottom: 1px solid #dddddd;
   border-right: 1px solid #dddddd;
 }
+
 
 table tr:nth-last-of-type(even) {
   background-color: #f3f3f3;
 }
 
 table tr:last-of-type {
-  border-bottom: 2px solid #009879;
+  border-bottom: 2px solid #3498DB;
 }
 
 .source {
