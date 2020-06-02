@@ -1,7 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 const config = require('./config');
-const routes = require('./routes/api');
 var logger = require('morgan');
 var cors = require('cors');
 const path = require('path');
@@ -24,9 +23,9 @@ require('./models');
 const alertRouter = require("./routes/alertRouter");
 const taskRouter = require("./routes/taskRouter");
 const requirementRouter = require("./routes/requirementRouter.js");
-const routes = require('./routes/api');
+const forumRouter = require('./routes/api.js');
 
-app.use('/api/forum', routes);
+app.use('/api/forum', forumRouter);
 app.use("/alert", alertRouter);
 app.use("/tasks", taskRouter);
 app.use("/requirement", requirementRouter);
