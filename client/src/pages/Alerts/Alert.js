@@ -32,28 +32,14 @@ function useAlets() {
 }
 
 function Alert(alert) {
-    const { _id, country, lat, lng, alert_info } = alert;
+    const { lat, lng, alert_info } = alert;
     return (
         <MyMarker lat={lat} lng={lng} text={alert_info} />
     );
 }
 //TODO change marker text format into more good looking one
 const MyMarker = ({ text }) => (
-    <div
-        style={{
-            color: "white",
-            background: "red",
-            padding: "10px 40px",
-            display: "inline-flex",
-            textAlign: "center",
-            alignItems: "center",
-            justifyContent: "center",
-            borderRadius: "10%",
-            transform: "translate(-40%, -40%)"
-        }}
-    >
-        {text}
-    </div>
+    <div className="marker"> {text} </div>
 );
 
 const distanceToMouse = (pt, mousePos, markerProps) => {
@@ -83,7 +69,7 @@ export default function App() {
                     <h2>Check Alerts Before Your Trip!</h2>
                     <h3>Use the map to see more live information about each destination</h3>
                 </div>
-                <div style={{ height: "60vh", width: "60%" }}>
+                <div className="map">
                     <GoogleMapReact
                         distanceToMouse={distanceToMouse}
                         bootstrapURLKeys={{

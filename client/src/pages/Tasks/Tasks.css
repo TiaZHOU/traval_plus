@@ -38,10 +38,18 @@
     background-color: #fff;
 }
 
-label {
+.taskList label {
     cursor: pointer;
 }
 
 .info {
     margin: 1rem 0;
+}
+
+input[type="date"], input[type="time"] {
+    appearance: none;
+    color: #95a5a6;
+    border: 1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding: 2px;
 }
