@@ -25,7 +25,6 @@ db.once("open", async () => {
 require('./task');
 require('./visa');
 require('./immunisation');
-require('./alerts');
-require("./Comment");
-require("./Post");
-require("./User");
+require('./alerts')
+require('./user')
+

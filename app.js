@@ -2,7 +2,6 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require('morgan');
 var cors = require('cors');
-const config = require("config");
 const path = require('path');
 var app = express();
 
@@ -19,19 +18,14 @@ require('./models');
 const alertRouter = require("./routes/alertRouter");
 const taskRouter = require("./routes/taskRouter");
 const requirementRouter = require("./routes/requirementRouter.js");
+const forumRouter = require("./routes/forumRouter.js");
+const userRouter = require("./routes/userRouter.js");
 
 app.use("/alert", alertRouter);
 app.use("/tasks", taskRouter);
 app.use("/requirement", requirementRouter);
-
-//forum
-app.use(express.json());
-
-app.use("/api/forum/users", require("./routes/api/users"));
-app.use("/api/forum/auth", require("./routes/api/auth"));
-app.use("/api/forum/posts", require("./routes/api/posts"));
-app.use("/api/forum/posts/comments", require("./routes/api/comments"));
-app.use("/api/forum/posts/likes", require("./routes/api/likes"));
+app.use("/forum", forumRouter);
+app.use("/user", userRouter);
 
 // GET home page
 app.get("/", (req, res) => {
