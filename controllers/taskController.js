@@ -41,9 +41,14 @@ var createTask = (req, res) => {
 
 // DELETE tasks by id
 var deleteTask = (req, res) => {
-    const taskId = req.body._id;
-    Task.findById(taskId).exec();
-    res.redirect('/travel-tasks');
+    const taskId = req.params.id;
+    Task.findByIdAndRemove(taskId, function (err, task) {
+        if (err) {
+            res.status(500).send(err);
+        } else {
+            res.status(204).send("Deleted!");
+        }
+    });
 };
 
 // PUT tasks
