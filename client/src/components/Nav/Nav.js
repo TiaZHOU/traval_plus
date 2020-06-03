@@ -31,7 +31,7 @@ class LoginButton extends React.Component {
         console.log('rendering google signin button');
         window.gapi.signin2.render('my-signin2', {
             scope: 'profile email',
-            width: 150,
+            width: 200,
             height: 30,
             longtitle: true,
             theme: 'light',
@@ -66,11 +66,10 @@ class LoginButton extends React.Component {
     render() {
         // noinspection CheckTagEmptyBody
         return (
-            <div>
+            <div className="LoginButton">
                 <div id="my-signin2"></div>
-                <br />
                 {this.state.isLoggedIn && (
-                    <button style={{ width: 150, height: 20, textAlign: 'center' }} onClick={this.logout}>
+                    <button onClick={this.logout}>
                         Logout
                     </button>
                 )}
@@ -82,19 +81,20 @@ class LoginButton extends React.Component {
 export default function Nav() {
     return (
         <nav>
-            <a href="/">
-                <img src={logo} className="logo" alt="logo" />
-            </a>
+            <div class="controls">
+                <a href="/">
+                    <img src={logo} className="logo" alt="logo" />
+                </a>
+                <label for="toggle" className="label">&#9776;</label>
+            </div>
+            <input type="checkbox" id="toggle" />
             <div className="menu">
-                <NavLink to="/travel-docs">Travel Requirements</NavLink>
                 <NavLink to="/map">Alert Map</NavLink>
+                <NavLink to="/travel-docs">Travel Requirements</NavLink>
                 <NavLink to="/travel-tasks">Planner</NavLink>
                 <NavLink to="/forum">Forum</NavLink>
-            </div>
-            <div>
                 <LoginButton className="LoginButton"/>
             </div>
         </nav>
-
     );
 }

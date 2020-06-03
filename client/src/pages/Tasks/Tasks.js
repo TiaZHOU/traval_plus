@@ -68,7 +68,7 @@ export default function Tasks() {
 function Task(task) {
     const { _id, taskName, taskDate, taskDescription, isDone } = task;
     return (
-        <div className="info">
+        <div className="task">
             <input type="checkbox" id={taskName}/>
             <label for={taskName}>{taskName} {taskDate} {taskDescription}</label>
         </div>
