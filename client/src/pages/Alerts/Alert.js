@@ -12,7 +12,7 @@ function getAlerts() {
     });
 }
 
-function useAlets() {
+function useAlerts() {
     const [loading, setLoading] = useState(true);
     const [alerts, setAlerts] = useState([]);
     const [error, setError] = useState(null);
@@ -54,8 +54,9 @@ const distanceToMouse = (pt, mousePos, markerProps) => {
         );
     }
 };
+
 export default function App() {
-    const { loading, alerts, error } = useAlets();
+    const { loading, alerts, error } = useAlerts();
     if (loading) {
         return <p>Loading...</p>;
     }
@@ -63,13 +64,14 @@ export default function App() {
         return <p>Something went wrong: {error.message}</p>;
     }
     return (
-        <div>
-            <section className="alert_background">
+        <div className="mapPage">
+            <div className="alertBackground">
                 <div className="info">
                     <h2>Live Travel Alert Map</h2>
                     <h4>Pan around the map to see live travel alerts and plan your trip accordingly.</h4>
-                    <h4>Due to the current COVID-19 pandemic, most countries have closed their borders in order to decrease the spread of the virus.
-                        You can't leave Australia unless you seek an <a href="https://covid19.homeaffairs.gov.au/leaving-australia">exemption from Home Affairs</a>.
+                    <h4>Due to the current COVID-19 pandemic, most countries have closed their borders in order
+                        to decrease the spread of the virus. You can't leave Australia unless you seek an
+                        <a href="https://covid19.homeaffairs.gov.au/leaving-australia">exemption from Home Affairs</a>
                     </h4>
                     <h5>
                         You should apply for an exemption at least 48 hours before, but not more than 3 months before your planned travel.
@@ -79,18 +81,15 @@ export default function App() {
                 <div className="map">
                     <GoogleMapReact
                         distanceToMouse={distanceToMouse}
-                        bootstrapURLKeys={{
-                            key: "AIzaSyDm1LGRwK1dWiCNc77SrsjpK4U-xxFA408"
-                        }}
+                        bootstrapURLKeys={{ key: "AIzaSyDm1LGRwK1dWiCNc77SrsjpK4U-xxFA408"}}
                         center={{ lat: -28.5, lng: 135.95 }}
-                        defaultZoom={2}
-                    >
+                        defaultZoom={2} >
                         {alerts.map(alert => (
                             <Alert key={alert._id} {...alert} />
                         ))}
                     </GoogleMapReact>
                 </div>
-            </section>
+            </div>
             <Footer/>
         </div>
     );

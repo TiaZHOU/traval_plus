@@ -42,37 +42,133 @@ input[type="date"], input[type="time"] {
 }
 
 .addTask, .taskList {
-    background-color: #aed3fb;
+    width: 350px;
+    /*background-color: #aed3fb;*/
     min-height: 400px;
-    min-width: 55%;
     justify-self: center;
     box-shadow: 0 0 20px rgb(0,0,0,0.15);
     text-align: center;
-    border-radius: 0.2em;
+    border-radius: 0.5em;
+    max-height: 450px;
+    overflow: scroll;
 }
 
 form div {
     margin: 1.2rem;
 }
 
-.taskList {
-    background-color: #fbd1d5;
+.taskList header {
+    margin: 0;
+    padding: 1em 0;
+    border-top: 1em solid #3498DB;
+    border-bottom: 1px solid #eeeeee;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    background-color: #fff;
+}
+
+.taskList footer {
+    margin: 0;
+    padding: .5em 0;
+    background-color: #fff;
+}
+
+.taskList .task {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.taskList input[type=checkbox] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    visibility: hidden;
 }
 
 .taskList label {
+    text-align: left;
+    position: relative;
+    display: block;
+    padding: .75em 1em;
+    transition: .3s ease-in-out;
     cursor: pointer;
 }
 
-.task {
-    margin: 1rem 0;
+.taskList label::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #cccccc;
+    border-radius: 25%;
+    vertical-align: middle;
+    margin-right: .6em;
+}
+
+.taskList label::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background-color: #3498DB;
+    transition: .3s ease-in-out;
+}
+
+.taskList label:hover::after {
+    width: 5px;
+}
+
+.taskList label .fa-check{
+    position: absolute;
+    left: 1em;
+    top: .6em;
+    font-size: 1.2em;
+    opacity: 0;
+    color: #3498DB;
+    transition: .3s ease-in-out;
+}
+
+.taskList input[type=checkbox]:checked + label .fa-check {
+    opacity: 1;
+}
+
+.taskList .task label {
+    position: relative;
+    color: #2d3436;
+    transition: .3s ease-in-out;
+}
+
+.taskList input[type=checkbox]:checked + label {
+    color: #aaaaaa;
+    text-decoration: line-through;
+}
+
+.taskList .details {
+    margin: 0;
+    font-size: 12px;
+    color: #6d6d6d;
+    display: flex;
+    justify-content: space-between;
+    padding: .8em 1.5em 0 2.5em;
+}
+
+.fa-times {
+    font-size: 24px;
+    padding-right: 1em;
+    cursor: pointer;
+}
+
+.fa-times:hover {
+    color: red;
+    transition: .3s ease-in-out;
 }
 
 .Footer {
     width: 100%
-}
-
-input[type=checkbox]:checked + label {
-    text-decoration: line-through;
 }
 
 @media only screen and (max-width: 1000px) {

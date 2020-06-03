@@ -1,4 +1,4 @@
-.alert_background {
+.alertBackground {
     background-image: url("../../background.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -44,4 +44,12 @@ h4 {
     font-size: 0.8rem;
     border: solid 1px rgba(255, 0, 0, 0.8);
     text-shadow: 2px 2px 4px #000000;
+}
+
+@media only screen and (max-width: 1000px) {
+    .alertBackground {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

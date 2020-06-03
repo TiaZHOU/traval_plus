@@ -41,14 +41,14 @@ var createTask = (req, res) => {
 
 // DELETE tasks by id
 var deleteTask = (req, res) => {
-    const taskId = req.body.id;
-    Task.findByIdAndRemove(taskId).exec();
+    const taskId = req.body._id;
+    Task.findById(taskId).exec();
     res.redirect('/travel-tasks');
 };
 
 // PUT tasks
 var updateTask = (req, res) => {
-    const taskId = req.body.id;
+    const taskId = req.body._id;
     Task.findById(taskId, (err, doc) => {
         if (err) {
             console.error('error, no task found');

@@ -14,7 +14,8 @@ export default class Tasks extends Component {
             taskDate: '',
             taskTime: '',
             taskDescription: '',
-            tasks: []
+            tasks: [],
+            loading: true
         };
     };
 
@@ -57,16 +58,44 @@ export default class Tasks extends Component {
         axios.get(BASE_URL + '/tasks')
             .then((response) => {
                 const data = response.data;
-                this.setState({tasks: data});
+                this.setState({tasks: data, loading: false });
             })
             .catch(() => {
                 console.log('Error retrieving data!');
             })
     };
 
+    deleteTask = (_id) => {
+        axios.delete(BASE_URL + '/tasks/' + _id)
+            .then(response => {
+                console.log(response.data);
+                this.getTask();
+            })
+            .catch((error) => {
+                throw error.response.data
+            })
+    };
+
+    displayTask = (task) => {
+        const { _id, taskName, taskDate, taskTime } = task;
+        if (!task) return null;
+        return (
+            <div className="task" key={_id}>
+                <i className="fas fa-times" onClick={this.deleteTask(_id)} />
+                <input type="checkbox" id={_id} />
+                <label htmlFor={_id}>
+                    <i className="fas fa-check" />
+                    {taskName}
+                    <span className="details">{taskDate}, {taskTime}</span>
+                </label>
+            </div>
+        );
+
+    };
+
     render() {
         const { taskName, taskDate, taskTime, taskDescription } = this.state;
-        const tasks =  this.state.tasks;
+        const { tasks, loading } =  this.state;
         return(
             <div>
                 <div className="container">
@@ -94,38 +123,20 @@ export default class Tasks extends Component {
                         </form>
                     </div>
 
-
                     <div className="taskList">
                         <header>Tasks List</header>
-                        {tasks.map(task => (
-                            <Task key={task._id} {...task} />
-                        ))}
+                        {loading ? <p>Loading...</p> :
+                            tasks.map(task => (
+                                this.displayTask(task)
+                            ))}
+
+                        <footer />
                     </div>
-
                 </div>
-
                 <Footer />
 
             </div>
 
         );
     }
-}
-
-function Task(task) {
-    const { _id, taskName, taskDate, taskDescription, isDone } = task;
-    if (!task) return null;
-    return (
-        <div className="task">
-            <input type="checkbox" id={taskName}/>
-            <label htmlFor={taskName}>
-                {taskName}
-            </label>
-            <p>
-                {taskDate}
-                {taskDescription}
-
-            </p>
-        </div>
-    );
 }
