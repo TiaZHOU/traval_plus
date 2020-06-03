@@ -1,6 +1,5 @@
 #body {
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -50,6 +49,10 @@ input[type="date"], input[type="time"] {
     box-shadow: 0 0 20px rgb(0,0,0,0.15);
     text-align: center;
     border-radius: 0.2em;
+}
+
+form div {
+    margin: 1.2rem;
 }
 
 .taskList {

@@ -51,7 +51,7 @@ Link to forum posts: https://info30005travelplus.herokuapp.com/forum/post
 | delete   | ```/forum/comment/1/```
 | delete   | ```/forum/post/1/```
 
-## Core function 3: Task scheduling
+## Core function 3: Task.js scheduling
 Allows users to schedule in tasks such as buying plane tickets, renew passports, or to get vaccinated.
 (This functionality is unfinished and might need further consideration, for example if authentication is needed)
 

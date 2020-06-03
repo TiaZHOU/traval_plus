@@ -81,11 +81,11 @@ class LoginButton extends React.Component {
 export default function Nav() {
     return (
         <nav>
-            <div class="controls">
+            <div className="controls">
                 <a href="/">
                     <img src={logo} className="logo" alt="logo" />
                 </a>
-                <label for="toggle" className="label">&#9776;</label>
+                <label htmlFor="toggle" className="label">&#9776;</label>
             </div>
             <input type="checkbox" id="toggle" />
             <div className="menu">

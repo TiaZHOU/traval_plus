@@ -13,13 +13,13 @@ div {
 
 .Disclaimer {
   margin: auto;
-  background-color: rgba(255, 0, 0, 0.1);
-  border: solid 1px #ff0000;
+  background-color: rgba(0, 0, 255, 0.1);
+  border: solid 1px #0000ff;
   padding: 1.5em 3em;
   max-width: 32%;
 }
 
-.Disclaimer p {
+.Disclaimer #desc {
   font-size: 12px;
 }
 
@@ -62,4 +62,34 @@ table tr:last-of-type {
 .source {
   margin-top: 4rem;
   font-size: 10px;
+}
+
+.VisaReq th {
+  width: 180px;
+}
+
+table th {
+  width: 90px;
+}
+
+@media only screen and (max-width: 700px) {
+  .Disclaimer {
+    max-width: 20rem;
+  }
+
+  #desc {
+    padding: 0 20px;
+  }
+
+  tr td:nth-child(1) {
+    width: 100px;
+  }
+
+  .VisaReq th {
+    width: 120px;
+  }
+
+  table td {
+    padding: 10px 10px;
+  }
 }

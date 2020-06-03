@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-//import { useTasks, addTask, updateTask, deleteTask*/ } from "./TasksAPI";
-import Footer from "../../components/Footer/Footer";
-import './Tasks.css';
 import axios from 'axios';
+import './Tasks.css';
+import Footer from "../../components/Footer/Footer";
 
 const BASE_URL = "https://info30005travelplus.herokuapp.com";
 
@@ -14,9 +13,14 @@ export default class Tasks extends Component {
             taskName: '',
             taskDate: '',
             taskTime: '',
-            taskDescription: ''
-        }
-    }
+            taskDescription: '',
+            tasks: []
+        };
+    };
+
+    componentDidMount = () => {
+        this.getTask();
+    };
 
     changeHandler = (e) => {
         this.setState({[e.target.name]: e.target.value });
@@ -24,18 +28,49 @@ export default class Tasks extends Component {
 
     submitHandler = (e) => {
         e.preventDefault();
-        console.log(this.state);
-        axios.post(BASE_URL + '/tasks/', this.state)
+
+        const payload = {
+            taskName: this.state.taskName,
+            taskDate: this.state.taskDate,
+            taskTime: this.state.taskTime,
+            taskDescription: this.state.taskDescription,
+        };
+
+        axios.post(BASE_URL + '/tasks/', payload)
             .then(response => {
                 console.log(response);
+                this.resetUserInputs();
+                this.getTask();
             });
+    };
+
+    resetUserInputs = () => {
+        this.setState({
+            taskName: "",
+            taskDate: "",
+            taskTime: "",
+            taskDescription: ""
+        });
+    };
+
+    getTask = () => {
+        axios.get(BASE_URL + '/tasks')
+            .then((response) => {
+                const data = response.data;
+                this.setState({tasks: data});
+            })
+            .catch(() => {
+                console.log('Error retrieving data!');
+            })
     };
 
     render() {
         const { taskName, taskDate, taskTime, taskDescription } = this.state;
+        const tasks =  this.state.tasks;
         return(
-            <div id="body">
+            <div>
                 <div className="container">
+
                     <div className="addTask">
                         <header>Add New Task</header>
                         <form onSubmit={this.submitHandler}>
@@ -58,42 +93,39 @@ export default class Tasks extends Component {
                             <button className="button">Submit</button>
                         </form>
                     </div>
-                    {/*<div className="taskList">*/}
-                    {/*    <header>Tasks List</header>*/}
-                    {/*    {tasks.map(task => (*/}
-                    {/*        <Task key={task._id} {...task} />*/}
-                    {/*    ))}*/}
-                    {/*</div>*/}
+
+
+                    <div className="taskList">
+                        <header>Tasks List</header>
+                        {tasks.map(task => (
+                            <Task key={task._id} {...task} />
+                        ))}
+                    </div>
+
                 </div>
-                <Footer></Footer>
+
+                <Footer />
+
             </div>
+
         );
     }
 }
 
 function Task(task) {
     const { _id, taskName, taskDate, taskDescription, isDone } = task;
+    if (!task) return null;
     return (
         <div className="task">
             <input type="checkbox" id={taskName}/>
-            <label for={taskName}>
+            <label htmlFor={taskName}>
                 {taskName}
             </label>
             <p>
                 {taskDate}
                 {taskDescription}
-                x
+
             </p>
         </div>
     );
 }
-
-/*onChange={} => checkbox*/
-
-/*function onSubmit() {
-    // addAuthor({
-    //   id,
-    //   first_name,
-    //   last_name
-    // });
-}*/
