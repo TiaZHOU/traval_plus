@@ -68,7 +68,7 @@ Link: https://info30005travelplus.herokuapp.com/tasks/
 | -------- |-------
 | get      | ```/tasks/```
 | get      | ```/tasks/1/```
-| post     | ```/tasks/?taskName=Buy tickets&taskDate=20-03-2019&isDone=false/```
+| post     | ```/tasks/```
 | put      | ```/tasks/1?taskName=Buy tickets&taskDate=20-03-2019&isDone=false/```
 | delete   | ```/tasks/1/```
 

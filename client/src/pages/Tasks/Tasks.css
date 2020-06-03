@@ -1,23 +1,25 @@
+#body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fafafa;
+    font-size: 0.8rem;
+}
+
 .container {
     display: grid;
     padding-top: 5%;
     grid-template-columns: 1fr 1fr;
-    background-color: #eeeeee;
-    min-height: 80vh;
 }
 
-.addTask, .taskList {
-    background-color: #aed3fb;
-    min-height: 400px;
-    min-width: 55%;
-    justify-self: center;
-    box-shadow: 0 0 20px rgb(0,0,0,0.15);
-    text-align: center;
-    border-radius: 0.2em;
-}
-
-.taskList {
-    background-color: #fbd1d5;
+input[type="date"], input[type="time"] {
+    appearance: none;
+    color: #95a5a6;
+    border: 1px solid #ecf0f1;
+    background:#ecf0f1;
+    padding: 2px;
 }
 
 .button {
@@ -40,6 +42,20 @@
     background-color: #fff;
 }
 
+.addTask, .taskList {
+    background-color: #aed3fb;
+    min-height: 400px;
+    min-width: 55%;
+    justify-self: center;
+    box-shadow: 0 0 20px rgb(0,0,0,0.15);
+    text-align: center;
+    border-radius: 0.2em;
+}
+
+.taskList {
+    background-color: #fbd1d5;
+}
+
 .taskList label {
     cursor: pointer;
 }
@@ -48,10 +64,14 @@
     margin: 1rem 0;
 }
 
-input[type="date"], input[type="time"] {
-    appearance: none;
-    color: #95a5a6;
-    border: 1px solid #ecf0f1;
-    background:#ecf0f1;
-    padding: 2px;
+.Footer {
+    width: 100%
+}
+
+input[type=checkbox]:checked + label {
+    text-decoration: line-through;
+}
+
+@media only screen and (max-width: 1000px) {
+
 }

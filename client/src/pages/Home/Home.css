@@ -44,11 +44,3 @@
     color: transparent;
     background-color: #fff;
 }
-
-.Footer {
-    display: flex;
-    font-weight: 200;
-    font-size: 0.8rem;
-    justify-content: space-between;
-    padding: 0.5rem 3rem;
-}

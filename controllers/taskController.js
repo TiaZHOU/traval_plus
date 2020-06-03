@@ -25,9 +25,18 @@ var getTaskById = async (req, res) => {
 // POST tasks
 var createTask = (req, res) => {
     if(!req.body) { return res.send(400); }
-    const data = new Task(req.body);
-    data.save();
-    res.redirect('/travel-tasks');
+    const data = new Task();
+    data.taskName = req.body.taskName;
+    data.taskDate = req.body.taskDate;
+    data.taskTime = req.body.taskTime;
+    data.taskDescription = req.body.taskDescription;
+    data.save(function (err, insertedTask) {
+        if (err) {
+            console.log('Error saving task');
+        } else {
+            res.json(insertedTask);
+        }
+    });
 };
 
 // DELETE tasks by id

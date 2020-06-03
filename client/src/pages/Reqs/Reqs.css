@@ -63,11 +63,3 @@ table tr:last-of-type {
   margin-top: 4rem;
   font-size: 10px;
 }
-
-.Footer {
-  display: flex;
-  font-weight: 200;
-  font-size: 0.8rem;
-  justify-content: space-between;
-  padding: 0.5rem 3rem;
-}
