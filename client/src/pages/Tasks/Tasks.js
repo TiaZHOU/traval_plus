@@ -15,7 +15,9 @@ export default class Tasks extends Component {
             taskTime: '',
             taskDescription: '',
             tasks: [],
-            loading: true
+            loading: true,
+            isUpdate: false,
+            taskId: ''
         };
     };
 
@@ -69,6 +71,7 @@ export default class Tasks extends Component {
         axios.get(BASE_URL + '/tasks/' + _id)
             .then(response => {
                 if(response != null) {
+                    this.setState({ isUpdate: true, taskId: _id });
                     this.setState({
                         taskName: response.data.taskName,
                         taskDate: response.data.taskDate,
@@ -92,6 +95,25 @@ export default class Tasks extends Component {
             })
             .catch((error) => {
                 throw error.response.data
+            });
+    };
+
+    updateTask = (e) => {
+        e.preventDefault();
+
+        const payload = {
+
+            taskName: this.state.taskName,
+            taskDate: this.state.taskDate,
+            taskTime: this.state.taskTime,
+            taskDescription: this.state.taskDescription,
+        };
+
+        axios.put(BASE_URL + '/tasks/' + this.taskId, payload)
+            .then(response => {
+                console.log(response);
+                this.resetUserInputs();
+                this.getTask();
             });
     };
 
@@ -143,7 +165,8 @@ export default class Tasks extends Component {
                                 <label htmlFor="taskDescription">Task description</label>
                                 <input type="text" name="taskDescription" value={taskDescription} onChange={this.changeHandler} />
                             </div>
-                            <button className="button">Submit</button>
+                            {this.state.isUpdate ? <button className="button" onClick={this.updateTask}>Update</button> :
+                                <button className="button">Submit</button>}
                         </form>
                     </div>
 

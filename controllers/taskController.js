@@ -63,6 +63,7 @@ var updateTask = (req, res) => {
             doc.taskDescription = req.body.taskDescription;
             doc.taskTime = req.body.taskTime;
             doc.save();
+            res.status(204).send("Updated");
         }
     })};
 
