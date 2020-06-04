@@ -81,7 +81,7 @@ export default class Tasks extends Component {
     };
 
     displayTask = (task) => {
-        const { _id, taskName, taskDate, taskTime } = task;
+        const { _id, taskName, taskDate, taskTime, taskDescription } = task;
         if (!task) return null;
         return (
             <div className="task" key={_id}>
@@ -90,7 +90,9 @@ export default class Tasks extends Component {
                 <label htmlFor={_id}>
                         <i className="fas fa-check" />
                     {taskName}
-                    <span className="details">{taskDate}, {taskTime}</span>
+                    <span className="details">{taskDate}, {taskTime}
+                    <br/>
+                        {taskDescription}</span>
                 </label>
             </div>
         );
