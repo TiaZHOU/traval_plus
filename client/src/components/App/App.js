@@ -26,7 +26,7 @@ export default function App() {
                   <Route path="/map">
                     <Map />
                   </Route>
-                  <Route exact path="/forum">
+                  <Route path="/forum">
                       <Forum />
                 </Route>
               </Switch>
