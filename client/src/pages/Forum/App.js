@@ -200,7 +200,7 @@ export default class App extends Component {
           <header id="header">
             <nav className="top-menu" />
             <div className="main-header">
-              <Link to="/forum" id="header-img" className="default-header">
+              <Link to="/#/forum" id="header-img" className="default-header">
                 forum home
               </Link>
               <div className="tab-menu" />
@@ -209,7 +209,7 @@ export default class App extends Component {
                 {this.state.loggedIn && this.state.user.isAdmin ? (
                   <span>
                     {' '}
-                    <Link to="/forum/admin">Admin Settings</Link> |{' '}
+                    <Link to="/#/forum/admin">Admin Settings</Link> |{' '}
                   </span>
                 ) : (
                   ''
@@ -219,7 +219,7 @@ export default class App extends Component {
                     Hello{' '}
                     <Link
                       className="fake-link"
-                      to={`/forum/user/${this.state.user.username}`}>
+                      to={`/#/forum/user/${this.state.user.username}`}>
                       {this.state.user.username}
                     </Link>{' '}
                     |{' '}
@@ -229,7 +229,7 @@ export default class App extends Component {
                   </span>
                 ) : (
                   <span>
-                    Want to join? <Link to="/forum/register">sign up</Link> in
+                    Want to join? <Link to="/#/forum/register">sign up</Link> in
                     seconds.
                   </span>
                 )}
@@ -247,7 +247,7 @@ export default class App extends Component {
               )}
               <Route
                 exact
-                path="/forum"
+                path="/#/forum"
                 render={(props) => (
                   <Homepage
                     loading={this.state.loading}
@@ -264,7 +264,7 @@ export default class App extends Component {
                 )}
               />
               <Route
-                path="/forum/submit"
+                path="/#/forum/submit"
                 render={(props) =>
                   this.state.loggedIn ? (
                     <Submit
@@ -275,12 +275,12 @@ export default class App extends Component {
                       {...props}
                     />
                   ) : (
-                    <Redirect to="/forum" />
+                    <Redirect to="/#/forum" />
                   )
                 }
               />
               <Route
-                path="/forum/admin"
+                path="/#/forum/admin"
                 render={(props) =>
                   this.state.loggedIn && this.state.user.isAdmin ? (
                     <Admin
@@ -289,13 +289,13 @@ export default class App extends Component {
                       codes={this.state.codes}
                     />
                   ) : (
-                    <Redirect to="/forum" />
+                    <Redirect to="/#/forum" />
                   )
                 }
               />
               <Route
                 exact
-                path="/forum/user/:username"
+                path="/#/forum/user/:username"
                 render={(props) => (
                   <UserPage
                     user={this.state.user}
@@ -309,7 +309,7 @@ export default class App extends Component {
               />
               <Route
                 exact
-                path="/forum/post/:id"
+                path="/#/forum/post/:id"
                 render={(props) => (
                   <Single
                     user={this.state.user}
@@ -325,10 +325,10 @@ export default class App extends Component {
                 )}
               />
               <Route
-                path="/forum/register"
+                path="/#/forum/register"
                 render={(props) =>
                   this.state.loggedIn ? (
-                    <Redirect to="/forum" />
+                    <Redirect to="/#/forum" />
                   ) : (
                     <Register register={this.register} {...props} />
                   )
@@ -387,7 +387,7 @@ export default class App extends Component {
               )}
               {this.state.loggedIn ? (
                 <div className="submit-button">
-                  <Link to="/forum/submit">Submit</Link>
+                  <Link to="/#/forum/submit">Submit</Link>
                 </div>
               ) : (
                 ''

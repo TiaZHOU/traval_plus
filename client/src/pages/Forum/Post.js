@@ -139,21 +139,21 @@ export default class Post extends Component {
               onClick={() => this.downvote(this.props.user, _id)}
             />
           </div>
-          <Link to={`/forum/post/${_id}`} className="thumbnail self" />
+          <Link to={`/#/forum/post/${_id}`} className="thumbnail self" />
           <div className="content">
             <div className="title-area">
               <span className="title">
                 {this.props.single ? (
                   <span>{title}</span>
                 ) : (
-                  <Link to={`/forum/post/${_id}`}>{title}</Link>
+                  <Link to={`/#/forum/post/${_id}`}>{title}</Link>
                 )}
               </span>{' '}
               <span className="url">(self.{document.domain})</span>
             </div>
             <div className="meta-area">
               Submitted {moment(created).fromNow()} by{' '}
-              <Link to={`/forum/user/${username}`}>{username}</Link>
+              <Link to={`/#/forum/user/${username}`}>{username}</Link>
             </div>
             <div className="link-area">
               {author === this.props.user._id || this.props.user.isAdmin ? (
