@@ -40,7 +40,7 @@ export default class Reqs extends Component {
         return (
             <div>
                 <div>
-                    <h2>Travel Requirements Finder</h2>
+                    <h2 id="title">Travel Requirements Finder</h2>
                     <p id="desc">Search for this visa requirements and recommended vaccines you should get before travelling to your destination country!</p>
                     { this.state.show && <div className="Disclaimer" >
                         <PopUp />

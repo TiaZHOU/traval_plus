@@ -1,36 +1,61 @@
 .alertBackground {
-    background-image: url("../../background.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
-    align-items: center;
+    flex-direction: row-reverse;
     height: 600px;
     color: black;
-    text-shadow: 0.25px 0.25px 0.25px #000000;
+}
+
+.mapPage {
+    align-items: unset;
+    text-align: unset;
 }
 
 .info {
-    max-width: 35%;
-    padding: 0 4%;
+    max-width: 32%;
+    padding: 1.6rem 4rem;
+    text-align: left;
+    background-color: #606060;
+    color: white;
+    height: 100%;
 }
 
-h2 {
+.info a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: #aed3fb;
+}
+
+.info h2 {
     font-size: 35px;
-    font-weight: 200;
-    color: floralwhite;
+    font-weight: 400;
+    text-shadow: 0 0 5px rgba(0,0,0,0.4);
+    padding-bottom: 1em;
 }
 
-h4 {
+.info h3 {
+    color: #aed3fb;
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 8%;
+}
+
+.info h4 {
     font-size: 15px;
     font-weight: 50;
     color: white;
 }
 
+.info p {
+    font-size: 13px;
+}
+
 .map {
-    height: 80%;
-    width: 50%;
+    align-items: unset;
+    height: 100%;
+    width: 100%;
 }
 
 .marker {
@@ -47,9 +72,5 @@ h4 {
 }
 
 @media only screen and (max-width: 1000px) {
-    .alertBackground {
-        display: flex;
-        flex-direction: column;
-    }
 
 }

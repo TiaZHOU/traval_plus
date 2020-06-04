@@ -2,7 +2,7 @@
     font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
-    background-color: #fafafa;
+    background-color: #f7f7f7;
     font-size: 0.8rem;
 }
 
@@ -40,12 +40,11 @@ input[type="date"], input[type="time"] {
 .addTask, .taskList {
     width: 350px;
     /*background-color: #aed3fb;*/
-    min-height: 400px;
+    min-height: 470px;
     justify-self: center;
     box-shadow: 0 0 20px rgb(0,0,0,0.15);
     text-align: center;
     border-radius: 0.5em;
-    max-height: 450px;
     overflow: scroll;
 }
 
