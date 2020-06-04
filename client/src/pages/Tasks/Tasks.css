@@ -2,9 +2,9 @@
     font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     background-color: #fafafa;
     font-size: 0.8rem;
+    height: 100%;
 }
 
 .container {
@@ -49,8 +49,21 @@ input[type="date"], input[type="time"] {
     overflow: scroll;
 }
 
-form div {
-    margin: 1.2rem;
+.addTask div {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 1rem 3.5rem;
+    font-size: 13px;
+}
+
+.addTask div input {
+    width: 100%;
+    height: 1.7rem;
+}
+
+.addTask div label {
+    padding-bottom: 0.4em;
 }
 
 .taskList header {
@@ -164,7 +177,7 @@ form div {
 }
 
 .Footer {
-    width: 100%
+    width: 100%;
 }
 
 @media only screen and (max-width: 1000px) {
