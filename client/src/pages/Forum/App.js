@@ -5,7 +5,7 @@ import Submit from './Submit';
 import Single from './Single';
 import Register from './Register';
 import Admin from './Admin';
-import { HashRouter, BrowserRouter, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Link, Redirect } from 'react-router-dom';
 import UserPage from './UserPage';
 import InnerHTML from 'react-dangerous-html';
 const BASE_URL = "https://info30005travelplus.herokuapp.com";
@@ -195,7 +195,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <HashRouter>
+      <BrowserRouter>
         <Layout>
           <header id="header">
             <nav className="top-menu" />
@@ -428,7 +428,7 @@ export default class App extends Component {
             <div className="copyright" />
           </footer>
         </Layout>
-      </HashRouter>
+      </BrowserRouter>
     );
   }
 }
