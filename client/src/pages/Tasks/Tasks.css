@@ -7,7 +7,8 @@
 }
 
 .container {
-    display: grid;
+    display: inline-grid;
+    grid-gap: 10rem;
     padding-top: 5%;
     grid-template-columns: 1fr 1fr;
 }
@@ -90,6 +91,7 @@ input[type="date"], input[type="time"] {
     flex-direction: row-reverse;
     width: 100%;
     justify-content: space-between;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .taskList input[type=checkbox] {
@@ -171,13 +173,29 @@ input[type="date"], input[type="time"] {
 
 .fa-times {
     font-size: 24px;
-    padding-right: 1em;
     cursor: pointer;
+    margin: 0 1em;
 }
 
 .fa-times:hover {
     color: red;
-    transition: .3s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.icons {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.fa-edit {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fa-edit:hover {
+    color: #00d22a;
+    transition: .2s ease-in-out;
 }
 
 .Footer {
@@ -187,5 +205,17 @@ input[type="date"], input[type="time"] {
 }
 
 @media only screen and (max-width: 1000px) {
+    .container {
+        display: grid;
+        padding-top: 5%;
+        grid-gap: 5%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: none;
+    }
+
+    .Footer {
+        position: unset;
+        margin-top: 15%;
+    }
 
 }

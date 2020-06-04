@@ -57,13 +57,28 @@ export default class Tasks extends Component {
     getTask = () => {
         axios.get(BASE_URL + '/tasks')
             .then((response) => {
-
                 const data = response.data;
                 this.setState({tasks: data, loading: false });
             })
             .catch(() => {
                 console.log('Error retrieving data!');
             })
+    };
+
+    findTaskById = (_id) => {
+        axios.get(BASE_URL + '/tasks/' + _id)
+            .then(response => {
+                if(response != null) {
+                    this.setState({
+                        taskName: response.data.taskName,
+                        taskDate: response.data.taskDate,
+                        taskTime: response.data.taskTime,
+                        taskDescription: response.data.taskDescription
+                    })
+                }
+            }).catch((err) => {
+                console.error('Error: '+ err);
+        })
     };
 
     deleteTask = (_id) => {
@@ -85,7 +100,10 @@ export default class Tasks extends Component {
         if (!task) return null;
         return (
             <div className="task" key={_id}>
-                <i className="fas fa-times"  onClick={ () => this.deleteTask(_id) }/>
+                <span className="icons">
+                    <i className="fas fa-edit" onClick={ () => {this.findTaskById(_id)} }/>
+                    <i className="fas fa-times"  onClick={ () => this.deleteTask(_id) }/>
+                </span>
                 <input type="checkbox" id={_id} />
                 <label htmlFor={_id}>
                         <i className="fas fa-check" />

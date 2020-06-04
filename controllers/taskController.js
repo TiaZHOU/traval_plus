@@ -13,7 +13,7 @@ var getAllTasks = async (req, res) => {
 
 // GET tasks by id
 var getTaskById = async (req, res) => {
-    const taskId = req.body.id;
+    const taskId = req.params.id;
     try {
         const task = await Task.findById(taskId);
         return res.send(task);
@@ -53,7 +53,7 @@ var deleteTask = (req, res) => {
 
 // PUT tasks
 var updateTask = (req, res) => {
-    const taskId = req.body._id;
+    const taskId = req.params.id;
     Task.findById(taskId, (err, doc) => {
         if (err) {
             console.error('error, no task found');
@@ -61,10 +61,9 @@ var updateTask = (req, res) => {
             doc.taskName = req.body.taskName;
             doc.taskDate = req.body.taskDate;
             doc.taskDescription = req.body.taskDescription;
-            doc.isDone = req.body.isDone;
+            doc.taskTime = req.body.taskTime;
             doc.save();
         }
-        res.redirect('/travel-tasks');
     })};
 
 module.exports = { getAllTasks, getTaskById, createTask, deleteTask, updateTask };
