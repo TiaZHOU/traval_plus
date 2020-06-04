@@ -41,7 +41,6 @@ export default class Tasks extends Component {
 
         axios.post(BASE_URL + '/tasks/', payload)
             .then(response => {
-                console.log(response);
                 this.resetUserInputs();
                 this.getTask();
             });
@@ -102,18 +101,18 @@ export default class Tasks extends Component {
         e.preventDefault();
 
         const payload = {
-
             taskName: this.state.taskName,
             taskDate: this.state.taskDate,
             taskTime: this.state.taskTime,
             taskDescription: this.state.taskDescription,
         };
 
-        axios.put(BASE_URL + '/tasks/' + this.taskId, payload)
+        axios.put(BASE_URL + '/tasks/' + this.state.taskId, payload)
             .then(response => {
                 console.log(response);
                 this.resetUserInputs();
                 this.getTask();
+                this.setState({isUpdate: false, taskId:''});
             });
     };
 
@@ -148,7 +147,7 @@ export default class Tasks extends Component {
 
                     <div className="addTask">
                         <header>Add New Task</header>
-                        <form onSubmit={this.submitHandler}>
+                        <form onSubmit={this.state.isUpdate ? this.updateTask : this.submitHandler}>
                             <div>
                                 <label htmlFor="taskName">Task name</label>
                                 <input type="text" name="taskName" value={taskName} onChange={this.changeHandler} />
@@ -165,7 +164,7 @@ export default class Tasks extends Component {
                                 <label htmlFor="taskDescription">Task description</label>
                                 <input type="text" name="taskDescription" value={taskDescription} onChange={this.changeHandler} />
                             </div>
-                            {this.state.isUpdate ? <button className="button" onClick={this.updateTask}>Update</button> :
+                            {this.state.isUpdate ? <button className="button">Update</button> :
                                 <button className="button">Submit</button>}
                         </form>
                     </div>
