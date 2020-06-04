@@ -164,7 +164,7 @@ export default class App extends Component {
       });
     }
 
-    fetch(BASE_URL + '/#/forum/posts/all')
+    fetch(BASE_URL + '/forum/posts/all')
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {
