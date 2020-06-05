@@ -2,7 +2,7 @@ import React from "react";
 import Footer from "../../components/Footer/Footer";
 import './Home.css';
 import { NavLink } from "react-router-dom";
-import logowhite from "../../logowhite.png";
+import logowhite from "../../img/logowhite.png";
 
 export default function Home() {
     return (

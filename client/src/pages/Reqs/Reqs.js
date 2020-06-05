@@ -41,7 +41,8 @@ export default class Reqs extends Component {
             <div>
                 <div>
                     <h2 id="title">Travel Requirements Finder</h2>
-                    <p id="desc">Search for this visa requirements and recommended vaccines you should get before travelling to your destination country!</p>
+                    <p id="desc">Search for visa requirements and recommended vaccines you <br />
+                    should get before travelling to your destination country!</p><br />
                     { this.state.show && <div className="Disclaimer" >
                         <PopUp />
                         <button type="button" className="Button" onClick={this.toggleDiv}>Agree</button>

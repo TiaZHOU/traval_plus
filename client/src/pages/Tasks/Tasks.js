@@ -129,7 +129,7 @@ export default class Tasks extends Component {
                 <label htmlFor={_id}>
                         <i className="fas fa-check" />
                     {taskName}
-                    <span className="details">{taskDate}, {taskTime}
+                    <span className="details">Due: {taskDate}, {taskTime}
                     <br/>
                         {taskDescription}</span>
                 </label>
@@ -149,15 +149,15 @@ export default class Tasks extends Component {
                         <header>Add New Task</header>
                         <form onSubmit={this.state.isUpdate ? this.updateTask : this.submitHandler}>
                             <div>
-                                <label htmlFor="taskName">Task name</label>
+                                <label htmlFor="taskName">Task name <span id="asterisk">*</span></label>
                                 <input type="text" name="taskName" value={taskName} onChange={this.changeHandler} />
                             </div>
                             <div>
-                                <label htmlFor="taskDate">Task date</label>
+                                <label htmlFor="taskDate">Task date <span id="asterisk">*</span></label>
                                 <input type="date" name="taskDate" value={taskDate} onChange={this.changeHandler} />
                             </div>
                             <div>
-                                <label htmlFor="taskTime">Task time</label>
+                                <label htmlFor="taskTime">Task time <span id="asterisk">*</span></label>
                                 <input type="time" name="taskTime" value={taskTime} onChange={this.changeHandler} />
                             </div>
                             <div>

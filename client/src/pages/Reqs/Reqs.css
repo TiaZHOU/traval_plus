@@ -1,6 +1,6 @@
 div {
+  font-family: 'Source Sans Pro', sans-serif;
   align-items: center;
-  font-family: sans-serif;
   text-align: center;
 }
 
@@ -16,26 +16,42 @@ div {
 }
 
 .Disclaimer {
+  font-family: 'Source Sans Pro', sans-serif;
   margin: auto;
-  background-color: rgba(0, 0, 255, 0.1);
-  border: solid 1px #0000ff;
-  padding: 1.5em 3em;
+  box-shadow: 0 0 20px rgb(0,0,0,0.15);
+  padding: 1.8em 2.2em;
+  font-size: 20px;
   max-width: 35%;
-  font-size: 0.85rem;
   font-weight: 300;
 }
 
-.Disclaimer #desc {
-  font-size: 12px;
+.Disclaimer h3 {
+  margin-top: 0;
 }
 
-.Button {
-  padding: 1%;
+.Disclaimer p {
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.Disclaimer .Button {
+  margin-top: 1.4em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(270deg, rgba(57,174,242,0.9) 0%, rgba(62,194,183,0.9) 100%);
+  color: white;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 2em;
+  padding: 0.5em 2em;
 }
 
 table {
   min-width: 20rem;
-  margin: 2rem auto 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 45%;
   border-collapse: collapse;
   border-radius: 5px 5px 0 0;
@@ -56,6 +72,9 @@ table td {
   border-right: 1px solid #dddddd;
 }
 
+table tr td:last-of-type {
+  text-align: left;
+}
 
 table tr:nth-last-of-type(even) {
   background-color: #f3f3f3;

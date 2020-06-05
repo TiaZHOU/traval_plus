@@ -72,9 +72,9 @@ export default function App() {
                     <h3>COVID-19</h3>
                     <h4>Due to the current COVID-19 pandemic, most countries have closed their borders in order
                         to decrease the spread of the virus. You can't leave Australia unless you seek an
-                        <a href="https://covid19.homeaffairs.gov.au/leaving-australia"> exemption from Home Affairs</a>
+                        <a href="https://covid19.homeaffairs.gov.au/leaving-australia"> exemption from Home Affairs</a>.
                     </h4>
-                    <h3>Travel exemptions</h3>
+                    <h3>Travel Exemptions</h3>
                     <h4>
                         You should apply for an exemption at least 48 hours before, but not more than 3 months before your planned travel.
                     </h4>

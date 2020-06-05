@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
-import logo from "../../logo.png";
+import logo from "../../img/logo.png";
 
 class LoginButton extends React.Component {
     constructor(props) {
@@ -89,10 +89,18 @@ export default function Nav() {
             </div>
             <input type="checkbox" id="toggle" />
             <div className="menu">
-                <NavLink to="/map">Alert Map</NavLink>
-                <NavLink to="/travel-docs">Travel Requirements</NavLink>
-                <NavLink to="/travel-tasks">Planner</NavLink>
-                <NavLink to="/forum">Forum</NavLink>
+                <NavLink to="/map" activeClassName="active">
+                    Alert Map
+                </NavLink>
+                <NavLink to="/travel-docs" activeClassName="active">
+                    Travel Requirements
+                </NavLink>
+                <NavLink to="/travel-tasks" activeClassName="active">
+                    Planner
+                </NavLink>
+                <NavLink to="/forum" activeClassName="active">
+                    Forum
+                </NavLink>
                 <LoginButton className="LoginButton"/>
             </div>
         </nav>

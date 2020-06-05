@@ -1,5 +1,5 @@
 #body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     display: flex;
     flex-direction: column;
     background-color: #f7f7f7;
@@ -21,18 +21,18 @@ input[type="date"], input[type="time"] {
     padding: 2px;
 }
 
-.button {
-    border-radius: 0.2rem;
-    padding: 0.5rem 1rem;
+.addTask .button {
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
     text-decoration: none;
     font-size: 14px;
     cursor: pointer;
-    background-color: #3498DB;
+    box-shadow: 0 5px 20px rgb(0,0,0,0.15);
+    background: linear-gradient(270deg, rgba(57,174,242,1) 0%, rgba(62,194,183,1) 100%);
 }
 
-.button:hover {
-    transition: all 0.3s ease 0s;
-    padding: 0.5rem 1rem;
+.addTask .button:hover {
+    transition: all 0.3s ease 0s;;
     background-color: #3cb2ff;
     color: #fff;
 }
@@ -56,8 +56,13 @@ input[type="date"], input[type="time"] {
     display: flex;
     flex-direction: column;
     align-items: end;
-    margin: 1rem 3.5rem;
-    font-size: 13px;
+    margin: 1.5rem 3.5rem;
+    font-size: 14px;
+}
+
+#asterisk {
+    font-weight: 500;
+    color: red;
 }
 
 .addTask div input {
@@ -66,7 +71,8 @@ input[type="date"], input[type="time"] {
 }
 
 .addTask div label {
-    padding-bottom: 0.4em;
+    padding-bottom: 0.5em;
+    text-transform: uppercase;
 }
 
 .taskList header {
