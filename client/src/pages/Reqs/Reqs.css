@@ -23,10 +23,12 @@ div {
   font-size: 20px;
   max-width: 35%;
   font-weight: 300;
+  border-radius: 0.7em;
 }
 
 .Disclaimer h3 {
   margin-top: 0;
+  letter-spacing: 0.06em;
 }
 
 .Disclaimer p {
@@ -36,23 +38,32 @@ div {
 }
 
 .Disclaimer .Button {
-  margin-top: 1.4em;
-  letter-spacing: 0.1em;
-  font-weight: 600;
-  cursor: pointer;
-  background: linear-gradient(270deg, rgba(57,174,242,0.9) 0%, rgba(62,194,183,0.9) 100%);
   color: white;
+  margin-top: 1.4em;
+  border-radius: 2rem;
+  padding: 0.5rem 2.3rem;
+  text-decoration: none;
   text-transform: uppercase;
-  font-size: 16px;
-  border-radius: 2em;
-  padding: 0.5em 2em;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 5px 20px rgb(0,0,0,0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-image: linear-gradient(to right, #3498DB 0%, #2CC2A4 100%);
+  background-size: 170% auto;
+}
+
+.Disclaimer .Button:hover {
+  background-position: right center;
+  color: #fff;
 }
 
 table {
   min-width: 20rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 45%;
+  margin: 1em auto;
+  width: 700px;
   border-collapse: collapse;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
@@ -63,7 +74,12 @@ table {
 table th {
   background-color: #3498DB;
   color: white;
+  font-size: 1.1em;
   padding: 10px 15px;
+}
+
+table th:nth-child(1) {
+  border-right: solid rgba(255,255,255,0.7) 1px;
 }
 
 table td {
@@ -91,10 +107,15 @@ table tr:last-of-type {
 
 .VisaReq th {
   width: 180px;
+  border-bottom: 1px solid #3498DB;
 }
 
 table th {
   width: 90px;
+}
+
+.reqPage {
+  height: 110vh;
 }
 
 @media only screen and (max-width: 700px) {

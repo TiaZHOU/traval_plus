@@ -17,7 +17,8 @@ export default class Tasks extends Component {
             tasks: [],
             loading: true,
             isUpdate: false,
-            taskId: ''
+            taskId: '',
+            error: false
         };
     };
 
@@ -31,6 +32,11 @@ export default class Tasks extends Component {
 
     submitHandler = (e) => {
         e.preventDefault();
+        if(!this.state.taskName || !this.state.taskDate || !this.state.taskTime) {
+            this.setState({error: true});
+        } else {
+            this.setState({error: false});
+        }
 
         const payload = {
             taskName: this.state.taskName,
@@ -99,7 +105,11 @@ export default class Tasks extends Component {
 
     updateTask = (e) => {
         e.preventDefault();
-
+        if(!this.state.taskName || !this.state.taskDate || !this.state.taskTime) {
+            this.setState({error: true});
+        } else {
+            this.setState({error: false});
+        }
         const payload = {
             taskName: this.state.taskName,
             taskDate: this.state.taskDate,
@@ -142,30 +152,46 @@ export default class Tasks extends Component {
         const { taskName, taskDate, taskTime, taskDescription } = this.state;
         const { tasks, loading } =  this.state;
         return(
-            <div>
+            <div className="taskPage">
                 <div className="container">
 
                     <div className="addTask">
-                        <header>Add New Task</header>
+                        <header>{this.state.isUpdate ? <>Edit</> : <>Add</> } task</header>
                         <form onSubmit={this.state.isUpdate ? this.updateTask : this.submitHandler}>
                             <div>
-                                <label htmlFor="taskName">Task name <span id="asterisk">*</span></label>
-                                <input type="text" name="taskName" value={taskName} onChange={this.changeHandler} />
+                                <label htmlFor="taskName">Task Name <span id="asterisk">*</span></label>
+                                <input type="text"
+                                       name="taskName"
+                                       value={taskName}
+                                       onChange={this.changeHandler} />
                             </div>
                             <div>
-                                <label htmlFor="taskDate">Task date <span id="asterisk">*</span></label>
-                                <input type="date" name="taskDate" value={taskDate} onChange={this.changeHandler} />
+                                <label htmlFor="taskDate">Task Date <span id="asterisk">*</span></label>
+                                <input type="date"
+                                       name="taskDate"
+                                       value={taskDate}
+                                       onChange={this.changeHandler} />
                             </div>
                             <div>
-                                <label htmlFor="taskTime">Task time <span id="asterisk">*</span></label>
-                                <input type="time" name="taskTime" value={taskTime} onChange={this.changeHandler} />
+                                <label htmlFor="taskTime">Task Time <span id="asterisk">*</span></label>
+                                <input type="time"
+                                       name="taskTime"
+                                       value={taskTime}
+                                       onChange={this.changeHandler} />
                             </div>
                             <div>
-                                <label htmlFor="taskDescription">Task description</label>
-                                <input type="text" name="taskDescription" value={taskDescription} onChange={this.changeHandler} />
+                                <label htmlFor="taskDescription">Task Description</label>
+                                <input type="text"
+                                       className="desc"
+                                       name="taskDescription"
+                                       value={taskDescription}
+                                       onChange={this.changeHandler} />
                             </div>
                             {this.state.isUpdate ? <button className="button">Update</button> :
                                 <button className="button">Submit</button>}
+                            <span className="error">{this.state.error ?
+                                <p>Please fill in the required fields.</p> :
+                                <></>}</span>
                         </form>
                     </div>
 
@@ -176,7 +202,7 @@ export default class Tasks extends Component {
                                 this.displayTask(task)
                             ))}
 
-                        {this.state.tasks.length == 0 ?
+                        {this.state.tasks.length == 0 && !loading ?
                             <p>Add a task!</p> : <p/>
                         }
 

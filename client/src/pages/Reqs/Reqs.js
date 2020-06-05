@@ -38,8 +38,8 @@ export default class Reqs extends Component {
         const { country } = this.state;
 
         return (
-            <div>
-                <div>
+            <div className="reqPage">
+                <div className="reqTitle">
                     <h2 id="title">Travel Requirements Finder</h2>
                     <p id="desc">Search for visa requirements and recommended vaccines you <br />
                     should get before travelling to your destination country!</p><br />
