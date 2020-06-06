@@ -80,14 +80,14 @@ TODO Fix the top menu alignments etc
 }
 
 .user-header {
-  font-size: small;
+  font-size: 13px;
   width: 310px;
   position: absolute;
-  right: 0px;
-  bottom: 0px;
+  right: 0;
+  bottom: 0;
   background-color: #ede5f2;
   padding: 4px;
-  line-height: 12px;
+  line-height: 17px;
   border-top-left-radius: 7px;
 }
 
@@ -120,8 +120,6 @@ TODO Fix the top menu alignments etc
 }
 
 #body-submissions {
-  border-top: 2px solid #dddddd;
-  margin-right: 5px;
   padding: 5px;
 }
 
@@ -154,7 +152,10 @@ TODO Fix the top menu alignments etc
   display: grid;
   grid-template-columns: 20px 36px 70px 1fr;
   grid-gap: 7px;
-  margin-bottom: 10px;
+  margin-bottom: 1.3rem;
+  box-shadow: 0 0 10px rgb(0,0,0,0.15);
+  border-radius: 1rem;
+  padding: 0.5rem 0;
 }
 
 .post-text {
@@ -197,7 +198,7 @@ TODO Fix the top menu alignments etc
 }
 
 .arrow {
-  margin: 2px 0px 0px 0px;
+  margin: 2px 0 0 0;
   width: 100%;
   height: 14px;
   display: block;
@@ -212,7 +213,7 @@ TODO Fix the top menu alignments etc
 
 .arrow.up {
   background-image: url('../../img/sprite.png');
-  background-position: 0px -1676px;
+  background-position: 0 -1676px;
   background-repeat: no-repeat;
 }
 
@@ -253,7 +254,7 @@ TODO Fix the top menu alignments etc
 
 .thumbnail.self {
   background-image: url('../../img/sprite.png');
-  background-position: 0px -1267px;
+  background-position: 0 -1267px;
   background-repeat: no-repeat;
   height: 50px;
 }
@@ -261,12 +262,21 @@ TODO Fix the top menu alignments etc
 .title-area {
 }
 
-.title {
-  font-size: large;
+.content .title {
+  font-weight: 600;
+  font-size: 1.08rem;
+  text-transform: capitalize;
 }
 
-.title a {
+.content .title a:hover {
+  text-decoration: underline;
+  color: #3498DB;
+  transition: 0.2s ease-in-out;
+}
+
+.content .title a , .content .title:visited {
   text-decoration: none;
+  color: #2d3436;
 }
 
 .url,
@@ -277,7 +287,7 @@ TODO Fix the top menu alignments etc
 }
 
 .meta-area a {
-  color: gray;
+  color: #3498DB;
   text-decoration: none;
   border-bottom: 1px dotted gray;
 }
@@ -430,7 +440,7 @@ TODO Fix the top menu alignments etc
   border: 1px solid #c4dbf1;
   background: #ffffff none repeat-x scroll center left;
   background-image: url('../../img/sprite.png');
-  background-position: 0px -278px;
+  background-position: 0 -278px;
   background-repeat: repeat;
   font-size: 150%;
   font-weight: bold;
@@ -498,10 +508,6 @@ TODO Fix the top menu alignments etc
   font-size: 12px;
   line-height: 20px;
   border-radius: 3px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
@@ -559,6 +565,7 @@ TODO Fix the top menu alignments etc
     grid-template-columns: 20px 1fr;
     grid-gap: 3px;
     margin-bottom: 10px;
+    border-radius: 1rem;
   }
 
   .post-text {

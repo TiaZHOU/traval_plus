@@ -49,6 +49,12 @@ nav {
 
 .LoginButton {
     padding-left: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logout {
+    margin-left: 2rem;
 }
 
 @media only screen and (max-width: 1000px) {  /* CHANGE */

@@ -229,8 +229,7 @@ export default class App extends Component {
                   </span>
                 ) : (
                   <span>
-                    Want to join? <Link to="/forum/register">sign up</Link> in
-                    seconds.
+                    Want to join? <Link to="/forum/register">Sign up</Link> here.
                   </span>
                 )}
               </div>

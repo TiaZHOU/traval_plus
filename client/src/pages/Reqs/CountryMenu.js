@@ -130,7 +130,7 @@ exports.options = [
     {value:"Oman", label:"🇴🇲 Oman"},
     {value:"Pakistan", label:"🇵🇰 Pakistan"},
     {value:"Palau", label:"🇵🇼 Palau"},
-    {value:"Palestinian", label:"🇵🇸 Palestinian"},
+    {value:"Palestine", label:"🇵🇸 Palestine"},
     {value:"Panama", label:"🇵🇦 Panama"},
     {value:"Papua New Guinea", label:"🇵🇬 Papua New Guinea"},
     {value:"Paraguay", label:"🇵🇾 Paraguay"},

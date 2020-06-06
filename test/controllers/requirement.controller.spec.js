@@ -1,7 +1,9 @@
 const sinon = require('sinon');
+const supertest = require('supertest');
 const chai = require('chai');
 const expect = chai.expect();
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
+
 
 // Importing model for our unit testing.
 const visa = require("../../models/visa");

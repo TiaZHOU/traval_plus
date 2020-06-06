@@ -69,7 +69,7 @@ class LoginButton extends React.Component {
             <div className="LoginButton">
                 <div id="my-signin2"></div>
                 {this.state.isLoggedIn && (
-                    <button onClick={this.logout}>
+                    <button className="logout" onClick={this.logout}>
                         Logout
                     </button>
                 )}

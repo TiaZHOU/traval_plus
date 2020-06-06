@@ -17,12 +17,12 @@ Link to immunisation reqs: https://info30005travelplus.herokuapp.com/requirement
 - Displaying relevant visa application information and immunisation requirements for each country 
 - Allows users to access this information for a specific country
 
+#####Endpoints:
+
 | Method   | Url (example)
 | -------- |-------
-| get      | ```/requirement/visa/```
-| get      | ```/requirement/immunisation/```
 | get      | ```/requirement/visa/Mexico/```
-| get      | ```/requirement/immunisation/0001/```
+| get      | ```/requirement/immunisation/Mexico/```
 
 ## Core function 2: Discussion forum
 A discussion forum that allows users to discuss travel tips and experiences. This will allow first-time travellers to receive personal advice from experienced travellers.
@@ -82,7 +82,16 @@ Link to functionality: https://info30005travelplus.herokuapp.com/alert
 - Shows users travel alerts.
 - Shows travel alerts for specific area.
 
+#####Endpoints:
 | Method   | Url (example)
 | -------- |-------
 | get      | ```/alert/```
 | get      | ```/alert/North America/```
+
+
+
+Group the functionalities of your app by the purpose they serve. For example, for the library app that we have been using in the lectures, I would group them into Login, Account Management, Loan Management, Item Management (for items, such as books), etc. Then I would describe the following for each group/subset of the functionalities.
+Please write 2-3 sentences describing each functionality. You can describe what the functionality is and what it achieves. For example, Loan Management – This allows members to loan out items from the library. The librarian uses this functionality to identify all current and overdue items, and send reminders to staff to return any overdue items. The functionality is also used by the librarian to loan out items to members.
+Relevant URLs that will be used by your tutor to access the front-end for each functionality. Your tutor will use these URLs to access your front-end and assess the functionalities. Provide sample login details as well.
+Provide the names of the views, routes, controllers, and models associated with each functionality (i.e. for each subset/group of functionalities).
+Note on testing: We require groups to use the knowledge of testing covered in the subject to evaluate one core functionality that was implemented in Deliverable 3 (all views, models, controllers, routes). Provide the details of how to run the tests in the readme file.
