@@ -54,9 +54,9 @@ export default class Register extends Component {
   render() {
     document.title = 'Sign up';
     return (
-      <div>
+      <div id="createAccount">
         <div className="reg-form">
-          <h4 className="modal-title">Create a new account</h4>
+          <h2 className="modal-title">Create a new account</h2>
           {this.state.regError ? (
             <div className="reg-error">
               {this.state.regErrorMsg}
@@ -76,22 +76,22 @@ export default class Register extends Component {
             <input
               type="text"
               name="username"
-              placeholder="choose a username"
+              placeholder="Choose a username"
               required
             />
             <input
               type="password"
               name="password"
-              placeholder="password"
+              placeholder="Password"
               required
             />
             <input
               type="password"
               name="passwordConfirm"
-              placeholder="verify password"
+              placeholder="Verify password"
               required
             />
-            <input type="email" name="email" placeholder="email" required />
+            <input type="email" name="email" placeholder="Email" required />
             <div className="register-button-box">
               <button className="button-primary">Sign Up</button>
             </div>

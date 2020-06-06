@@ -27,7 +27,6 @@ body {
 
 #header {
   background-image: linear-gradient(to right, #3498DB 0%, #2CC2A4 100%);
-  border-bottom: 1px solid #c9b2d9;
 }
 
 .top-menu {
@@ -38,7 +37,6 @@ body {
   text-transform: uppercase;
 }
 /* Main header splits into 3 columns */
-/* TODO Make it responsive */
 .main-header {
   display: grid;
   grid-template-columns: 150px 1fr 300px;
@@ -48,10 +46,6 @@ body {
   width: 120px;
 }
 
-/*
-TODO Fix the top menu alignments etc
-*/
-
 .main-header {
   position: relative;
   display: flex;
@@ -60,7 +54,6 @@ TODO Fix the top menu alignments etc
 #header-img.default-header {
   text-indent: -9999px;
   background-image: url('../../img/travelforumwhite.png');
-  /* background-position: 0px -1323px; */
   background-repeat: no-repeat;
   background-size: contain;
   margin: 0.5rem 0.5rem 0.5rem 3rem;
@@ -132,7 +125,11 @@ aside form {
   padding: 5px;
 }
 
-/* User post main meat of the app  */
+#body-submissions #createAccount {
+  display: flex;
+  justify-content: center;
+}
+
 /* TODO Make this responsive */
 
 .pagination {
@@ -169,14 +166,15 @@ aside form {
 }
 
 .post-text {
-  padding: 2rem 6rem;
+  padding: 2rem 7rem;
+  text-align: justify;
   margin: 3rem;
   border-radius: 0.5rem;
   box-shadow: 0 5px 20px rgb(0,0,0,0.15);
 }
 
 .comments {
-  padding: 1rem 6rem;
+  padding: 1rem 3rem;
   margin: 3rem;
   border-radius: 0.5rem;
   box-shadow: 0 5px 20px rgb(0,0,0,0.15);
@@ -210,14 +208,12 @@ aside form {
   float: left;
   margin-top: 15px;
   color: #c6c6c6;
-  font-family: arial;
   font-size: medium;
   text-align: right;
 }
 
 .arrow {
   margin: 2px 0 0 0;
-  width: 100%;
   height: 14px;
   display: block;
   cursor: pointer;
@@ -277,9 +273,6 @@ aside form {
   height: 50px;
 }
 
-.title-area {
-}
-
 .content .title {
   font-weight: 600;
   font-size: 1.08rem;
@@ -290,6 +283,11 @@ aside form {
   text-decoration: underline;
   color: #3498DB;
   transition: 0.2s ease-in-out;
+}
+
+.post:hover {
+  background-color: #f6f6f6;
+  transition: 0.3s ease-in-out;
 }
 
 .content .title a , .content .title:visited {
@@ -319,12 +317,14 @@ aside form {
 /* Submit page  */
 
 .submit-form {
-  width: 500px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .input-box {
   width: 500px;
-  background-color: #cee3f8;
   border-radius: 4px;
   padding: 5px 10px 10px 10px;
   font-size: large;
@@ -342,7 +342,8 @@ aside form {
 
 .comments h3 {
   font-weight: normal;
-  border-bottom: 1px dotted #000;
+  padding: 1.2em;
+  border-bottom: 1px dotted #ccc;
 }
 
 .comments a {
@@ -359,11 +360,30 @@ aside form {
   font-size: small;
 }
 
-.comment-form textarea {
-  display: block;
-  width: 500px;
-  margin-bottom: 10px;
+.comment-form textarea, .submit-form input, .submit-form textarea {
+  width: 100%;
+  display: inline;
+  background: #fafafa;
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
+  border-radius: 5px;
+  font-size: 16px;
+  color: #666;
+  transition: all .4s ease;
+  padding: 0 20px;
+  outline: none;
+  border: none;
 }
+
+.submit-form input {
+  height: 2.1rem;
+  line-height: 1.3em;
+  margin-top: 0.8rem;
+}
+
+.submit-form textarea {
+  margin-top: 0.8rem;
+}
+
 
 .single-comment {
   margin: 7px;
@@ -373,13 +393,14 @@ aside form {
 }
 
 .comment-author {
-  font-size: small;
+  font-size: 1rem;
   font-weight: bold;
   color: #666666;
 }
 
 .comment-body {
-  margin-bottom: 7px;
+  text-align: justify;
+  margin: 2em 2.5em;
 }
 
 .comment-meta {
@@ -397,14 +418,30 @@ aside form {
 
 .login-box {
   padding: 7px;
-  border: 1px solid #b4b4b4;
+  border: 1px solid #d9d9d9;
   margin: 10px 0;
   border-radius: 0.3rem;
   box-shadow: 0 5px 10px rgb(0,0,0,0.15);
 }
 
+#login form p {
+  font-weight: 600;
+  font-size: large;
+}
+
 .login-box input {
   display: inline;
+  height: 2.1rem;
+  line-height: 1.3em;
+  background: #fafafa;
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
+  border-radius: 5px;
+  font-size: 16px;
+  color: #666;
+  transition: all .4s ease;
+  padding: 0 20px;
+  outline: none;
+  border: none
 }
 
 .reg-error {
@@ -433,9 +470,11 @@ aside form {
   margin: 7px 0;
   font-size: small;
   text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-.login-btn {
+.login-btn, .comment-form button, .submit-form button {
   color: white;
   margin-top: 1.4em;
   border-radius: 2rem;
@@ -453,7 +492,7 @@ aside form {
   background-size: 170% auto;
 }
 
-.login-btn:hover {
+.login-btn:hover, .comment-form button:hover {
   background-position: right center;
   color: #fff;
 }
@@ -501,52 +540,62 @@ aside {
 /* Registration page  */
 
 .reg-form {
+  margin: 25px 40px;
   width: 500px;
-  padding: 60px;
+  padding: 30px 60px;
   max-width: 100%;
+  box-shadow: 0 5px 10px rgb(0,0,0,0.15);
+  border-radius: 1em;
 }
 
 .modal-title {
+  font-size: 1.4rem;
   color: #4270a2;
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 1.5rem;
 }
 
 .reg-form input {
-  display: block;
   width: 100%;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 7px 10px;
+  display: inline;
+  height: 2.1rem;
+  line-height: 1.3em;
+  background: #fafafa;
+  box-shadow: inset 0 1px 3px 0 rgba(0,0,0,.08);
+  border-radius: 5px;
+  font-size: 16px;
+  color: #666;
+  transition: all .4s ease;
+  padding: 0 20px;
+  outline: none;
+  border: none;
 }
 
 .register-button-box {
   margin-top: 40px;
-  text-align: right;
 }
 
 .button-primary {
-  background-color: #4f86b5;
-  border-bottom: 2px solid #4270a2;
-  color: #ffffff;
-  display: inline-block;
-  margin-bottom: 0;
-  text-align: center;
+  color: white;
+  margin-top: 1.4em;
+  border-radius: 2rem;
+  padding: 0.5rem 2.3rem;
+  text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
-  vertical-align: middle;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.1em;
   cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 4px 12px 3px;
-  font-size: 12px;
-  line-height: 20px;
-  border-radius: 3px;
-  user-select: none;
+  border: none;
+  box-shadow: 0 5px 20px rgb(0,0,0,0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-image: linear-gradient(to right, #3498DB 0%, #2CC2A4 100%);
+  background-size: 170% auto;
+}
+.button-primary:hover {
+  background-position: right center;
+  color: #fff;
 }
 
 /* Ad and hooks  */
@@ -572,6 +621,11 @@ aside {
 
 .sidebar-ad {
   margin-top: 10px;
+}
+
+#sidebar a {
+  text-decoration: none;
+  margin: 1rem;
 }
 
 @media only screen and (max-width: 800px) {

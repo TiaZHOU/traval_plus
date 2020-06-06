@@ -149,7 +149,7 @@ export default class Post extends Component {
                   <Link to={`/forum/post/${_id}`}>{title}</Link>
                 )}
               </span>{' '}
-              <span className="url">(self.{document.domain})</span>
+              {/*<span className="url">(self.{document.domain})</span>*/}
             </div>
             <div className="meta-area">
               Submitted {moment(created).fromNow()} by{' '}

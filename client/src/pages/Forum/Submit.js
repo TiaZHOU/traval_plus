@@ -63,11 +63,11 @@ export default class Submit extends Component {
         <h3>Submit a new post</h3>
         <form onSubmit={this.processPost} className="submit-form" action="">
           <div className="input-box">
-            <label htmlFor="title">title</label>
+            <label htmlFor="title">Title</label>
             <input name="title" type="text" required />
           </div>
           <div className="input-box">
-            <label htmlFor="text">text (optional)</label>
+            <label htmlFor="text">Post body (optional)</label>
             <textarea name="text" id="" rows="6" />
           </div>
           <button>submit</button>

@@ -361,7 +361,7 @@ export default class App extends Component {
                     ''
                   )}
                   <form onSubmit={this.login}>
-                    <p>Login</p>
+                    <p>Sign In</p>
                     <input
                       className="login-username"
                       type="text"
@@ -386,9 +386,9 @@ export default class App extends Component {
                 </div>
               )}
               {this.state.loggedIn ? (
-                <div className="submit-button">
-                  <Link to="/forum/submit">Start A Thread</Link>
-                </div>
+                  <Link to="/forum/submit">
+                    <div className="submit-button">Start A Thread</div>
+                  </Link>
               ) : (
                 ''
               )}
