@@ -15,7 +15,6 @@ export default class Reqs extends Component {
     }
 
     toggleDiv = () => {
-        const {show} = this.state;
         this.setState({show: false});
     };
 
@@ -49,7 +48,7 @@ export default class Reqs extends Component {
                     </div> }
                 </div>
 
-                { !this.state.show? <Select
+                { !this.state.show ? <Select
                     className="CountryMenu"
                     options={CountryMenu.options}
                     value={ country }

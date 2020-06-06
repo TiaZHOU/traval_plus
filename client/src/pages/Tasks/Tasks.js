@@ -202,7 +202,7 @@ export default class Tasks extends Component {
                                 this.displayTask(task)
                             ))}
 
-                        {this.state.tasks.length == 0 && !loading ?
+                        {this.state.tasks.length === 0 && !loading ?
                             <p>Add a task!</p> : <p/>
                         }
 
