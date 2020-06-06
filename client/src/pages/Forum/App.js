@@ -361,32 +361,33 @@ export default class App extends Component {
                     ''
                   )}
                   <form onSubmit={this.login}>
+                    <p>Login</p>
                     <input
                       className="login-username"
                       type="text"
                       name="username"
-                      placeholder="username"
+                      placeholder="Username"
                       required
                     />
                     <input
                       className="login-password"
                       type="password"
                       name="password"
-                      placeholder="password"
+                      placeholder="Password"
                       required
                     />
                     <div className="login-button-area">
                       <a className="login-reset-link" href="/forum/reset">
-                        reset password
+                        Reset password
                       </a>
-                      <button>login</button>
+                      <button className="login-btn">Login</button>
                     </div>
                   </form>
                 </div>
               )}
               {this.state.loggedIn ? (
                 <div className="submit-button">
-                  <Link to="/forum/submit">Submit</Link>
+                  <Link to="/forum/submit">Start A Thread</Link>
                 </div>
               ) : (
                 ''

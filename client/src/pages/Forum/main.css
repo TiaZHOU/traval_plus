@@ -26,7 +26,7 @@ body {
 }
 
 #header {
-  background: #7bbfd6;
+  background-image: linear-gradient(to right, #3498DB 0%, #2CC2A4 100%);
   border-bottom: 1px solid #c9b2d9;
 }
 
@@ -54,6 +54,7 @@ TODO Fix the top menu alignments etc
 
 .main-header {
   position: relative;
+  display: flex;
 }
 
 #header-img.default-header {
@@ -62,11 +63,11 @@ TODO Fix the top menu alignments etc
   /* background-position: 0px -1323px; */
   background-repeat: no-repeat;
   background-size: contain;
-  height: 60px;
+  margin: 0.5rem 0.5rem 0.5rem 3rem;
   width: 100%;
   display: inline-block;
   vertical-align: bottom;
-  margin-bottom: 3px;
+  height: 3rem;
 }
 
 #header-img {
@@ -80,14 +81,14 @@ TODO Fix the top menu alignments etc
 }
 
 .user-header {
-  font-size: 13px;
+  font-size: 0.9rem;
   width: 310px;
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: #ede5f2;
+  background-color: rgba(255,255,255,0.3);
   padding: 4px;
-  line-height: 17px;
+  line-height: 1.5em;
   border-top-left-radius: 7px;
 }
 
@@ -107,15 +108,23 @@ TODO Fix the top menu alignments etc
   padding-bottom: 25px;
 }
 
-/* ToDo Item */
+aside form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-password, .login-username {
+  width: auto;
+  padding: 0.4rem;
+  margin: 0.5rem 1rem;
+}
 
 /* Container to hold posts and sidebar */
 /* TODO make this responsive */
 #container {
-  margin-top: 7px;
-  margin-left: 5px;
-  margin-right: 5px;
+  align-items: unset;
   display: grid;
+  margin: 1rem;
   grid-template-columns: 1fr 300px;
 }
 
@@ -154,14 +163,23 @@ TODO Fix the top menu alignments etc
   grid-gap: 7px;
   margin-bottom: 1.3rem;
   box-shadow: 0 0 10px rgb(0,0,0,0.15);
-  border-radius: 1rem;
-  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  margin-left: 10px;
+  padding: 0.9rem 0;
 }
 
 .post-text {
-  border: 1px dashed gray;
-  border-radius: 5px;
-  padding: 10px;
+  padding: 2rem 6rem;
+  margin: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 20px rgb(0,0,0,0.15);
+}
+
+.comments {
+  padding: 1rem 6rem;
+  margin: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 20px rgb(0,0,0,0.15);
 }
 
 /* Votes  */
@@ -379,15 +397,14 @@ TODO Fix the top menu alignments etc
 
 .login-box {
   padding: 7px;
-  border: 1px solid #666;
+  border: 1px solid #b4b4b4;
   margin: 10px 0;
+  border-radius: 0.3rem;
+  box-shadow: 0 5px 10px rgb(0,0,0,0.15);
 }
 
 .login-box input {
   display: inline;
-  width: 49%;
-  font-size: 0.9rem;
-  padding: 3px;
 }
 
 .reg-error {
@@ -412,18 +429,33 @@ TODO Fix the top menu alignments etc
   cursor: pointer;
 }
 
-.login-username {
-  margin-right: 0;
-}
-
-.login-password {
-  float: right;
-}
-
 .login-button-area {
   margin: 7px 0;
-  text-align: right;
   font-size: small;
+  text-align: center;
+}
+
+.login-btn {
+  color: white;
+  margin-top: 1.4em;
+  border-radius: 2rem;
+  padding: 0.5rem 2.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 5px 20px rgb(0,0,0,0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-image: linear-gradient(to right, #3498DB 0%, #2CC2A4 100%);
+  background-size: 170% auto;
+}
+
+.login-btn:hover {
+  background-position: right center;
+  color: #fff;
 }
 
 .login-reset-link {
@@ -431,32 +463,38 @@ TODO Fix the top menu alignments etc
   margin-right: 10px;
 }
 
+aside {
+  align-items: unset;
+  margin: 0 1rem;
+}
+
 /* Post submit button style from reddit */
 
 .submit-button {
-  display: block;
-  text-align: center;
-  position: relative;
-  border: 1px solid #c4dbf1;
-  background: #ffffff none repeat-x scroll center left;
-  background-image: url('../../img/sprite.png');
-  background-position: 0 -278px;
-  background-repeat: repeat;
-  font-size: 150%;
-  font-weight: bold;
-  letter-spacing: -1px;
-  line-height: 29px;
-  height: 29px;
-  margin-top: 10px;
+  color: white;
+  margin-top: 0.8em;
+  border-radius: 2rem;
+  padding: 0.5rem 2.3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 5px 20px rgb(0,0,0,0.15);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  background-image: linear-gradient(to right, #3498DB 0%, #2CC2A4 100%);
+  background-size: 170% auto;
+  margin-left: 1rem;
+}
+
+.submit-button:hover {
+  background-position: right center;
 }
 
 .submit-button a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #369;
+  color: white;
   text-decoration: none;
 }
 
@@ -565,7 +603,6 @@ TODO Fix the top menu alignments etc
     grid-template-columns: 20px 1fr;
     grid-gap: 3px;
     margin-bottom: 10px;
-    border-radius: 1rem;
   }
 
   .post-text {

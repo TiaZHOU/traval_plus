@@ -119,7 +119,7 @@ export default class Post extends Component {
     return (
       <Fragment>
         <div className="post">
-          <div className="rank">{this.props.rank}</div>
+          <div className="rank" />
           <div className="votes">
             <div
               className={`arrow up ${
