@@ -5,6 +5,7 @@ export default class MapInfo extends Component {
         return(
             <div className="info">
                 <h2>Live Travel Alert Map</h2>
+                <span className="live"><span>&#9679; </span> LIVE</span>
                 <h4>Pan around the map to see live travel alerts and plan your trip accordingly.</h4>
                 <h3>COVID-19</h3>
                 <h4>Due to the current COVID-19 pandemic, most countries have closed their borders in order

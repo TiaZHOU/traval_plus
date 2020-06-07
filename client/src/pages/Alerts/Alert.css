@@ -61,6 +61,17 @@
     width: 100%;
 }
 
+.live span {
+    color: red;
+    animation: flickerAnimation 1.5s infinite;
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+
 .marker {
     stroke: #FF0000;
     padding: 10px 16px;
