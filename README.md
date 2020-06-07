@@ -109,5 +109,5 @@ The comparing will occur when the plan is updated in the database and an alert w
 - ```controllers/alertController```
 - ```routes/alertRouter```
 
-##Testing
+## Testing
 Run ```npm test``` 
