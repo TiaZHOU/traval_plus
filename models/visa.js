@@ -6,3 +6,5 @@ var visaSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("visa", visaSchema, "visa");
+
+
