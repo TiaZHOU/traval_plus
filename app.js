@@ -30,7 +30,7 @@ app.use("/tasks", taskRouter);
 app.use("/requirement", requirementRouter);
 
 // GET home page
-app.get("/*", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + '/client/public/index.html'))
 });
 
