@@ -30,8 +30,8 @@ app.use("/tasks", taskRouter);
 app.use("/requirement", requirementRouter);
 
 // GET home page
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/public/index.html'));
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname + '/client/public/index.html'))
 });
 
 // Start app and listen for incoming requests on port 5000

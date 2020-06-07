@@ -137,14 +137,7 @@ appController.readFileContents = (req, res) => {
       }
     });
 
-    // if (!errors.length) {
-    //   response.success = true;
-    //   response.codes = codes;
-    //   res.json(response);
-    // } else {
-    //   response.message = errors;
-    //   res.json(response);
-    // }
+
   } catch (error) {
     response.message = `Something went wrong, please check error: ${error}`;
     res.json(response);

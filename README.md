@@ -27,9 +27,7 @@ Link to immunisation reqs: https://info30005travelplus.herokuapp.com/requirement
 ## Core function 2: Discussion forum
 A discussion forum that allows users to discuss travel tips and experiences. This will allow first-time travellers to receive personal advice from experienced travellers.
  
-Link to forum comments: https://info30005travelplus.herokuapp.com/forum/comment
- 
-Link to forum posts: https://info30005travelplus.herokuapp.com/forum/post
+Link to forum comments: https://info30005travelplus.herokuapp.com/forum
 
 #### Features
 - See all comments and posts
@@ -38,18 +36,27 @@ Link to forum posts: https://info30005travelplus.herokuapp.com/forum/post
 - Edit comments and posts
 - Delete comments and posts
 
-| Method   | Url (example)
-| -------- |-------
-| get      | ```/forum/comment/```
-| get      | ```/forum/post/```
-| get      | ```/forum/comment/1/```
-| get      | ```/forum/post/1/```
-| post     | ```/forum/comment/?post=My trip&comment=Loved it!&first_name=John&last_name=Doe&date=12-12-2012/```
-| post     | ```/forum/post/?title=Is Mexico safe?&content=Let me know&first_name=John&last_name=Doe&date=12-12-2012/```
-| put      | ```/forum/comment/1?post=My trip&comment=Loved it!&first_name=John&last_name=Doe&date=12-12-2012/```
-| put      | ```/forum/post/1?title=Is Mexico safe?&content=Let me know&first_name=John&last_name=Doe&date=12-12-2012/```
-| delete   | ```/forum/comment/1/```
-| delete   | ```/forum/post/1/```
+|Method | URL (Example)
+|-------|-------
+|get    |```/forum/posts/all get /tasks/```
+|get    |```/forum/posts/:skip/:page get /tasks/:id```
+|get    |```/forum/post/:id/single post /tasks/```
+|get    |```/forum/user/:username/posts put /tasks/:id```
+|post   |```/forum/register delete /tasks/:id```
+|post   |```/forum/login```
+|post   |```/forum/posts/new```
+|put    |```/forum/post/:id/upvote```
+|put    |```/forum/post/:id/downvote```
+|delete |```/forum/post/:id/delete```
+|get    |```/forum/post/:id/comments/all```
+|post   |```/forum/post/:id/comment```
+|delete |```/forum/post/:id/comment```
+|put    |```/forum/comment/:id/upvote```
+|put    |```/forum/comment/:id/downvote```
+|post   |```/forum/user/:username/action/:action```
+|delete |```/forum/user/:username```
+|get    |```/forum/app/content```
+|put    |```/forum/app/update```
 
 ## Core function 3: Task.js scheduling
 Allows users to schedule in tasks such as buying plane tickets, renew passports, or to get vaccinated.
@@ -67,10 +74,10 @@ Link: https://info30005travelplus.herokuapp.com/tasks/
 | Method   | Url (example)
 | -------- |-------
 | get      | ```/tasks/```
-| get      | ```/tasks/1/```
+| get      | ```/tasks/:id```
 | post     | ```/tasks/```
-| put      | ```/tasks/1?taskName=Buy tickets&taskDate=20-03-2019&isDone=false/```
-| delete   | ```/tasks/1/```
+| put      | ```/tasks/:id```
+| delete   | ```/tasks/:id```
 
 ## Core function 4: Travel alerts
 Once a traveling plan is made by user, the system will compare the plan with the alert list.
@@ -89,9 +96,11 @@ Link to functionality: https://info30005travelplus.herokuapp.com/alert
 | get      | ```/alert/North America/```
 
 
+##Testing
+Run ```npm test``` 
 
-Group the functionalities of your app by the purpose they serve. For example, for the library app that we have been using in the lectures, I would group them into Login, Account Management, Loan Management, Item Management (for items, such as books), etc. Then I would describe the following for each group/subset of the functionalities.
-Please write 2-3 sentences describing each functionality. You can describe what the functionality is and what it achieves. For example, Loan Management – This allows members to loan out items from the library. The librarian uses this functionality to identify all current and overdue items, and send reminders to staff to return any overdue items. The functionality is also used by the librarian to loan out items to members.
-Relevant URLs that will be used by your tutor to access the front-end for each functionality. Your tutor will use these URLs to access your front-end and assess the functionalities. Provide sample login details as well.
 Provide the names of the views, routes, controllers, and models associated with each functionality (i.e. for each subset/group of functionalities).
-Note on testing: We require groups to use the knowledge of testing covered in the subject to evaluate one core functionality that was implemented in Deliverable 3 (all views, models, controllers, routes). Provide the details of how to run the tests in the readme file.
+Note on testing: We require groups to use the knowledge of testing covered in the
+ subject to evaluate one core functionality that was implemented in
+  Deliverable 3 (all views, models, controllers, routes). Provide the
+   details of how to run the tests in the readme file.

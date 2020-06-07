@@ -288,7 +288,7 @@ postController.deletePost = async (req, res) => {
 
       if (
         authorizedUser.isAdmin ||
-        postToDelete.author.toString() == userId.toString()
+        postToDelete.author.toString() === userId.toString()
       ) {
         await Post.findByIdAndDelete(postId);
         response.success = true;

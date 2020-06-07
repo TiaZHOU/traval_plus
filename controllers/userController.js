@@ -75,7 +75,6 @@ userController.register = async (req, res) => {
     if (existingUser) {
       response.message = 'The username is already taken';
       res.json(response);
-      return;
     } else {
       let salt = helpers.generateSalt();
       let hash = helpers.hashThePassword(password, salt);
@@ -119,7 +118,7 @@ userController.login = async (req, res) => {
       // Check if the password matches..
       let hashedPassword = helpers.hashThePassword(password, user.salt);
 
-      if (hashedPassword == user.hash) {
+      if (hashedPassword === user.hash) {
         // Delete the password/hash info then send it
         // Create a new token for the user
         response.token = jwt.sign(
