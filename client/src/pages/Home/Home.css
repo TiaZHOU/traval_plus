@@ -19,19 +19,19 @@
 
 .jumbotron h2 {
     font-size: 75px;
-    text-shadow: 0 0 20px rgb(0,0,0,0.15);
+    text-shadow: 0 0 20px rgb(0,0,0,0.2);
     margin: 0;
 }
 
 .jumbotron h3 {
     margin: 0.5rem 0;
     font-size: 1.7rem;
-    text-shadow: 0 5px 20px rgb(0,0,0,0.15);
+    text-shadow: 0 5px 20px rgb(0,0,0,0.2);
 }
 
 .jumbotron h4 {
     line-height: 1.5rem;
-    text-shadow: 0 5px 20px rgb(0,0,0,0.15);
+    text-shadow: 0 5px 20px rgb(0,0,0,0.2);
 }
 
 .logowhite {

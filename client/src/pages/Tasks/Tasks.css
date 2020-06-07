@@ -20,6 +20,7 @@
     letter-spacing: 0.1em;
     cursor: pointer;
     border: none;
+    color: white;
     box-shadow: 0 5px 20px rgb(0,0,0,0.15);
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
     background-image: linear-gradient(to right, #3498DB 0%, #2CC2A4 100%);
