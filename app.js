@@ -8,8 +8,6 @@ const expressValidator = require('express-validator');
 const helmet = require('helmet');
 var app = express();
 
-//test by demo
-
 app.use(helmet());
 app.use(logger('dev')); // dev tool
 app.use(bodyParser.urlencoded({ extended: true })); // support parsing of urlencoded bodies (e.g. for forms)
@@ -20,6 +18,7 @@ app.use(expressValidator());
 
 require('./models');
 
+// Routers and routes
 const alertRouter = require("./routes/alertRouter");
 const taskRouter = require("./routes/taskRouter");
 const requirementRouter = require("./routes/requirementRouter.js");
@@ -35,7 +34,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname + '/client/public/index.html'));
 });
 
-// start app and listen for incoming requests on port
+// Start app and listen for incoming requests on port 5000
 app.listen(process.env.PORT || 5000, () => {
   console.log('Travel+ is running!');
 });

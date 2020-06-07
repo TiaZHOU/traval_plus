@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import GoogleMapReact from "google-map-react";
 import "./Alert.css";
 import Footer from "../../components/Footer/Footer";
+import MapInfo from "../../components/MapInfo/MapInfo";
 const BASE_URL = "https://info30005travelplus.herokuapp.com";
 
 function getAlerts() {
@@ -37,16 +38,15 @@ function Alert(alert) {
         <MyMarker lat={lat} lng={lng} text={alert_info} />
     );
 }
-//TODO change marker text format into more good looking one
+
+// Renders markers
 const MyMarker = ({ text }) => (
     <div className="marker"> {text} </div>
 );
 
+// Helper function to assist panning on map
 const distanceToMouse = (pt, mousePos, markerProps) => {
     console.log(pt, mousePos, markerProps);
-
-    // pt can be undefined in some cases
-    // don't know why this happens
     if (pt && mousePos) {
         return Math.sqrt(
             (pt.x - mousePos.x) * (pt.x - mousePos.x) +
@@ -66,20 +66,7 @@ export default function App() {
     return (
         <div className="mapPage">
             <div className="alertBackground">
-                <div className="info">
-                    <h2>Live Travel Alert Map</h2>
-                    <h4>Pan around the map to see live travel alerts and plan your trip accordingly.</h4>
-                    <h3>COVID-19</h3>
-                    <h4>Due to the current COVID-19 pandemic, most countries have closed their borders in order
-                        to decrease the spread of the virus. You can't leave Australia unless you seek
-                        an <a href="https://covid19.homeaffairs.gov.au/leaving-australia">exemption from Home Affairs</a>.
-                    </h4>
-                    <h3>Travel Exemptions</h3>
-                    <h4>
-                        You should apply for an exemption at least 48 hours before, but not more than 3 months before your planned travel.
-                    </h4>
-                    <p>Source: <a href="https://www.smartraveller.gov.au/destinations">https://www.smartraveller.gov.au/destinations</a></p>
-                </div>
+                <MapInfo />
                 <div className="map">
                     <GoogleMapReact
                         distanceToMouse={distanceToMouse}

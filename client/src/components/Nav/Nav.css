@@ -58,7 +58,7 @@ nav {
     margin-left: 2rem;
 }
 
-@media only screen and (max-width: 1000px) {  /* CHANGE */
+@media only screen and (max-width: 1000px) {
     nav {
         margin: 0;
         padding: 20px 0;

@@ -113,7 +113,6 @@ aside form {
 }
 
 /* Container to hold posts and sidebar */
-/* TODO make this responsive */
 #container {
   align-items: unset;
   display: grid;
@@ -129,8 +128,6 @@ aside form {
   display: flex;
   justify-content: center;
 }
-
-/* TODO Make this responsive */
 
 .pagination {
   margin: 25px 0;
@@ -186,11 +183,6 @@ aside form {
   text-align: center;
   color: #cccccc;
   line-height: 1.2rem;
-}
-
-.upvote,
-.votecount,
-.downvote {
 }
 
 .upvote,
@@ -258,10 +250,7 @@ aside form {
 .thumbnail {
   float: left;
   font-size: 0;
-  margin-bottom: 2px;
-  margin-right: 5px;
-  margin-top: 0;
-  margin-left: 0;
+  margin: 0 5px 2px 0;
   overflow: hidden;
   width: 70px;
 }
@@ -446,7 +435,6 @@ aside form {
 
 .reg-error {
   background: #f3efdf;
-  /* background: #faffbd; */
   padding: 10px;
   margin-bottom: 10px;
   color: #800000;
@@ -538,7 +526,6 @@ aside {
 }
 
 /* Registration page  */
-
 .reg-form {
   margin: 25px 40px;
   width: 500px;
@@ -604,10 +591,6 @@ aside {
 
 .padding {
   padding: 10px;
-}
-
-.top-banner {
-  /* text-align: center; */
 }
 
 .banner img {

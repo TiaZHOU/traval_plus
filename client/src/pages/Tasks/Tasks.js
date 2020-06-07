@@ -26,10 +26,12 @@ export default class Tasks extends Component {
         this.getTask();
     };
 
+    // Tracking input in input boxes
     changeHandler = (e) => {
         this.setState({[e.target.name]: e.target.value });
     };
 
+    // Posts task to database
     submitHandler = (e) => {
         e.preventDefault();
         if(!this.state.taskName || !this.state.taskDate || !this.state.taskTime) {
@@ -52,6 +54,7 @@ export default class Tasks extends Component {
             });
     };
 
+    // Resets all input boxes
     resetUserInputs = () => {
         this.setState({
             taskName: "",
@@ -61,6 +64,7 @@ export default class Tasks extends Component {
         });
     };
 
+    // Get all tasks from database
     getTask = () => {
         axios.get(BASE_URL + '/tasks')
             .then((response) => {
@@ -72,6 +76,7 @@ export default class Tasks extends Component {
             })
     };
 
+    // Finds one specific task
     findTaskById = (_id) => {
         axios.get(BASE_URL + '/tasks/' + _id)
             .then(response => {
@@ -103,6 +108,7 @@ export default class Tasks extends Component {
             });
     };
 
+    // Updates task via put request
     updateTask = (e) => {
         e.preventDefault();
         if(!this.state.taskName || !this.state.taskDate || !this.state.taskTime) {
@@ -126,6 +132,7 @@ export default class Tasks extends Component {
             });
     };
 
+    // Renders tasks in task list
     displayTask = (task) => {
         const { _id, taskName, taskDate, taskTime, taskDescription } = task;
         if (!task) return null;

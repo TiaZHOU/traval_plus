@@ -14,10 +14,12 @@ export default class Reqs extends Component {
         this.toggleDiv = this.toggleDiv.bind(this);
     }
 
+    // Show or hide disclaimer
     toggleDiv = () => {
         this.setState({show: false});
     };
 
+    // Use fetch to get all visa + immunisation reqs for a country from database
     handleChange = country => {
         this.setState({ country });
         fetch(BASE_URL + `/requirement/visa/` + country.value)
