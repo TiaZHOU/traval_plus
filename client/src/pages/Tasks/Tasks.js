@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Tasks.css';
 import Footer from "../../components/Footer/Footer";
 
-const BASE_URL = "https://info30005travelplus.herokuapp.com";
+const BASE_URL = "https://tianqizhou-blog.herokuapp.com";
 
 export default class Tasks extends Component {
 

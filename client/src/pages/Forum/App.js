@@ -8,7 +8,7 @@ import Admin from './Admin';
 import { BrowserRouter, Route, Link, Redirect } from 'react-router-dom';
 import UserPage from './UserPage';
 import InnerHTML from 'react-dangerous-html';
-const BASE_URL = "https://info30005travelplus.herokuapp.com";
+const BASE_URL = "https://tianqizhou-blog.herokuapp.com";
 function Layout(props) {
   return <div id="layout">{props.children}</div>;
 }

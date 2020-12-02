@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const BASE_URL = "https://info30005travelplus.herokuapp.com";
+const BASE_URL = "https://tianqizhou-blog.herokuapp.com";
 
 export default class Admin extends Component {
   state = {

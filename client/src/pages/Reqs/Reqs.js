@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import PopUp from "../../components/PopUp/PopUp";
 import "./Reqs.css";
 
-const BASE_URL = "https://info30005travelplus.herokuapp.com";
+const BASE_URL = "https://tianqizhou-blog.herokuapp.com";
 const CountryMenu = require("./CountryMenu");
 
 export default class Reqs extends Component {

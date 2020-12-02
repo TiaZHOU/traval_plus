@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 import Markdown from 'react-markdown';
-const BASE_URL = "https://info30005travelplus.herokuapp.com";
+const BASE_URL = "https://tianqizhou-blog.herokuapp.com";
 export default class Post extends Component {
   upvote = () => {
     if (this.props.user._id) {

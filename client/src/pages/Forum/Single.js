@@ -3,7 +3,7 @@ import Post from './Post';
 import Comment from './Comment';
 import Loading from '../../img/loading.gif';
 import InnerHTML from 'react-dangerous-html';
-const BASE_URL = "https://info30005travelplus.herokuapp.com";
+const BASE_URL = "https://tianqizhou-blog.herokuapp.com";
 export default class Single extends Component {
   state = {
     post: null,

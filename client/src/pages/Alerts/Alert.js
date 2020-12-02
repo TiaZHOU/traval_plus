@@ -3,7 +3,7 @@ import GoogleMapReact from "google-map-react";
 import "./Alert.css";
 import Footer from "../../components/Footer/Footer";
 import MapInfo from "../../components/MapInfo/MapInfo";
-const BASE_URL = "https://info30005travelplus.herokuapp.com";
+const BASE_URL = "https://tianqizhou-blog.herokuapp.com";
 
 function getAlerts() {
     const endpoint = BASE_URL + '/alert';

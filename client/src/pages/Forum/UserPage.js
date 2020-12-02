@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Post from './Post';
-const BASE_URL = "https://info30005travelplus.herokuapp.com";
+const BASE_URL = "https://tianqizhou-blog.herokuapp.com";
 export default class UserPage extends Component {
   state = {
     posts: [],
