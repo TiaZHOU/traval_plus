@@ -1,5 +1,5 @@
 # Travel+ homepage
-Link: https://info30005travelplus.herokuapp.com/
+Link: https://tianqizhou-blog.herokuapp.com/
 
 ## Introduction
 A website for first-time or inexperienced Australian travelers to get travel information.
